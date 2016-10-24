@@ -1,0 +1,131 @@
+20/06/2014
+----------
+Athlete v1.4.1
+
+added: mostviewed products block
+added: bestsellers product block
+added: option to change header cart bg
+added: option for search button bg
+added: font-awesome
+added: default text to newsletter input
+added: options to control columns num in related and upsell products
+
+updated: code for footer blocks in blocks.xml
+updated: footer customer service static block
+updated: oauth classes to avoid conflict with oauth php extension
+updated: banner slider bugs
+updated: listing toolbar icons
+updated: revolution slider updated to latest version
+updated: revolution slider caption
+updated: sticky header animation
+updated: default revolution slides
+
+fixed: carousel bug in megamenu
+fixed: products grid
+fixed: css fixes
+fixed: cart popup - not showing correct image for configurable product
+fixed: cart popup in sticky header
+fixed: footer social icons bug
+fixed: megamenu in sticky header
+fixed: navigation background in responsive mode
+fixed: content banner letter spacing
+fixed: cloudzoom border color option
+
+
+
+02/06/2014
+----------
+Athlete v1.4
+
+added: option to enable/disable totop button
+added: option to enable/disable prev/next links
+added: option to change layout width
+added: fluid layout
+added: option to control listing image width
+added: option for logo padding
+added: option for sticky header
+added: support for 1.9
+
+updated: jquery lib updated to 1.11
+updated: Rss page
+updated: carousel script updated to owl carousel 
+updated: default static blocks
+update: quick start package upgraded to 1.9.0.1
+updated: documentation
+
+fixed: megamenu css
+fixed: blog in IE11
+fixed: blog read more button
+fixed: quick view css
+fixed: header search behavior
+fixed: static block in header
+fixed: paypal button on product page
+fixed: hide brands slider on login page
+fixed: slideshow - hide arrows when there is only one slide
+fixed: review block - add support for disable module output option
+fixed: prevent addthis from changing address bar
+fixed: merged js error
+fixed: sorter dropdown css
+fixed: product action links postion
+fixed: policy popup background bug
+fixed: clean up css code
+fixed: twitter include bug
+fixed: cart popup - condtions for checkout button
+
+
+
+04/04/2014
+----------
+Athlete v1.3.1
+quick start package update - remove admin user from sql dump
+
+
+04/02/2014
+----------
+Athlete v1.3
+
+added: support of aheadworks blog extension
+added: new banner slider group for banners on blog page
+added: option to control main menu position - to the right of logo / under logo
+added: static block for header - displayed when main menu position = under logo
+added: support of colorswatch in quick view popup
+
+updated: documentation
+
+fixed: ipad grid hover
+fixed: search field size
+fixed: twitter lib include error
+fixed: quick view button bug
+fixed: quick view popup carousel bug
+fixed: minor css fixes
+fixed: add titles to action buttons on grid
+fixed: ajax cart typo
+
+
+
+03/19/2014
+----------
+Athlete v1.2
+
+updated: documentation
+
+added: quick start package
+
+
+
+
+03/19/2014
+----------
+Athlete v1.1
+
+fixed: css
+fixed: retina for banners
+
+added: ajax cart
+
+
+
+
+03/16/2014
+----------
+Athlete v1.0

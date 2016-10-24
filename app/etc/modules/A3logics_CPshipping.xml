@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Activate module
+*
+* PHP version 5.4.7
+*
+* @category  A3logics
+* @package   A3logics_CPshipping
+* @author    a3logics <manish.mittal2@a3logics.in>
+* @copyright 2014 A3logics
+* @license   http://www.php.net/license/3_01.txt  PHP License 3.01
+* @link      http://homeurl/Cpshopping.php
+*/
+-->
+<config>
+  <modules>
+    <A3logics_CPshipping>
+      <active>true</active>
+      <codePool>local</codePool>            
+	        <depends>
+                <Mage_Shipping />
+            </depends>
+      <version>0.1.0</version>
+    </A3logics_CPshipping>
+  </modules>
+</config>

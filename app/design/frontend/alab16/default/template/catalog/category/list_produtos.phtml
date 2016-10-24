@@ -1,0 +1,17 @@
+<div class="footer-produtos footer-inblock">
+	<ul>
+		<?php 
+		$category = Mage::getModel('catalog/category')->load(370);
+		$subcategories = $category->getChildrenCategories();
+		foreach($subcategories as $subcategory){
+		     echo "<li class='level0'><a href='".$subcategory->getUrl()."'><span>".$subcategory->getName()."</span></a></li>";
+		     $subsubcategories = $subcategory->getChildrenCategories();
+		     	echo "<ul>";
+			    foreach($subsubcategories as $subsubcategory){
+			         echo "<li class='level1'><a href='".$subsubcategory->getUrl()."'><span>".$subsubcategory->getName()."</span></a></li>";
+			    }
+			    echo "</ul>";
+		}
+		?>
+	</ul>
+</div>

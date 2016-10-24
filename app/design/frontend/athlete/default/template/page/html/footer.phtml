@@ -1,0 +1,17 @@
+<?php echo $this->getChildHtml('athlete_brands'); ?>
+<?php echo $this->getChildHtml('bottomContainer'); ?>
+<div class="footer-container">
+	<div class="footer row clearfix">
+		<div class="grid_18">
+			<div class="footer-info clearfix">
+				<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId(Mage::helper('athlete')->getCfg('footer/cms_block'))->toHtml(); ?>
+			</div>
+			<?php echo $this->getChildHtml('athlete_footer_customer_service');?>
+		</div>
+	</div>
+</div>
+<div class="footer-container">
+	<div class="footer row clearfix">
+			<address><p style="text-align: center;"><font color="#fff">Desenvolvido por <a class="endereco" title="Agencia SEO Hina" href="http://hina.com.br" target="_blank" style="color:#fff;"><strong>Ag&ecirc;ncia SEO Hina</strong></a> - &copy; 2016 - Todos os direitos reservados.</address></font></p>
+	</div>
+</div>

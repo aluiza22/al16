@@ -1,0 +1,15 @@
+<?php // echo $this->getLayout()->createBlock('cms/block')->setBlockId('your_static_block_id')->toHtml() ?>
+<div class="row1 home">
+	<div class="col13">
+		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista-home')->toHtml() ?>
+	</div>
+	<div class="col23">
+		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('slider-home')->toHtml() ?>
+	</div>
+</div>
+<?php echo $this->getLayout()->createBlock('newproducts/newproducts')->setTemplate('magehit/newproducts/newproductsblock.phtml')->toHtml(); ?>
+
+<?php echo $this->getLayout()->createBlock('bestseller/bestseller')->setTemplate('magehit/bestseller/bestsellerblock.phtml')->toHtml(); ?>
+
+<?php echo $this->getLayout()->createBlock('isfeatured/isfeatured')->setTemplate('isfeatured/featureblock.phtml')->toHtml(); ?>
+

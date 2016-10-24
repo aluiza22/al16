@@ -1,0 +1,27 @@
+2016-01-23T13:51:09+00:00 DEBUG (7): exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/config/public_html/ambientelab/lib/Varien/Data/Collection/Db.php:187
+Stack trace:
+#0 /home/config/public_html/ambientelab/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/config/public_html/ambientelab/app/code/core/Mage/Core/Model/Config.php(1348): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Array)
+#2 /home/config/public_html/ambientelab/app/code/core/Mage/Core/Model/Config.php(1380): Mage_Core_Model_Config->getModelInstance('wordpress_resou...', Array)
+#3 /home/config/public_html/ambientelab/app/Mage.php(491): Mage_Core_Model_Config->getResourceModelInstance('wordpress/user_...', Array)
+#4 /home/config/public_html/ambientelab/app/code/community/Fishpig/Wordpress/Model/Resource/User.php(75): Mage::getResourceModel('wordpress/user_...')
+#5 /home/config/public_html/ambientelab/app/code/community/Fishpig/Wordpress/sql/wordpress_setup/mysql4-upgrade-3.2.0.0-3.2.0.1.php(22): Fishpig_Wordpress_Model_Resource_User->cleanDuplicates()
+#6 /home/config/public_html/ambientelab/app/code/core/Mage/Core/Model/Resource/Setup.php(624): include('/home/config/pu...')
+#7 /home/config/public_html/ambientelab/app/code/core/Mage/Core/Model/Resource/Setup.php(422): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '0.1.0', '4.1.2.8')
+#8 /home/config/public_html/ambientelab/app/code/core/Mage/Core/Model/Resource/Setup.php(327): Mage_Core_Model_Resource_Setup->_installResourceDb('4.1.2.8')
+#9 /home/config/public_html/ambientelab/app/code/core/Mage/Core/Model/Resource/Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#10 /home/config/public_html/ambientelab/downloader/Maged/Controller.php(981): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#11 /home/config/public_html/ambientelab/downloader/Maged/Controller.php(420): Maged_Controller->cleanCache()
+#12 /home/config/public_html/ambientelab/downloader/Maged/Controller.php(830): Maged_Controller->cleanCacheAction()
+#13 /home/config/public_html/ambientelab/downloader/Maged/Controller.php(514): Maged_Controller->dispatch()
+#14 /home/config/public_html/ambientelab/downloader/index.php(36): Maged_Controller::run()
+#15 {main}
+2016-05-24T21:07:12+00:00 DEBUG (7): exception 'Exception' with message 'WordPress Admin details not set.' in /home/ambientelab/public_html/app/code/community/Fishpig/Wordpress/controllers/Adminhtml/WordpressController.php:31
+Stack trace:
+#0 /home/ambientelab/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Fishpig_Wordpress_Adminhtml_WordpressController->loginAction()
+#1 /home/ambientelab/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('login')
+#2 /home/ambientelab/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#3 /home/ambientelab/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#4 /home/ambientelab/public_html/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#5 /home/ambientelab/public_html/index.php(83): Mage::run('', 'store')
+#6 {main}

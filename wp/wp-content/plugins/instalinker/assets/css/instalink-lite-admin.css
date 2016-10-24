@@ -1,0 +1,469 @@
+/* Elfsight (c) elfsight.com */
+.instalink-lite-settings-wp-messages-hack {
+	position: absolute;
+	visibility: hidden;
+}
+.instalink-lite-settings h1 {
+	font-size: 36px;
+	margin: 30px 0;
+}
+
+.instalink-lite-settings-group {
+	background: #fff;
+	border: 1px solid #E5E5E5;
+  	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+  	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.instalink-lite-settings-group h2 {
+	font-size: 30px;
+	line-height: 36px;
+	margin: 0 0 10px;
+}
+.instalink-lite-settings-group h2 + p {
+	margin: 5px 0;
+}
+
+.instalink-lite-instagram-connect {
+	border: 2px solid #EFCFCF;
+}
+.instalink-lite-instagram-connected {
+	border-color: #CCE2D3;
+}
+.instalink-lite-instagram-connect-access-token,
+.instalink-lite-instagram-connect-note {
+	display: inline-block;
+	vertical-align: top;
+	width: 400px;
+	padding: 0 30px 0 0;
+}
+.instalink-lite-instagram-connect-access-token h3,
+.instalink-lite-instagram-connect-note h3 {
+	margin: 0 0 10px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.instalink-lite-instagram-connect-access-token p,
+.instalink-lite-instagram-connect-note p {
+	margin: 10px 0;
+}
+.instalink-lite-instagram-connect-access-token h3 {
+	margin-top: 30px;
+}
+.instalink-lite-instagram-connect-access-token input {
+	border: 2px solid #d7d7d7;
+	border-radius: 5px;
+	padding: 8px 10px;
+	font-size: 13px;
+	font-weight: 600;
+	box-shadow: none;
+	width: 396px;
+}
+.instalink-lite-instagram-connected .instalink-lite-instagram-connect-access-token input {
+	border-color: #02c23c;
+}
+
+.instalink-lite-instagram-connect-note {
+	border-left: 3px solid #f1d5a3;
+	padding-left: 30px;
+}
+.instalink-lite-instagram-connect-note-list li {
+	position: relative;
+	padding-left: 20px;
+	margin-bottom: 10px;
+}
+.instalink-lite-instagram-connect-note-list li::before {
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: 0;
+	width: 8px;
+	height: 6px;
+	background: url('../img/icon-check-orange-small.png') no-repeat center;
+}
+.instalink-lite-instagram-connect-note-button {
+	display: inline-block;
+	border: 2px solid #f1d5a3;
+	border-radius: 5px;
+	color: #ddb103;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 7px 10px;
+	margin-top: 8px;
+}
+.instalink-lite-instagram-connect-note-button:hover {
+	color: #ffc000;
+	border-color: #ffc000;
+}
+
+.instalink-lite-settings-generator {
+	padding-bottom: 20px;
+}
+.instalink-lite-settings-generator::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.instalink-lite-settings-generator-setup {
+	float: left;
+	width: 540px;
+	padding-right: 30px;
+}
+.instalink-lite-settings-generator-setup form {
+	margin: 20px 0 30px;
+}
+.instalink-lite-settings-generator-field {
+	position: relative;
+	margin-bottom: 15px;
+}
+.instalink-lite-settings-generator-field-disabled .instalink-lite-settings-generator-label {
+	color: #aaa;
+}
+
+
+.instalink-lite-settings-generator-field-disabled label {
+	cursor: default;
+}
+
+.instalink-lite-settings-generator-field-disabled .wp-color-result {
+	pointer-events: none;
+	opacity: .5;
+}
+.instalink-lite-settings-generator-field-disabled .wp-color-result:focus {
+
+}
+
+.instalink-lite-settings-generator-label {
+	float: left;
+	width: 130px;
+	text-align: right;
+	margin-right: 7px;
+	line-height: 27px;
+}
+.instalink-lite-settings-generator-field input[type=checkbox] {
+	margin-top: 5px;
+}
+.instalink-lite-settings-generator-field .wp-picker-container {
+	position: relative;
+}
+.instalink-lite-settings-generator-field .wp-picker-holder {
+	top: 100%;
+	left: 0;
+	position: absolute;
+	z-index: 1;
+	box-shadow: 0 7px 20px rgba(0,0,0,.2);
+}
+.instalink-lite-settings-generator-field-responsive {
+	margin-left: 5px;
+}
+.instalink-lite-settings-generator-field-responsive input[type=checkbox] {
+	margin: 0;
+}
+
+.instalink-lite-settings-generator-preview-container {
+	margin-left: 570px;
+}
+.instalink-lite-settings-generator-preview {
+	display: block;
+}
+.instalink-lite-settings-generator-preview iframe {
+	width: 350px;
+	height: 350px;
+}
+.instalink-lite-settings-generator-preview-hint {
+	color: #888;
+	font-size: 16px;
+	line-height: 1.5;
+	background: #f8f8f8;
+	border: 3px solid #f1f1f1;
+	width: 255px;
+	height: 60px;
+	padding: 160px 20px;
+	text-align: center;
+}
+
+.instalink-lite-settings-generator-code {
+	margin-top: 20px;
+}
+.instalink-lite-settings-generator-code textarea {
+	width: 350px;
+	padding: 10px;
+	font-size: 12px;
+}
+
+.instalink-lite-settings-generator-premium-link {
+	font-size: 11px;
+	margin-left: 5px;
+}
+.instalink-lite-settings-generator-premium-title {
+	font-size: 15px;
+	font-weight: bold;
+	margin: 40px 0 20px;
+}
+.instalink-lite-settings-generator-premium-instashow {
+	font-size: 15px;
+	line-height: 1.4;
+	margin: 40px 0 0;
+}
+
+.instalink-lite-icon {
+	display: inline-block;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.instalink-lite-icon + * {
+	vertical-align: middle;
+	margin-left: .3em;
+}
+.instalink-lite-icon-vc {
+	width: 37px;
+	height: 38px;
+	background-image: url(../img/instalink-lite-icon-vc.png)
+}
+.instalink-lite-icon-generator {
+	width: 39px;
+	height: 31px;
+	background-image: url(../img/instalink-lite-icon-generator.png)
+}
+
+.instalink-lite-premium {
+	padding: 40px 0;
+}
+.instalink-lite-premium-title {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.instalink-lite-premium-title h2 {
+	font-size: 36px;
+	font-weight: bold;
+}
+.instalink-lite-premium-title h4 {
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0 0 5px;
+}
+.instalink-lite-premium-products::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.instalink-lite-premium-products-instashow,
+.instalink-lite-premium-products-instalink {
+	box-sizing: border-box;
+	width: 50%;
+	float: left;
+	position: relative;
+}
+.instalink-lite-premium-products-instashow {
+	padding-left: 250px;
+}
+.instalink-lite-premium-products-instalink {
+	padding-right: 250px;
+}
+.instalink-lite-premium-products-instashow-logo,
+.instalink-lite-premium-products-instalink-logo,
+.instalink-lite-premium-products-instashow-banner,
+.instalink-lite-premium-products-instalink-banner {
+	text-align: center;
+	margin: 0;
+}
+.instalink-lite-premium-products-instashow-logo a,
+.instalink-lite-premium-products-instalink-logo a,
+.instalink-lite-premium-products-instashow-banner a,
+.instalink-lite-premium-products-instalink-banner a {
+	display: inline-block;
+}
+.instalink-lite-premium-products-instashow-logo img,
+.instalink-lite-premium-products-instalink-logo img,
+.instalink-lite-premium-products-instashow-banner img,
+.instalink-lite-premium-products-instalink-banner img {
+	max-width: 100%;
+}
+.instalink-lite-premium-products-instashow-title,
+.instalink-lite-premium-products-instalink-title {
+	font-size: 17px;
+	line-height: 1.4;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px 0 0;
+}
+.instalink-lite-premium-products-features-generator,
+.instalink-lite-premium-products-features-vc {
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+.instalink-lite-premium-products-instashow-features {
+	position: absolute;
+	bottom: 74px;
+	left: 50px;
+}
+.instalink-lite-premium-products-instashow-features-list,
+.instalink-lite-premium-products-instalink-features-list {
+	margin-top: 17px;
+}
+.instalink-lite-premium-products-instashow-features-list li,
+.instalink-lite-premium-products-instalink-features-list li {
+	position: relative;
+	padding-left: 28px;
+}
+.instalink-lite-premium-products-instashow-features-list li::before,
+.instalink-lite-premium-products-instalink-features-list li::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 2px;
+	height: 12px;
+}
+.instalink-lite-premium-products-instashow-features-list li::before{
+	width: 16px;
+	background: url(../img/instashow-features-list-marker.png) no-repeat center;
+}
+.instalink-lite-premium-products-instalink-features-list li::before{
+	width: 15px;
+	background: url(../img/instalink-features-list-marker.png) no-repeat center;
+}
+
+.instalink-lite-premium-products-instalink-features {
+	position: absolute;
+	bottom: 74px;
+	right: 50px;
+}
+
+.instalink-lite-premium-products-buttons {
+	text-align: center;
+	margin-top: 20px;
+}
+.instalink-lite-premium-products-buttons-demo,
+.instalink-lite-premium-products-buttons-purchase {
+	display: inline-block;
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	padding: 15px 20px;
+	text-decoration: none;
+	margin: 0 10px;
+	transition: all .2s ease;
+}
+.instalink-lite-premium-products-buttons-demo:hover,
+.instalink-lite-premium-products-buttons-purchase:hover {
+	color: #fff;
+	box-shadow: 0 0 15px rgba(0, 125, 242, .5);
+}
+.instalink-lite-premium-products-buttons-demo {
+	background: rgb(0,189,249);
+	background: -moz-linear-gradient(top,  rgba(0,189,249,1) 0%, rgba(0,83,238,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,189,249,1)), color-stop(100%,rgba(0,83,238,1)));
+	background: -webkit-linear-gradient(top,  rgba(0,189,249,1) 0%,rgba(0,83,238,1) 100%);
+	background: -o-linear-gradient(top,  rgba(0,189,249,1) 0%,rgba(0,83,238,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(0,189,249,1) 0%,rgba(0,83,238,1) 100%);
+	background: linear-gradient(to bottom,  rgba(0,189,249,1) 0%,rgba(0,83,238,1) 100%);
+}
+.instalink-lite-premium-products-buttons-purchase {
+	background: rgb(255,0,113);
+	background: -moz-linear-gradient(top,  rgba(255,0,113,1) 0%, rgba(255,0,44,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,0,113,1)), color-stop(100%,rgba(255,0,44,1)));
+	background: -webkit-linear-gradient(top,  rgba(255,0,113,1) 0%,rgba(255,0,44,1) 100%);
+	background: -o-linear-gradient(top,  rgba(255,0,113,1) 0%,rgba(255,0,44,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,0,113,1) 0%,rgba(255,0,44,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,0,113,1) 0%,rgba(255,0,44,1) 100%);
+}
+
+@media only screen and (max-width: 1920px) {
+	.instalink-lite-premium-products-instashow,
+	.instalink-lite-premium-products-instalink {
+		padding: 0 20px;
+	}
+	.instalink-lite-premium-products-instashow-title,
+	.instalink-lite-premium-products-instalink-title {
+		font-size: 16px;
+	}
+	.instalink-lite-premium-products-instashow-features,
+	.instalink-lite-premium-products-instalink-features {
+		position: static;
+		width: 500px;
+		margin: 0 auto;
+	}
+	.instalink-lite-premium-products-features-generator,
+	.instalink-lite-premium-products-features-vc {
+		display: inline-block;
+		width: 48%;
+	}
+
+	.instalink-lite-premium-products-instashow-features-list,
+	.instalink-lite-premium-products-instalink-features-list {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		margin-top: 0;	
+	}
+	.instalink-lite-premium-products-instashow-features-list li,
+	.instalink-lite-premium-products-instalink-features-list li {
+	    -webkit-column-break-inside: avoid;
+    	break-inside: avoid-column;
+    	page-break-inside: avoid;
+	}
+}
+
+.instalink-lite-widget-premium-title {
+	font-size: 15px;
+	font-weight: bold;
+}
+.instalink-lite-widget-premium-content label {
+	opacity: .5;
+}
+
+@media only screen and (max-width: 1280px) {
+	.instalink-lite-premium-title h2 {
+		font-size: 30px;
+	}
+	.instalink-lite-premium-title h4 {
+		font-size: 18px;
+	}
+	.instalink-lite-premium-products-instashow-title,
+	.instalink-lite-premium-products-instalink-title {
+		font-size: 15px;
+	}
+	.instalink-lite-premium-products-instashow-features,
+	.instalink-lite-premium-products-instalink-features {
+		width: 250px;
+		padding-left: 60px;
+	}
+	.instalink-lite-premium-products-features-generator,
+	.instalink-lite-premium-products-features-vc {
+		display: block;
+		width: auto;
+	}
+	.instalink-lite-premium-products-instashow-features-list,
+	.instalink-lite-premium-products-instalink-features-list {
+		-webkit-column-count: auto;
+		-moz-column-count: auto;
+		column-count: auto;
+	}
+	.instalink-lite-premium-products-instashow-features-list li,
+	.instalink-lite-premium-products-instalink-features-list li {
+		-webkit-column-break-inside: auto;
+		break-inside: auto;
+		page-break-inside: auto;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.instalink-lite-premium-title h2 {
+		font-size: 28px;
+	}
+	.instalink-lite-premium-title h4 {
+		font-size: 16px;
+	}
+	.instalink-lite-premium-products-instashow,
+	.instalink-lite-premium-products-instalink {
+		width: 100%;
+		float: none;
+		margin-bottom: 50px;
+	}
+}

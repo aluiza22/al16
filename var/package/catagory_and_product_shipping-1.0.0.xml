@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>catagory_and_product_shipping</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Perfect solution to add flat-rate shipping charges to any product/category specifically, that would work flawless regardless of the feature and functionality of your store.</summary>
+    <description>For every shopping website developed using Magento technology, it is much required by admin to have a module that would add shipping charges according to the products individually or category wise. This product extension is a feasible solution to this requirement, and using this extension admin will be able to apply flat rate shipping charges to products individually or across categories. The extension allows admin to define an individual shipping rate for a product under category or set a default rate for that category. </description>
+    <notes>For every shopping website developed using Magento technology, it is much required by admin to have a module that would add shipping charges according to the products individually or category wise. This product extension is a feasible solution to this requirement, and using this extension admin will be able to apply flat rate shipping charges to products individually or across categories. The extension allows admin to define an individual shipping rate for a product under category or set a default rate for that category. </notes>
+    <authors><author><name>Khemchand Joshi</name><user>khemchandjoshi</user><email>khemchandj@a3logics.com</email></author><author><name>Amit Mehta</name><user>amitmehta</user><email>amit.mehta@a3logics.in</email></author><author><name>Manish Mittal</name><user>manishmittal</user><email>manish.mittal2@a3logics.in</email></author><author><name>Vishwas Bhatnagar</name><user>vishwasbhatnagar</user><email>vishwas.bhatnagar@a3logics.in</email></author><author><name>Vimal Parihar</name><user>vimalarihar</user><email>vimal.parihar@a3logics.in</email></author></authors>
+    <date>2014-12-04</date>
+    <time>11:11:52</time>
+    <contents><target name="magelocal"><dir name="A3logics"><dir name="CPshipping"><dir name="Helper"><file name="Data.php" hash="c37a932191a5be74e625b88c5f9099fe"/></dir><dir name="Model"><dir name="Carrier"><file name="Cpshipping.php" hash="285ebf2b770ddf052f97b523a2be9fa3"/></dir><dir name="Shipping"><dir name="Carrier"><file name="Abstract.php" hash="427768f09734361f58bbef58a128b1da"/></dir></dir><file name="Source.php" hash="8addccc1cd261d51b5d5da4925f3786f"/></dir><dir name="etc"><file name="config.xml" hash="6b9e678789090e10cc66076e61dd0ffa"/><file name="system.xml" hash="d29cd978d28d9f8f02ca855c3429d95c"/></dir><dir name="sql"><dir name="categoryattribute1411717816_setup"><file name="mysql4-install-0.1.0.php" hash="65bb07d739d99e3018e34cbaeb9ee735"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="A3logics_CPshipping.xml" hash="5e86ba6124751d695702e2c6c5f63d9d"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.1.0</max></php></required></dependencies>
+</package>

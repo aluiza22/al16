@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Clockworkgeek_CalendarView</name>
+    <version>1.4.1</version>
+    <stability>stable</stability>
+    <license/>
+    <channel>community</channel>
+    <extends/>
+    <summary/>
+    <description/>
+    <notes>Spanish translation provided by Marcos Diaz, gracias!</notes>
+    <authors/>
+    <date>2016-02-18</date>
+    <time>17:33:44</time>
+    <contents><target name="magecommunity"><dir name="Clockworkgeek"><dir name="CalendarView"><dir name="Block"><dir name="Html"><file name="Date.php" hash="88033157b18467dea1ff7eaaef819314"/></dir></dir><dir name="Helper"><file name="Data.php" hash="796e1c34398f91401f459d5751461665"/></dir><dir name="etc"><file name="config.xml" hash="3df61b4731851023c64aa9640b9e938d"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="calendarview.xml" hash="63802012b673918deae096bc4a8c8f26"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Clockworkgeek_CalendarView.xml" hash="e15dbdb8dff966babc0afffb340e76d7"/></dir></target><target name="mageweb"><dir name="js"><dir name="calendarview"><file name="I18n.js" hash="bad962dee7858fb6377f92ad3f6eb79a"/><file name="calendarview.js" hash="298dfcbdc84edc3cbfa452a4035bd6aa"/></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="calendarview"><file name="calendarview.css" hash="72e1b36973450f6a7d35902d9103d93c"/><file name="calendarview_ie.css" hash="048fa59cd71dfa6206c718b09702f26d"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
