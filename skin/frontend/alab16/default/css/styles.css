@@ -12893,42 +12893,178 @@ div.calendar table td.button {
   top: 50%;
 }
 
+/* line 255, ../scss/styles.scss */
+.col {
+  display: block;
+  float: left;
+  position: relative;
+}
+
+/* line 256, ../scss/styles.scss */
+.col:after {
+  clear: both;
+  float: none;
+}
+
+/* line 257, ../scss/styles.scss */
+.col25 {
+  width: 25%;
+}
+
+/* line 258, ../scss/styles.scss */
+.col75 {
+  width: 75%;
+}
+
+/* line 259, ../scss/styles.scss */
+.pl {
+  padding-left: 20px;
+}
+
+/* line 260, ../scss/styles.scss */
+.pr {
+  padding-right: 20px;
+}
+
+/* line 262, ../scss/styles.scss */
+.block-content {
+  margin-top: 0px;
+}
+
+/* line 266, ../scss/styles.scss */
+.revista .block-title {
+  background: none repeat scroll 0 0 #fff;
+  padding: 10px 20px !important;
+  position: absolute;
+  z-index: 2147483647;
+}
+
+/* line 273, ../scss/styles.scss */
+.revista .block-title strong {
+  color: #000;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/* line 279, ../scss/styles.scss */
+.revista .block-content {
+  position: relative;
+}
+
+/* line 283, ../scss/styles.scss */
+.revista .block-content li.item {
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 380px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* line 293, ../scss/styles.scss */
+.revista .block-content li.item a {
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+  /* IE6-9 */
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 2em;
+  font-weight: 600;
+  height: 100%;
+  line-height: 1.2em;
+  padding: 60px 20px;
+  position: absolute;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* line 309, ../scss/styles.scss */
+.revista .block-content li.item a:hover {
+  text-decoration: none;
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=1 );
+  /* IE6-9 */
+}
+
+/* line 317, ../scss/styles.scss */
+.item.last.odd > a:after {
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  bottom: 0;
+  color: rgba(255, 255, 255, 0.78);
+  content: "Ver mais";
+  display: inline-block;
+  font-size: 0.5em;
+  font-weight: 600;
+  left: 15px;
+  margin: 15px 0;
+  padding: 4px 15px;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+/* line 332, ../scss/styles.scss */
+.std ul {
+  list-style: none;
+  margin: 0;
+}
+
+/* line 337, ../scss/styles.scss */
+.slideshow-container {
+  border: medium none;
+  margin: 0;
+}
+
+/* line 342, ../scss/styles.scss */
+.slideshow-container .slideshow {
+  border: none;
+}
+
 @media only screen and (max-width: 771px) {
-  /* line 258, ../scss/styles.scss */
+  /* line 345, ../scss/styles.scss */
   .skip-link.skip-social {
     display: none;
   }
 
-  /* line 262, ../scss/styles.scss */
+  /* line 349, ../scss/styles.scss */
   .skip-link.skip-chat {
     display: none;
   }
 
-  /* line 266, ../scss/styles.scss */
+  /* line 353, ../scss/styles.scss */
   .skip-link.skip-wishlist {
     display: none;
   }
 }
 @media only screen and (min-width: 771px) {
-  /* line 272, ../scss/styles.scss */
+  /* line 359, ../scss/styles.scss */
   .page-header {
-    margin: 10px auto 0;
+    margin: 10px auto 15px;
   }
 
-  /* line 276, ../scss/styles.scss */
+  /* line 363, ../scss/styles.scss */
   .account-cart-wrapper {
     right: 10px;
     top: 10px;
     line-height: 42px;
   }
 
-  /* line 282, ../scss/styles.scss */
+  /* line 369, ../scss/styles.scss */
   .account-cart-wrapper > * {
     float: left;
     padding-left: 3px;
   }
 
-  /* line 284, ../scss/styles.scss */
+  /* line 371, ../scss/styles.scss */
   #header-search {
     display: inline-block;
     height: 50px;
@@ -12938,42 +13074,42 @@ div.calendar table td.button {
     top: 0;
   }
 
-  /* line 293, ../scss/styles.scss */
+  /* line 380, ../scss/styles.scss */
   #header-nav {
     border-bottom: medium none;
     display: inline-block;
     width: 74%;
   }
 
-  /* line 299, ../scss/styles.scss */
+  /* line 386, ../scss/styles.scss */
   #header-menu {
     margin-left: auto;
     position: relative;
     width: 75%;
   }
 
-  /* line 305, ../scss/styles.scss */
+  /* line 392, ../scss/styles.scss */
   .nav-primary {
     text-align: right;
   }
 
-  /* line 309, ../scss/styles.scss */
+  /* line 396, ../scss/styles.scss */
   .nav-primary a.level0 {
     padding: 0 10px;
   }
 
-  /* line 313, ../scss/styles.scss */
+  /* line 400, ../scss/styles.scss */
   .nav-primary li.level0:after {
     content: " | ";
     color: #006784;
   }
 
-  /* line 318, ../scss/styles.scss */
+  /* line 405, ../scss/styles.scss */
   .nav-primary li.level0.last:after {
     content: "";
   }
 
-  /* line 322, ../scss/styles.scss */
+  /* line 409, ../scss/styles.scss */
   #search {
     background: none repeat scroll 0 0 #edf1f4;
     border: medium none;
@@ -12987,14 +13123,14 @@ div.calendar table td.button {
     width: 100%;
   }
 
-  /* line 335, ../scss/styles.scss */
+  /* line 422, ../scss/styles.scss */
   #search_mini_form .search-button {
     height: 22px;
     width: 30px;
     padding: 0;
   }
 
-  /* line 341, ../scss/styles.scss */
+  /* line 428, ../scss/styles.scss */
   #search_mini_form .search-button:before {
     background-position: 7px -145px;
     content: "";
@@ -13008,17 +13144,17 @@ div.calendar table td.button {
     width: 24px;
   }
 
-  /* line 354, ../scss/styles.scss */
+  /* line 441, ../scss/styles.scss */
   #header-search {
     height: 25px;
   }
 
-  /* line 356, ../scss/styles.scss */
+  /* line 443, ../scss/styles.scss */
   .main-container {
     padding: 0 30px;
   }
 
-  /* line 357, ../scss/styles.scss */
+  /* line 444, ../scss/styles.scss */
   .footer-container {
     padding: 0;
   }

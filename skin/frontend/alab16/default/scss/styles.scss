@@ -252,7 +252,94 @@ $mq-fixed-value: false;
 .owl-theme .owl-controls .owl-buttons div.owl-prev {left: 0; top:50%;}
 .owl-theme .owl-controls .owl-buttons div.owl-next {right: 0; top:50%;}
 
+.col {display: block; float: left; position: relative;}
+.col:after {clear: both;float: none;}
+.col25 {width: 25%;}
+.col75 {width: 75%;}
+.pl {padding-left: 20px;}
+.pr {padding-right: 20px;}
 
+.block-content {
+    margin-top: 0px;
+}
+
+.revista .block-title {
+    background: none repeat scroll 0 0 #fff;
+    padding: 10px 20px !important;
+    position: absolute;
+    z-index: 2147483647;
+}
+
+.revista .block-title strong {
+    color: #000;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.revista .block-content {
+    position: relative;
+}
+
+.revista .block-content li.item {
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 380px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.revista .block-content li.item a {
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 2em;
+    font-weight: 600;
+    height: 100%;
+    line-height: 1.2em;
+    padding: 60px 20px;
+    position: absolute;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.revista .block-content li.item a:hover {
+	text-decoration: none;
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+}
+
+.item.last.odd > a:after {
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.78);
+    content: "Ver mais";
+    display: inline-block;
+    font-size: 0.5em;
+    font-weight: 600;
+    left: 15px;
+    margin: 15px 0;
+    padding: 4px 15px;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.std ul {
+    list-style: none;
+    margin:0;
+}
+
+.slideshow-container {
+    border: medium none;
+    margin: 0;
+}
+
+.slideshow-container .slideshow {border: none;}
 
 @media only screen and (max-width: 771px) {
 	.skip-link.skip-social {
@@ -270,7 +357,7 @@ $mq-fixed-value: false;
 @media only screen and (min-width: 771px) {
 
 	.page-header {
-    	margin: 10px auto 0;
+    	margin: 10px auto 15px;
 	}
 
 	.account-cart-wrapper {

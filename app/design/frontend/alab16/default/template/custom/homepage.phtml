@@ -1,11 +1,12 @@
 <?php // echo $this->getLayout()->createBlock('cms/block')->setBlockId('your_static_block_id')->toHtml() ?>
 <div class="row1 home">
-	<div class="col13">
-		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista-home')->toHtml() ?>
+	<div class="col25 col revista">
+		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista1-home')->toHtml() ?>
 	</div>
-	<div class="col23">
+	<div class="col75 col pl">
 		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('slider-home')->toHtml() ?>
 	</div>
+	<div class="clearfix"></div>
 </div>
 <?php echo $this->getLayout()->createBlock('newproducts/newproducts')->setTemplate('magehit/newproducts/newproductsblock.phtml')->toHtml(); ?>
 

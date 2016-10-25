@@ -6,7 +6,11 @@
  * @author      Ben Tideswell <help@fishpig.co.uk>
  */
 ?>
-<?php $posts = $this->getPosts() ?>
+<?php $posts = $this->getPosts();
+
+$url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);
+?>
+
 <?php if (count($posts) > 0): ?>
 	<div class="block block-blog block-recent-posts">
 		<?php if ($title = $this->getTitle()): ?>
@@ -16,8 +20,13 @@
 		<?php endif; ?>
 		<div class="block-content">
 			<ul id="<?php echo $this->getListId() ?>">
-			<?php foreach($posts as $post): ?>
-				<li class="item">
+			<?php foreach($posts as $post): 
+					if($featuredImage = $post->getFeaturedImage()){
+						$image = $featuredImage->getAvailableImage();
+					} else {
+						$image = $url.'images/placeholder-revista.jpg';
+					}?>
+				<li class="item" style="background-image: url(<?php echo $image; ?>)">
 					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->htmlEscape($post->getPostTitle()) ?>"><?php echo $this->htmlEscape($post->getPostTitle()) ?></a>
 				</li>
 			<?php endforeach; ?>
