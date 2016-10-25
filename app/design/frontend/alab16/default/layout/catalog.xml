@@ -63,8 +63,8 @@ Default layout, loads most of the pages
             <action method="addLink" translate="label title" module="catalog" ifconfig="catalog/seo/site_map"><label>Site Map</label><url helper="catalog/map/getCategoryUrl" /><title>Site Map</title></action>
         </reference>-->
         <reference name="footer">
-			<block type="catalog/navigation" name="catalog.category-produtos" template="catalog/category/list_produtos.phtml"/>
-			<block type="catalog/navigation" name="catalog.category-campanhas" template="catalog/category/list_campanhas.phtml"/>
+			<block type="catalog/navigation" name="catalog.category-produtos" after ="footer_links" template="catalog/category/list_produtos.phtml"/>
+			<block type="catalog/navigation" name="catalog.category-campanhas" after ="footer_links" template="catalog/category/list_campanhas.phtml"/>
 		</reference> 
         <block type="catalog/product_price_template" name="catalog_product_price_template" />
     </default>

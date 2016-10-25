@@ -153,10 +153,17 @@ $mq-fixed-value: false;
     width: 100%;
 }
 
-.footer-inblock {float: left; width: 20%;}
+.footer-inblock {float: left; width: 15%; font-size: 0.7em; }
 .footer-inblock a, .footer-inblock {color: #fff; font-family: 'Advent Pro',sans-serif; font-weight: 600;}
 .footer-inblock .level1 {text-indent: 10px;}
 .footer-inblock ul li a {color: #fff;}
+
+.footer-inblock > h4 {
+    color: #fff;
+    font-family: "Advent Pro",sans-serif;
+    font-size: 1.1em;
+    font-weight: normal;
+}
 
 .block-subscribe {border:2px solid #fecc17; border-width: 2px 0; text-align: center;}
 .block-subscribe .block-content {margin: 10px 0;}
@@ -179,13 +186,26 @@ $mq-fixed-value: false;
 }
 
 
-.footer-inblock .links.social-media li em.facebook {background-position: 5px 6px; height: 25px; width: 25px;}
-.footer-inblock .links.social-media li em.instagram {background-position: 5px -18px; height: 25px; width: 25px;}
-.footer-inblock .links.social-media li em.pinterest {background-position: 5px -43px; height: 25px; width: 25px;}
+.footer-inblock .links.social-media li em.facebook {background-position: 2px -71px; height: 25px; width: 25px;}
+.footer-inblock .links.social-media li em.instagram {background-position: 2px -96px; height: 25px; width: 25px;}
+.footer-inblock .links.social-media li em.pinterest {background-position: 8px -121px; height: 25px; width: 25px;}
 
-.footer-inblock .links.social-media li em.facebook:hover {background-position: -20px 6px; height: 25px; width: 25px;}
-.footer-inblock .links.social-media li em.instagram:hover {background-position: -20px -18px; height: 25px; width: 25px;}
-.footer-inblock .links.social-media li em.pinterest:hover {background-position: -20px -43px; height: 25px; width: 25px;}
+.footer-inblock .links.social-media li em.facebook:hover {background-position: -23px -71px; height: 25px; width: 25px;}
+.footer-inblock .links.social-media li em.instagram:hover {background-position: -23px -96px; height: 25px; width: 25px;}
+.footer-inblock .links.social-media li em.pinterest:hover {background-position: -17px -121px; height: 25px; width: 25px;}
+
+.footer-inblock.footer-info .fendereco {}
+.footer-inblock.footer-info .fpagamento {margin: 15px 0;}
+.footer-inblock.footer-info .fpagamento span {
+    background: url("../images/icon_sprite.png") no-repeat scroll 0 -800px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 15px;
+    width: 21px;
+}
+.footer-inblock.footer-info .fpagamento span.master {background-position: 1px -825px;}
+.footer-inblock.footer-info .fpagamento span.america {background-position: 1px -850px;}
+.footer-inblock.footer-info .fpagamento span.paypal {background-position: 1px -875px;}
+.footer-inblock.footer-info .fpagamento span.boleto {background-position: 1px -900px;}
 
 .cms-index-index .fhead h2.subtitle, .cms-index-index .bshead h2.subtitle, .cms-index-index .nphead h2.subtitle {
     background: none repeat scroll 0 0 #e6b120;
@@ -217,7 +237,7 @@ $mq-fixed-value: false;
 }
 
 .owl-theme .owl-controls .owl-buttons div {
-    background: url("../images/sprite_icons.png") no-repeat scroll 1px 1px rgba(0, 0, 0, 0);
+    background: url("../images/icons_sprite.png") no-repeat scroll 1px 1px rgba(0, 0, 0, 0);
     border-radius: 0;
     color: #000;
     display: block;

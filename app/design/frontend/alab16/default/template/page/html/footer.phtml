@@ -27,9 +27,9 @@ $logo = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);
 ?>
 <div class="footer-container">
     <div class="footer">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links')->toHtml() ?>
         <?php echo $this->getChildHtml() ?>
-        <div><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links')->toHtml() ?></div>
-        <div><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_conta')->toHtml() ?></div>
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_conta')->toHtml() ?>
         <div class="footer-inblock footer-info">
         	<?php echo "<img src='".$logo."frontend/alab16/default/images/footer_logo.png' width='40px'>";?>
             <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('social-icons')->toHtml(); ?>        	
