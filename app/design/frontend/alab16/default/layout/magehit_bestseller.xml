@@ -32,6 +32,7 @@
             <block type="bestseller/bestseller" name="right.bestseller" as="right_bestseller" before="++" template="magehit/bestseller/vertical_bestsellerblock.phtml" />
         </reference>
     </default>
+    
     <!--<cms_index_index>
         <reference name="content">
             <block type="bestseller/bestseller" name="bestseller" as="bestseller"  template="magehit/bestseller/bestsellerblock.phtml" />

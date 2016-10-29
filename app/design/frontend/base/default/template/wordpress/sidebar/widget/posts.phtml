@@ -22,7 +22,7 @@ $url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);
 			<ul id="<?php echo $this->getListId() ?>">
 			<?php foreach($posts as $post): 
 					if($featuredImage = $post->getFeaturedImage()){
-						$image = $featuredImage->getAvailableImage();
+						$image = $featuredImage->getFullSizeImage();
 					} else {
 						$image = $url.'images/placeholder-revista.jpg';
 					}?>

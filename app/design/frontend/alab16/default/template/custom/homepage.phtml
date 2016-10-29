@@ -1,5 +1,5 @@
 <?php // echo $this->getLayout()->createBlock('cms/block')->setBlockId('your_static_block_id')->toHtml() ?>
-<div class="row1 home">
+<div class="row1 home row">
 	<div class="col25 col revista">
 		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista1-home')->toHtml() ?>
 	</div>
@@ -8,9 +8,75 @@
 	</div>
 	<div class="clearfix"></div>
 </div>
-<?php echo $this->getLayout()->createBlock('newproducts/newproducts')->setTemplate('magehit/newproducts/newproductsblock.phtml')->toHtml(); ?>
+<div class="row2 home row">
+	<div class="col30 col revista">
+		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista2-home')->toHtml() ?>
+	</div>
+	<div class="col70 col pl">
+		<?php echo $this->getLayout()->createBlock('newproducts/newproducts')->setTemplate('magehit/newproducts/newproductsblock.phtml')->toHtml(); ?>
+		<div class="row22 home row in">
+			<div class="layrev servico col50 col pl">				
+				<div class="block block-blog">
+					<div class="block-title">
+						<strong><span>Serviços</span></strong>
+					</div>
+					<div class="block-content">
+						<div class="item">
+							<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('servicos-home')->toHtml() ?>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="col50 col pr">
+				
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
 
-<?php echo $this->getLayout()->createBlock('bestseller/bestseller')->setTemplate('magehit/bestseller/bestsellerblock.phtml')->toHtml(); ?>
+<div class="row3 home row">
+	<div class="col100 col">
+		<?php echo $this->getLayout()->createBlock('bestseller/bestseller')->setTemplate('magehit/bestseller/bestsellerblock.phtml')->toHtml(); ?>
+	</div>
+	<div class="clearfix"></div>
+</div>
 
-<?php echo $this->getLayout()->createBlock('isfeatured/isfeatured')->setTemplate('isfeatured/featureblock.phtml')->toHtml(); ?>
+<div class="row4 home row">
+	<div class="col100 col">
+		<?php echo $this->setTemplate('catalog/category/carousel.phtml')->toHtml(); ?>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<div class="row5 home row">
+	<div class="col50 col chamada pr">
+		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('chamada1-home')->toHtml(); ?>
+	</div>
+	<div class="col50 col pl">
+		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('chamada2-home')->toHtml(); ?>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<div class="row6 home row">
+	<div class="layrev servico col25 col ">               
+                <div class="block block-blog">
+                    <div class="block-title">
+                        <strong><span>Nossos maravilhosos<br/> fornecedores</span></strong>
+                    </div>
+                    <div class="block-content">
+                        <div class="item">
+                            <a href="<?php echo Mage::getBaseUrl(); ?>fornecedores">Todo cuidado é pouco</a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+	<div class="col75 col pl">
+		<?php echo $this->getLayout()->createBlock('isfeatured/isfeatured')->setTemplate('isfeatured/featureblock.phtml')->toHtml(); ?>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+
 

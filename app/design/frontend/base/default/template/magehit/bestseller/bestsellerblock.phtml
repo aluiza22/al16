@@ -46,12 +46,13 @@ $slide_navigation = $_item['horizontal_carousels_setting_slide_navigation'];
                     <?php $count++ ?>
                 <?php endforeach; ?>
             </div>
+            <?php else: ?>
+                <div class="show-msg">
+                    <?php echo $this->__("There are no best seller products."); ?> 
+                </div>
+            <?php endif; ?>
     </div>
-    <?php else: ?>
-        <div class="show-msg">
-            <?php echo $this->__("There are no best seller products."); ?> 
-        </div>
-    <?php endif; ?>
+    
 <?php endif; ?>
 <script type="text/javascript">
 	var $bsp = jQuery.noConflict();

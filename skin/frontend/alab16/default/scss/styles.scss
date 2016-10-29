@@ -203,7 +203,7 @@ $mq-fixed-value: false;
     width: 21px;
 }
 .footer-inblock.footer-info .fpagamento span.master {background-position: 1px -825px;}
-.footer-inblock.footer-info .fpagamento span.america {background-position: 1px -850px;}
+.footer-inblock.footer-info .fpagamento span.american {background-position: 1px -850px;}
 .footer-inblock.footer-info .fpagamento span.paypal {background-position: 1px -875px;}
 .footer-inblock.footer-info .fpagamento span.boleto {background-position: 1px -900px;}
 
@@ -237,7 +237,7 @@ $mq-fixed-value: false;
 }
 
 .owl-theme .owl-controls .owl-buttons div {
-    background: url("../images/icons_sprite.png") no-repeat scroll 1px 1px rgba(0, 0, 0, 0);
+    background: url("../images/icon_sprite.png") no-repeat scroll 1px 1px rgba(0, 0, 0, 0);
     border-radius: 0;
     color: #000;
     display: block;
@@ -252,45 +252,69 @@ $mq-fixed-value: false;
 .owl-theme .owl-controls .owl-buttons div.owl-prev {left: 0; top:50%;}
 .owl-theme .owl-controls .owl-buttons div.owl-next {right: 0; top:50%;}
 
+.row {display: block; width: 100%; float: none; clear: both;}
+.row.in {margin-top: 20px;}
 .col {display: block; float: left; position: relative;}
 .col:after {clear: both;float: none;}
+.col10 {width: 10%;}
+.col15 {width: 15%;}
+.col20 {width: 20%;}
 .col25 {width: 25%;}
+.col30 {width: 30%;}
+.col35 {width: 35%;}
+.col40 {width: 40%;}
+.col45 {width: 45%;}
+.col50 {width: 50%;}
+.col55 {width: 55%;}
+.col60 {width: 60%;}
+.col65 {width: 65%;}
+.col70 {width: 70%;}
 .col75 {width: 75%;}
+.col80 {width: 80%;}
+.col85 {width: 85%;}
+.col90 {width: 90%;}
+.col95 {width: 95%;}
+.col100 {width: 100%; float: none;}
 .pl {padding-left: 20px;}
 .pr {padding-right: 20px;}
+.col50.pl {padding-left: 10px;}
+.col50.pr {padding-right: 10px;}
 
 .block-content {
     margin-top: 0px;
 }
 
-.revista .block-title {
+.revista .block-title, .layrev .block-title {
     background: none repeat scroll 0 0 #fff;
     padding: 10px 20px !important;
     position: absolute;
     z-index: 2147483647;
 }
 
-.revista .block-title strong {
+.revista .block-title strong, .layrev .block-title strong {
     color: #000;
     font-size: 1em;
     font-weight: normal;
 }
 
-.revista .block-content {
+.revista .block-content, .layrev .block-content {
     position: relative;
 }
 
-.revista .block-content li.item {
+.revista .block-content li.item, .layrev .block-content .item {
     background-blend-mode: darken;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 380px;
     margin: 0;
     overflow: hidden;
     padding: 0;
 }
+.row2 .revista .block-content li.item {height: 420px;}
+.layrev.servico .block-content .item {background-image: url(../images/media/servico.jpg); height: 312px;}
 
-.revista .block-content li.item a {
+.revista .block-content li.item a, .layrev .block-content .item a {
 	background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -306,7 +330,14 @@ $mq-fixed-value: false;
     width: 100%;
 }
 
-.revista .block-content li.item a:hover {
+.revista .block-content li.item a span, .layrev .block-content .item a span {
+	display: block;
+    font-size: 0.6em;
+    line-height: 1.1em;
+    margin-top: 6px;
+}
+
+.revista .block-content li.item a:hover, .layrev .block-content .item a:hover  {
 	text-decoration: none;
 	background: -moz-linear-gradient(left, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(left, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -314,7 +345,7 @@ $mq-fixed-value: false;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 }
 
-.item.last.odd > a:after {
+.revista .block-content li.item > a:after, .layrev .block-content .item > a:after {
     border: 1px solid rgba(255, 255, 255, 0.78);
     bottom: 0;
     color: rgba(255, 255, 255, 0.78);
@@ -340,6 +371,8 @@ $mq-fixed-value: false;
 }
 
 .slideshow-container .slideshow {border: none;}
+
+img {max-width: 100%;}
 
 @media only screen and (max-width: 771px) {
 	.skip-link.skip-social {

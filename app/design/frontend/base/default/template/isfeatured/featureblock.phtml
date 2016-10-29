@@ -38,7 +38,7 @@ $slide_navigation = $_item['horizontal_carousels_setting_slide_navigation'];
                             <div class="item">
                                 <a href="<?php echo $this->getUrl($_product->getUrlPath()) ?>" >
                                     <span>
-                                        <img class="lazyOwl" data-src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(260) ?>" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" />
+                                        <img class="lazyOwl" data-src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(210) ?>" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" />
                                     </span>
                                 </a>
                                 <h3 class="product-name">
@@ -60,12 +60,13 @@ $slide_navigation = $_item['horizontal_carousels_setting_slide_navigation'];
                     <?php $count++ ?>
                 <?php endforeach; ?>
             </div>
+        <?php else: ?>
+            <div class="show-msg">
+                <?php echo $this->__("There are no feature products."); ?> 
+            </div>
+        <?php endif; ?>
     </div>
-    <?php else: ?>
-        <div class="show-msg">
-            <?php echo $this->__("There are no feature products."); ?> 
-        </div>
-    <?php endif; ?>
+    
 <?php endif; ?>
 <script type="text/javascript">
 	var $fp = jQuery.noConflict();
