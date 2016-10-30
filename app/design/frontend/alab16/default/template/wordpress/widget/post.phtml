@@ -9,23 +9,27 @@
 <?php 
 
 $postID = $this->getData('post');
-var_dump($postID); 
-$post = Mage::getModel('wordpress/post')->load($postID);
-var_dump($post);
-/*
-if($featuredImage = $this->getFeaturedImage()){
-	$image = $featuredImage->getFullSizeImage();
-} else {
-	$image = $url.'images/placeholder-revista.jpg';
-}
-var_dump($image);*/
-?>
-<!--
-	<div class="block block-blog article">
-		<div class="block-content">
-			<li class="item" style="background-image: url(<?php echo $image; ?>)">
-				<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $post->htmlEscape($post->getPostTitle()) ?>"><?php echo $post->htmlEscape($post->getPostTitle()) ?></a>
-			</li>
+$categoryID = $this->getData('category');
+
+$posts = $this->getPosts();
+$posts->addCategoryAndPostIdFilter($postID,$categoryID,$operator = 'OR');
+
+if (count($posts) > 0) { 
+
+	foreach($posts as $post) {
+		if($featuredImage = $post->getFeaturedImage()){
+			$image = $featuredImage->getFullSizeImage();
+		} else {
+			$image = $url.'images/placeholder-revista.jpg';
+		} 
+		?>
+		<div class="block block-blog article">
+			<div class="block-content">
+				<li class="item" style="background-image: url(<?php echo $image; ?>)">
+					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $post->getPostTitle() ?>"><?php echo $post->getPostTitle(); ?></a>
+				</li>
+			</div>
 		</div>
-	</div>
--->
+	<?php }
+}
+?>

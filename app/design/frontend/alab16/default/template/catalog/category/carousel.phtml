@@ -30,7 +30,7 @@ $_helper = $this->helper('catalog/output');
              <div class="description">
                  <?php echo $_helper->categoryAttribute($category, $category->getDescription(), 'description') ?>
              </div>
-             <ul class="ccarousel products-grid products-grid--max-6-col" id="products-list">
+             <ul class="ccarousel-products products-grid products-grid--max-6-col" id="products-list">
                <?php 
                 $id = $category->getID();
                 $cproducts = Mage::getModel('catalog/category')->load($id)

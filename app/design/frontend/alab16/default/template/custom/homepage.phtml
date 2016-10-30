@@ -50,28 +50,28 @@
 </div>
 
 <div class="row5 home row">
-	<div class="col50 col chamada pr">
+	<div class="col50 col layrev chamada pr">
 		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('chamada1-home')->toHtml(); ?>
 	</div>
-	<div class="col50 col pl">
+	<div class="col50 col layrev chamada pl">
 		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('chamada2-home')->toHtml(); ?>
 	</div>
 	<div class="clearfix"></div>
 </div>
 
 <div class="row6 home row">
-	<div class="layrev servico col25 col ">               
-                <div class="block block-blog">
-                    <div class="block-title">
-                        <strong><span>Nossos maravilhosos<br/> fornecedores</span></strong>
-                    </div>
-                    <div class="block-content">
-                        <div class="item">
-                            <a href="<?php echo Mage::getBaseUrl(); ?>fornecedores">Todo cuidado é pouco</a>
-                        </div>  
-                    </div>
-                </div>
+	<div class="layrev fornecedores col25 col ">               
+        <div class="block block-blog">
+            <div class="block-title">
+                <strong><span>Nossos maravilhosos<br/> fornecedores</span></strong>
             </div>
+            <div class="block-content">
+                <div class="item">
+                    <a href="<?php echo Mage::getBaseUrl(); ?>fornecedores">Todo cuidado é pouco</a>
+                </div>  
+            </div>
+        </div>
+    </div>
 	<div class="col75 col pl">
 		<?php echo $this->getLayout()->createBlock('isfeatured/isfeatured')->setTemplate('isfeatured/featureblock.phtml')->toHtml(); ?>
 	</div>
