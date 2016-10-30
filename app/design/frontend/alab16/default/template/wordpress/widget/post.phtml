@@ -1,0 +1,31 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php 
+
+$postID = $this->getData('post');
+var_dump($postID); 
+$post = Mage::getModel('wordpress/post')->load($postID);
+var_dump($post);
+/*
+if($featuredImage = $this->getFeaturedImage()){
+	$image = $featuredImage->getFullSizeImage();
+} else {
+	$image = $url.'images/placeholder-revista.jpg';
+}
+var_dump($image);*/
+?>
+<!--
+	<div class="block block-blog article">
+		<div class="block-content">
+			<li class="item" style="background-image: url(<?php echo $image; ?>)">
+				<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $post->htmlEscape($post->getPostTitle()) ?>"><?php echo $post->htmlEscape($post->getPostTitle()) ?></a>
+			</li>
+		</div>
+	</div>
+-->

@@ -8,8 +8,8 @@
             <action method="addItem"><type>skin_js</type><name>js/whoalsoview/owl.carousel.custom.js</name></action>
             <action method="addItem"><type>skin_css</type><name>css/whoalsoview/styles.css</name></action>
         </reference>
-        <reference name="content">        
-            <block type="whoalsoview/Whoalsoview" name="custom_mostviewed" as="custom_mostviewed" template="whoalsoview/mostviewed.phtml" />
+        <reference name="product.info.additional">        
+            <block type="whoalsoview/Whoalsoview" name="custom_mostviewed" as="custom_mostviewed" template="whoalsoview/mostviewed.phtml" after="-" />
 	   	</reference>
    </catalog_product_view>
 </layout> 

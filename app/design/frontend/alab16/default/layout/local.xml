@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout>
+	
+	<catalog_product_view>
+	    <reference name="head">
+	        <action method="addItem"><type>skin_js</type><script>js/mynoconflict.js</script></action>
+	        <action method="addItem"><type>skin_js</type><script>js/lib/elevatezoom/jquery.elevateZoom-3.0.8.min.js</script></action>
+	    </reference>
+	    <reference name="product.info.additional">
+			<action method="unsetChild" ><name>product_tag_list</name></action>
+		</reference>
+	</catalog_product_view>
+
+</layout>

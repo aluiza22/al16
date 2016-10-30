@@ -207,3 +207,12 @@
 ## http://developer.yahoo.com/performance/rules.html#etags
 
     #FileETag none
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /ambientelab.local.com.br/revista/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /ambientelab.local.com.br/revista/index.php [L]
+</IfModule>

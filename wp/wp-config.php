@@ -80,4 +80,4 @@ if ( !defined('ABSPATH') )
 /** Configura as variáveis do WordPress e arquivos inclusos. */
 require_once(ABSPATH . 'wp-settings.php');
 
-define('WP_HOME','http://localhost/ambientelab/index.php/revista');
+define('WP_HOME','http://ambientelab.local.com.br/revista/');
