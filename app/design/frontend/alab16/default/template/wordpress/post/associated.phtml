@@ -5,6 +5,7 @@
  * @license     http://fishpig.co.uk/license.txt
  * @author      Ben Tideswell <help@fishpig.co.uk>
  */
+
 ?>
 <div class="col30 col revista">
 <?php if (($posts = $this->getPostCollection()) !== false): ?>
@@ -19,7 +20,7 @@
 				if($featuredImage = $post->getFeaturedImage()){
 						$image = $featuredImage->getFullSizeImage();
 					} else {
-						$image = $url.'images/placeholder-revista.jpg';
+						$image = $this->getSkinUrl('images/placeholder-revista.jpg');
 					}?>
 				<li class="item" style="background-image: url(<?php echo $image; ?>)">
 					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->htmlEscape($post->getPostTitle()) ?>"><?php echo $this->htmlEscape($post->getPostTitle()) ?></a>

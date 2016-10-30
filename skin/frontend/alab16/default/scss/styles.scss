@@ -43,6 +43,11 @@ $mq-fixed-value: false;
     max-width: 990px;
 }
 
+.block-title h2, .block-title h3, .block-title strong {
+    color: #000;
+    font-family: 'Advent Pro', sans-serif;
+}
+
 /* SOCIAL ICONS */
 .skip-link.skip-social {
     display: block;
@@ -372,6 +377,179 @@ $mq-fixed-value: false;
 
 .slideshow-container .slideshow {border: none;}
 
+.product-view .product-shop .product-name .h1, .product-view .product-img-box .product-name h1 {
+    color: #006784; 
+    text-transform: none;
+    font-family: 'Advent Pro',sans-serif;
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+.product-view .add-to-links {margin-right: 10px;}
+.product-view .add-to-links li a.link-wishlist {
+    background-image: url("../images/icon_sprite.png");
+    height: 30px;
+    padding: 0;
+    text-indent: -1e+11px;
+    width: 30px;
+    background-position: 2px -246px;
+}
+.product-view .add-to-cart-wrapper {padding-left: 0; position: relative;}
+.product-view .add-to-cart-wrapper, .product-view .block-related {
+    clear: both;
+    float: none;
+    width: unset;
+}
+
+.product-view .add-to-cart {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.product-view .product-options-bottom .price-box, .product-view .add-to-cart .qty-wrapper, .product-view .add-to-cart-buttons .button, .product-view .add-to-cart-buttons .paypal-logo {
+    margin-bottom: 0;
+}
+
+.product-view .add-to-cart .qty-wrapper {margin-right: 0;}
+.product-view .add-to-cart .qty-wrapper .qty {
+    border-color: #ed1a3a;
+    border-radius: 0;
+    color: #ed1a3a;
+    font-family: 'Advent Pro',sans-serif;
+    height: 30px;
+}
+
+.product-view .add-to-cart-buttons .button {
+    background: #ed1a3a;
+    line-height: 30px;
+    min-height: 30px;
+    min-width: unset;
+    padding: 0 10px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.product-view .product-shop .price-info, .product-view .sharing-links, .product-view .short-description {
+    float: none;
+    padding-left: 0;
+    text-align: left;
+    width: 100%;
+    clear: both;
+}
+
+.price-box .price, .price {font-family: 'Advent Pro',sans-serif;}
+.price-box .old-price .price {color: #000;}
+.product-view .product-shop .price-box .regular-price .price, .product-view .product-shop .price-box .special-price .price, .product-view .product-shop .price-box .full-product-price .price {
+    color: #af402b;
+}
+
+.product-collateral, .block-shipping-estimate {
+    clear: both;
+    float: none;
+    width: 100%;
+}
+
+#product-attribute-specs-table {
+    border: 0 none;
+    color: #000;
+    max-width: 100%;
+}
+#product-attribute-specs-table th {
+    border-bottom: 0 none;
+    border-right: 0 none;
+}
+.data-table th, .data-table thead th, .data-table tbody td {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-family: "Advent Pro",sans-serif;
+    font-size: 0.9em;
+    line-height: 1em;
+    padding: 3px;
+    text-transform: none;
+    white-space: pre-line;
+}
+
+
+.data-table th {font-weight: 600;}
+
+
+.product-img-box {width: 40%;}
+.product-view .product-shop {width: 60%;}
+
+.block-shipping-estimate .block-title {
+    border: 0;
+    margin-bottom: 0px;
+    padding: 20px 0 0;
+}
+#shipping-estimation-form .item {
+    margin: 0;
+    padding: 0;
+}
+#shipping-estimation-form .input-box {
+    display: inline-block;
+    float: left;
+    padding-top: 2px;
+    width: 60%;
+}
+#shipping-estimation-form .input-box .input-text {
+    border: 0; border-bottom: 1px dashed #000;
+    color: #000;
+    float: right;
+    font-family: "Advent Pro",sans-serif;
+    height: 1.2em;
+    width: 100%;
+    text-align: center;
+}
+.block-shipping-estimate .block-content {position: relative;}
+.block-shipping-estimate .actions {margin: 0;}
+.block-shipping-estimate .actions button {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px dashed #000;
+    color: #000;
+    font-size: 0.8em;
+    height: 1.8em;
+    line-height: 1.2em;
+    padding: 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.product-view .product-shop .extra-info {
+    display: block;
+    opacity: 0.6;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: auto;
+}
+
+.block-shipping-estimate .block-content li label {
+    color: #000;
+    font-family: "Advent Pro",sans-serif;
+    font-weight: normal;
+}
+
+#last_most_view_box.product-view.product-mostview {
+    float: right;
+    padding-left: 20px;
+    width: 70%;
+}
+
+.chamada-promocoes {
+    background: url("../images/labels_sprite.png") no-repeat scroll 0 0 #ed1a3a;
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 600;
+    line-height: 1em;
+    margin: 30px 0;
+    padding: 25px 0 25px 150px;
+    text-align: left;
+}
+
+.chamada-promocoes a {color: #fbd34c;}
+.chamada-promocoes a:hover {text-decoration: none;}
+
 img {max-width: 100%;}
 
 @media only screen and (max-width: 771px) {
@@ -390,8 +568,8 @@ img {max-width: 100%;}
 @media only screen and (min-width: 771px) {
 
 	.page-header {
-    	margin: 10px auto 15px;
-	}
+        margin: 10px auto 25px;
+    }
 
 	.account-cart-wrapper {
 	    right: 10px;

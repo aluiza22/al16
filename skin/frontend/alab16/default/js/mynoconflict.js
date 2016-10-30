@@ -2,7 +2,7 @@
 var $j = jQuery.noConflict();
 
 // First call elevateZoom
-
+/*
 $j(document).ready(function() {     
   $j('.product-image-thumbs').attr('id', 'zoomGallery');
 
@@ -37,4 +37,4 @@ $j('#image-main').elevateZoom({
     responsive: true
   });
 });
-});
+});*/

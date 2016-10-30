@@ -12509,8 +12509,14 @@ div.calendar table td.button {
   max-width: 990px;
 }
 
+/* line 46, ../scss/styles.scss */
+.block-title h2, .block-title h3, .block-title strong {
+  color: #000;
+  font-family: 'Advent Pro', sans-serif;
+}
+
 /* SOCIAL ICONS */
-/* line 47, ../scss/styles.scss */
+/* line 52, ../scss/styles.scss */
 .skip-link.skip-social {
   display: block;
   float: none;
@@ -12523,12 +12529,12 @@ div.calendar table td.button {
   margin-top: 4px;
 }
 
-/* line 59, ../scss/styles.scss */
+/* line 64, ../scss/styles.scss */
 .social-media li {
   display: inline-block;
 }
 
-/* line 63, ../scss/styles.scss */
+/* line 68, ../scss/styles.scss */
 .social-media li em {
   background-image: url("../images/social_icons.png");
   background-repeat: no-repeat;
@@ -12537,43 +12543,43 @@ div.calendar table td.button {
   width: 25px;
 }
 
-/* line 71, ../scss/styles.scss */
+/* line 76, ../scss/styles.scss */
 .social-media li em.facebook {
   background-position: 5px 6px;
 }
 
-/* line 72, ../scss/styles.scss */
+/* line 77, ../scss/styles.scss */
 .social-media li em.instagram {
   background-position: 5px -18px;
 }
 
-/* line 73, ../scss/styles.scss */
+/* line 78, ../scss/styles.scss */
 .social-media li em.pinterest {
   background-position: 5px -43px;
 }
 
-/* line 75, ../scss/styles.scss */
+/* line 80, ../scss/styles.scss */
 .social-media li em.facebook:hover {
   background-position: -20px 6px;
 }
 
-/* line 76, ../scss/styles.scss */
+/* line 81, ../scss/styles.scss */
 .social-media li em.instagram:hover {
   background-position: -20px -18px;
 }
 
-/* line 77, ../scss/styles.scss */
+/* line 82, ../scss/styles.scss */
 .social-media li em.pinterest:hover {
   background-position: -20px -43px;
 }
 
 /* TOP CART */
-/* line 82, ../scss/styles.scss */
+/* line 87, ../scss/styles.scss */
 .skip-cart {
   padding: 0;
 }
 
-/* line 84, ../scss/styles.scss */
+/* line 89, ../scss/styles.scss */
 .skip-cart .icon {
   line-height: 14px;
   padding-bottom: 13px;
@@ -12583,53 +12589,53 @@ div.calendar table td.button {
   color: #006784;
 }
 
-/* line 93, ../scss/styles.scss */
+/* line 98, ../scss/styles.scss */
 .skip-cart:hover:not(.skip-active) .icon {
   background-position: -48px -98px;
 }
 
-/* line 97, ../scss/styles.scss */
+/* line 102, ../scss/styles.scss */
 .skip-account .icon {
   background-position: 5px -47px;
 }
 
-/* line 101, ../scss/styles.scss */
+/* line 106, ../scss/styles.scss */
 .skip-account:hover:not(.skip-active) .icon {
   background-position: -45px -47px;
 }
 
-/* line 106, ../scss/styles.scss */
+/* line 111, ../scss/styles.scss */
 .skip-link.skip-chat .icon {
   background-position: 2px -196px;
 }
 
-/* line 110, ../scss/styles.scss */
+/* line 115, ../scss/styles.scss */
 .skip-chat:hover:not(.skip-active) .icon {
   background-position: -48px -196px;
 }
 
-/* line 114, ../scss/styles.scss */
+/* line 119, ../scss/styles.scss */
 .skip-link.skip-chat {
   display: inline-block;
   float: right;
 }
 
-/* line 119, ../scss/styles.scss */
+/* line 124, ../scss/styles.scss */
 .skip-link.skip-wishlist .icon {
   background-position: 2px -246px;
 }
 
-/* line 123, ../scss/styles.scss */
+/* line 128, ../scss/styles.scss */
 .skip-wishlist:hover:not(.skip-active) .icon {
   background-position: -47px -246px;
 }
 
-/* line 127, ../scss/styles.scss */
+/* line 132, ../scss/styles.scss */
 .skip-account {
   padding: 0;
 }
 
-/* line 129, ../scss/styles.scss */
+/* line 134, ../scss/styles.scss */
 .nav-primary a {
   color: #000;
   display: block;
@@ -12640,28 +12646,28 @@ div.calendar table td.button {
   font-weight: 600;
 }
 
-/* line 139, ../scss/styles.scss */
+/* line 144, ../scss/styles.scss */
 .nav-primary a:hover, .nav-primary li:hover > a {
   color: #006784;
 }
 
-/* line 143, ../scss/styles.scss */
+/* line 148, ../scss/styles.scss */
 .footer {
   background: #4e4e4e;
   padding: 25px 25px 0 25px;
 }
 
-/* line 144, ../scss/styles.scss */
+/* line 149, ../scss/styles.scss */
 .footer .block-title {
   border-top: none;
 }
 
-/* line 145, ../scss/styles.scss */
+/* line 150, ../scss/styles.scss */
 .footer .block-title strong, .footer .links a {
   color: #fff;
 }
 
-/* line 146, ../scss/styles.scss */
+/* line 151, ../scss/styles.scss */
 .footer address {
   border-top: medium none;
   color: #fff;
@@ -12672,31 +12678,31 @@ div.calendar table td.button {
   width: 100%;
 }
 
-/* line 156, ../scss/styles.scss */
+/* line 161, ../scss/styles.scss */
 .footer-inblock {
   float: left;
   width: 15%;
   font-size: 0.7em;
 }
 
-/* line 157, ../scss/styles.scss */
+/* line 162, ../scss/styles.scss */
 .footer-inblock a, .footer-inblock {
   color: #fff;
   font-family: 'Advent Pro',sans-serif;
   font-weight: 600;
 }
 
-/* line 158, ../scss/styles.scss */
+/* line 163, ../scss/styles.scss */
 .footer-inblock .level1 {
   text-indent: 10px;
 }
 
-/* line 159, ../scss/styles.scss */
+/* line 164, ../scss/styles.scss */
 .footer-inblock ul li a {
   color: #fff;
 }
 
-/* line 161, ../scss/styles.scss */
+/* line 166, ../scss/styles.scss */
 .footer-inblock > h4 {
   color: #fff;
   font-family: "Advent Pro",sans-serif;
@@ -12704,25 +12710,25 @@ div.calendar table td.button {
   font-weight: normal;
 }
 
-/* line 168, ../scss/styles.scss */
+/* line 173, ../scss/styles.scss */
 .block-subscribe {
   border: 2px solid #fecc17;
   border-width: 2px 0;
   text-align: center;
 }
 
-/* line 169, ../scss/styles.scss */
+/* line 174, ../scss/styles.scss */
 .block-subscribe .block-content {
   margin: 10px 0;
 }
 
-/* line 170, ../scss/styles.scss */
+/* line 175, ../scss/styles.scss */
 .block-subscribe label {
   font-family: 'Advent Pro',sans-serif;
   font-size: .7em;
 }
 
-/* line 171, ../scss/styles.scss */
+/* line 176, ../scss/styles.scss */
 .block-subscribe input[type="email"]#newsletter {
   font-family: 'Advent Pro',sans-serif;
   font-size: .8em;
@@ -12732,7 +12738,7 @@ div.calendar table td.button {
   width: 25%;
 }
 
-/* line 172, ../scss/styles.scss */
+/* line 177, ../scss/styles.scss */
 .block-subscribe button {
   background: #000;
   font-weight: 600;
@@ -12743,13 +12749,13 @@ div.calendar table td.button {
   text-transform: lowercase;
 }
 
-/* line 174, ../scss/styles.scss */
+/* line 179, ../scss/styles.scss */
 .footer-inblock .links.social-media {
   margin: 10px 0;
   width: 100%;
 }
 
-/* line 179, ../scss/styles.scss */
+/* line 184, ../scss/styles.scss */
 .footer-inblock .links.social-media li em {
   background-image: url("../images/social_icons.png");
   background-repeat: no-repeat;
@@ -12759,54 +12765,54 @@ div.calendar table td.button {
   margin: 0;
 }
 
-/* line 189, ../scss/styles.scss */
+/* line 194, ../scss/styles.scss */
 .footer-inblock .links.social-media li em.facebook {
   background-position: 2px -71px;
   height: 25px;
   width: 25px;
 }
 
-/* line 190, ../scss/styles.scss */
+/* line 195, ../scss/styles.scss */
 .footer-inblock .links.social-media li em.instagram {
   background-position: 2px -96px;
   height: 25px;
   width: 25px;
 }
 
-/* line 191, ../scss/styles.scss */
+/* line 196, ../scss/styles.scss */
 .footer-inblock .links.social-media li em.pinterest {
   background-position: 8px -121px;
   height: 25px;
   width: 25px;
 }
 
-/* line 193, ../scss/styles.scss */
+/* line 198, ../scss/styles.scss */
 .footer-inblock .links.social-media li em.facebook:hover {
   background-position: -23px -71px;
   height: 25px;
   width: 25px;
 }
 
-/* line 194, ../scss/styles.scss */
+/* line 199, ../scss/styles.scss */
 .footer-inblock .links.social-media li em.instagram:hover {
   background-position: -23px -96px;
   height: 25px;
   width: 25px;
 }
 
-/* line 195, ../scss/styles.scss */
+/* line 200, ../scss/styles.scss */
 .footer-inblock .links.social-media li em.pinterest:hover {
   background-position: -17px -121px;
   height: 25px;
   width: 25px;
 }
 
-/* line 198, ../scss/styles.scss */
+/* line 203, ../scss/styles.scss */
 .footer-inblock.footer-info .fpagamento {
   margin: 15px 0;
 }
 
-/* line 199, ../scss/styles.scss */
+/* line 204, ../scss/styles.scss */
 .footer-inblock.footer-info .fpagamento span {
   background: url("../images/icon_sprite.png") no-repeat scroll 0 -800px transparent;
   display: inline-block;
@@ -12814,27 +12820,27 @@ div.calendar table td.button {
   width: 21px;
 }
 
-/* line 205, ../scss/styles.scss */
+/* line 210, ../scss/styles.scss */
 .footer-inblock.footer-info .fpagamento span.master {
   background-position: 1px -825px;
 }
 
-/* line 206, ../scss/styles.scss */
+/* line 211, ../scss/styles.scss */
 .footer-inblock.footer-info .fpagamento span.american {
   background-position: 1px -850px;
 }
 
-/* line 207, ../scss/styles.scss */
+/* line 212, ../scss/styles.scss */
 .footer-inblock.footer-info .fpagamento span.paypal {
   background-position: 1px -875px;
 }
 
-/* line 208, ../scss/styles.scss */
+/* line 213, ../scss/styles.scss */
 .footer-inblock.footer-info .fpagamento span.boleto {
   background-position: 1px -900px;
 }
 
-/* line 210, ../scss/styles.scss */
+/* line 215, ../scss/styles.scss */
 .cms-index-index .fhead h2.subtitle, .cms-index-index .bshead h2.subtitle, .cms-index-index .nphead h2.subtitle {
   background: none repeat scroll 0 0 #e6b120;
   border: 0 none;
@@ -12846,20 +12852,20 @@ div.calendar table td.button {
   text-align: left;
 }
 
-/* line 221, ../scss/styles.scss */
+/* line 226, ../scss/styles.scss */
 .cms-index-index .nphead h2.subtitle {
   background: #0fa8b8;
   color: #fff;
 }
 
-/* line 226, ../scss/styles.scss */
+/* line 231, ../scss/styles.scss */
 .nphead h2:after {
   color: #e6b120;
   content: "★";
   margin: 0 5px;
 }
 
-/* line 232, ../scss/styles.scss */
+/* line 237, ../scss/styles.scss */
 .owl-pagination {
   margin-top: -38px;
   position: absolute;
@@ -12867,7 +12873,7 @@ div.calendar table td.button {
   top: 0;
 }
 
-/* line 239, ../scss/styles.scss */
+/* line 244, ../scss/styles.scss */
 .owl-theme .owl-controls .owl-buttons div {
   background: url("../images/icon_sprite.png") no-repeat scroll 1px 1px transparent;
   border-radius: 0;
@@ -12881,19 +12887,19 @@ div.calendar table td.button {
   text-indent: -1e+10px;
 }
 
-/* line 252, ../scss/styles.scss */
+/* line 257, ../scss/styles.scss */
 .owl-theme .owl-controls .owl-buttons div.owl-prev {
   left: 0;
   top: 50%;
 }
 
-/* line 253, ../scss/styles.scss */
+/* line 258, ../scss/styles.scss */
 .owl-theme .owl-controls .owl-buttons div.owl-next {
   right: 0;
   top: 50%;
 }
 
-/* line 255, ../scss/styles.scss */
+/* line 260, ../scss/styles.scss */
 .row {
   display: block;
   width: 100%;
@@ -12901,146 +12907,146 @@ div.calendar table td.button {
   clear: both;
 }
 
-/* line 256, ../scss/styles.scss */
+/* line 261, ../scss/styles.scss */
 .row.in {
   margin-top: 20px;
 }
 
-/* line 257, ../scss/styles.scss */
+/* line 262, ../scss/styles.scss */
 .col {
   display: block;
   float: left;
   position: relative;
 }
 
-/* line 258, ../scss/styles.scss */
+/* line 263, ../scss/styles.scss */
 .col:after {
   clear: both;
   float: none;
 }
 
-/* line 259, ../scss/styles.scss */
+/* line 264, ../scss/styles.scss */
 .col10 {
   width: 10%;
 }
 
-/* line 260, ../scss/styles.scss */
+/* line 265, ../scss/styles.scss */
 .col15 {
   width: 15%;
 }
 
-/* line 261, ../scss/styles.scss */
+/* line 266, ../scss/styles.scss */
 .col20 {
   width: 20%;
 }
 
-/* line 262, ../scss/styles.scss */
+/* line 267, ../scss/styles.scss */
 .col25 {
   width: 25%;
 }
 
-/* line 263, ../scss/styles.scss */
+/* line 268, ../scss/styles.scss */
 .col30 {
   width: 30%;
 }
 
-/* line 264, ../scss/styles.scss */
+/* line 269, ../scss/styles.scss */
 .col35 {
   width: 35%;
 }
 
-/* line 265, ../scss/styles.scss */
+/* line 270, ../scss/styles.scss */
 .col40 {
   width: 40%;
 }
 
-/* line 266, ../scss/styles.scss */
+/* line 271, ../scss/styles.scss */
 .col45 {
   width: 45%;
 }
 
-/* line 267, ../scss/styles.scss */
+/* line 272, ../scss/styles.scss */
 .col50 {
   width: 50%;
 }
 
-/* line 268, ../scss/styles.scss */
+/* line 273, ../scss/styles.scss */
 .col55 {
   width: 55%;
 }
 
-/* line 269, ../scss/styles.scss */
+/* line 274, ../scss/styles.scss */
 .col60 {
   width: 60%;
 }
 
-/* line 270, ../scss/styles.scss */
+/* line 275, ../scss/styles.scss */
 .col65 {
   width: 65%;
 }
 
-/* line 271, ../scss/styles.scss */
+/* line 276, ../scss/styles.scss */
 .col70 {
   width: 70%;
 }
 
-/* line 272, ../scss/styles.scss */
+/* line 277, ../scss/styles.scss */
 .col75 {
   width: 75%;
 }
 
-/* line 273, ../scss/styles.scss */
+/* line 278, ../scss/styles.scss */
 .col80 {
   width: 80%;
 }
 
-/* line 274, ../scss/styles.scss */
+/* line 279, ../scss/styles.scss */
 .col85 {
   width: 85%;
 }
 
-/* line 275, ../scss/styles.scss */
+/* line 280, ../scss/styles.scss */
 .col90 {
   width: 90%;
 }
 
-/* line 276, ../scss/styles.scss */
+/* line 281, ../scss/styles.scss */
 .col95 {
   width: 95%;
 }
 
-/* line 277, ../scss/styles.scss */
+/* line 282, ../scss/styles.scss */
 .col100 {
   width: 100%;
   float: none;
 }
 
-/* line 278, ../scss/styles.scss */
+/* line 283, ../scss/styles.scss */
 .pl {
   padding-left: 20px;
 }
 
-/* line 279, ../scss/styles.scss */
+/* line 284, ../scss/styles.scss */
 .pr {
   padding-right: 20px;
 }
 
-/* line 280, ../scss/styles.scss */
+/* line 285, ../scss/styles.scss */
 .col50.pl {
   padding-left: 10px;
 }
 
-/* line 281, ../scss/styles.scss */
+/* line 286, ../scss/styles.scss */
 .col50.pr {
   padding-right: 10px;
 }
 
-/* line 283, ../scss/styles.scss */
+/* line 288, ../scss/styles.scss */
 .block-content {
   margin-top: 0px;
 }
 
-/* line 287, ../scss/styles.scss */
+/* line 292, ../scss/styles.scss */
 .revista .block-title, .layrev .block-title {
   background: none repeat scroll 0 0 #fff;
   padding: 10px 20px !important;
@@ -13048,19 +13054,19 @@ div.calendar table td.button {
   z-index: 2147483647;
 }
 
-/* line 294, ../scss/styles.scss */
+/* line 299, ../scss/styles.scss */
 .revista .block-title strong, .layrev .block-title strong {
   color: #000;
   font-size: 1em;
   font-weight: normal;
 }
 
-/* line 300, ../scss/styles.scss */
+/* line 305, ../scss/styles.scss */
 .revista .block-content, .layrev .block-content {
   position: relative;
 }
 
-/* line 304, ../scss/styles.scss */
+/* line 309, ../scss/styles.scss */
 .revista .block-content li.item, .layrev .block-content .item {
   background-blend-mode: darken;
   background-repeat: no-repeat;
@@ -13072,18 +13078,18 @@ div.calendar table td.button {
   padding: 0;
 }
 
-/* line 314, ../scss/styles.scss */
+/* line 319, ../scss/styles.scss */
 .row2 .revista .block-content li.item {
   height: 420px;
 }
 
-/* line 315, ../scss/styles.scss */
+/* line 320, ../scss/styles.scss */
 .layrev.servico .block-content .item {
   background-image: url(../images/media/servico.jpg);
   height: 312px;
 }
 
-/* line 317, ../scss/styles.scss */
+/* line 322, ../scss/styles.scss */
 .revista .block-content li.item a, .layrev .block-content .item a {
   background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
   /* FF3.6-15 */
@@ -13104,7 +13110,7 @@ div.calendar table td.button {
   width: 100%;
 }
 
-/* line 333, ../scss/styles.scss */
+/* line 338, ../scss/styles.scss */
 .revista .block-content li.item a span, .layrev .block-content .item a span {
   display: block;
   font-size: 0.6em;
@@ -13112,7 +13118,7 @@ div.calendar table td.button {
   margin-top: 6px;
 }
 
-/* line 340, ../scss/styles.scss */
+/* line 345, ../scss/styles.scss */
 .revista .block-content li.item a:hover, .layrev .block-content .item a:hover {
   text-decoration: none;
   background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
@@ -13125,7 +13131,7 @@ div.calendar table td.button {
   /* IE6-9 */
 }
 
-/* line 348, ../scss/styles.scss */
+/* line 353, ../scss/styles.scss */
 .revista .block-content li.item > a:after, .layrev .block-content .item > a:after {
   border: 1px solid rgba(255, 255, 255, 0.78);
   bottom: 0;
@@ -13141,64 +13147,311 @@ div.calendar table td.button {
   text-transform: uppercase;
 }
 
-/* line 363, ../scss/styles.scss */
+/* line 368, ../scss/styles.scss */
 .std ul {
   list-style: none;
   margin: 0;
 }
 
-/* line 368, ../scss/styles.scss */
+/* line 373, ../scss/styles.scss */
 .slideshow-container {
   border: medium none;
   margin: 0;
 }
 
-/* line 373, ../scss/styles.scss */
+/* line 378, ../scss/styles.scss */
 .slideshow-container .slideshow {
   border: none;
 }
 
-/* line 375, ../scss/styles.scss */
+/* line 380, ../scss/styles.scss */
+.product-view .product-shop .product-name .h1, .product-view .product-img-box .product-name h1 {
+  color: #006784;
+  text-transform: none;
+  font-family: 'Advent Pro',sans-serif;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+/* line 388, ../scss/styles.scss */
+.product-view .add-to-links {
+  margin-right: 10px;
+}
+
+/* line 389, ../scss/styles.scss */
+.product-view .add-to-links li a.link-wishlist {
+  background-image: url("../images/icon_sprite.png");
+  height: 30px;
+  padding: 0;
+  text-indent: -1e+11px;
+  width: 30px;
+  background-position: 2px -246px;
+}
+
+/* line 397, ../scss/styles.scss */
+.product-view .add-to-cart-wrapper {
+  padding-left: 0;
+  position: relative;
+}
+
+/* line 398, ../scss/styles.scss */
+.product-view .add-to-cart-wrapper, .product-view .block-related {
+  clear: both;
+  float: none;
+  width: unset;
+}
+
+/* line 404, ../scss/styles.scss */
+.product-view .add-to-cart {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* line 409, ../scss/styles.scss */
+.product-view .product-options-bottom .price-box, .product-view .add-to-cart .qty-wrapper, .product-view .add-to-cart-buttons .button, .product-view .add-to-cart-buttons .paypal-logo {
+  margin-bottom: 0;
+}
+
+/* line 413, ../scss/styles.scss */
+.product-view .add-to-cart .qty-wrapper {
+  margin-right: 0;
+}
+
+/* line 414, ../scss/styles.scss */
+.product-view .add-to-cart .qty-wrapper .qty {
+  border-color: #ed1a3a;
+  border-radius: 0;
+  color: #ed1a3a;
+  font-family: 'Advent Pro',sans-serif;
+  height: 30px;
+}
+
+/* line 422, ../scss/styles.scss */
+.product-view .add-to-cart-buttons .button {
+  background: #ed1a3a;
+  line-height: 30px;
+  min-height: 30px;
+  min-width: unset;
+  padding: 0 10px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* line 432, ../scss/styles.scss */
+.product-view .product-shop .price-info, .product-view .sharing-links, .product-view .short-description {
+  float: none;
+  padding-left: 0;
+  text-align: left;
+  width: 100%;
+  clear: both;
+}
+
+/* line 440, ../scss/styles.scss */
+.price-box .price, .price {
+  font-family: 'Advent Pro',sans-serif;
+}
+
+/* line 441, ../scss/styles.scss */
+.price-box .old-price .price {
+  color: #000;
+}
+
+/* line 442, ../scss/styles.scss */
+.product-view .product-shop .price-box .regular-price .price, .product-view .product-shop .price-box .special-price .price, .product-view .product-shop .price-box .full-product-price .price {
+  color: #af402b;
+}
+
+/* line 446, ../scss/styles.scss */
+.product-collateral, .block-shipping-estimate {
+  clear: both;
+  float: none;
+  width: 100%;
+}
+
+/* line 452, ../scss/styles.scss */
+#product-attribute-specs-table {
+  border: 0 none;
+  color: #000;
+  max-width: 100%;
+}
+
+/* line 457, ../scss/styles.scss */
+#product-attribute-specs-table th {
+  border-bottom: 0 none;
+  border-right: 0 none;
+}
+
+/* line 461, ../scss/styles.scss */
+.data-table th, .data-table thead th, .data-table tbody td {
+  background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+  font-family: "Advent Pro",sans-serif;
+  font-size: 0.9em;
+  line-height: 1em;
+  padding: 3px;
+  text-transform: none;
+  white-space: pre-line;
+}
+
+/* line 473, ../scss/styles.scss */
+.data-table th {
+  font-weight: 600;
+}
+
+/* line 476, ../scss/styles.scss */
+.product-img-box {
+  width: 40%;
+}
+
+/* line 477, ../scss/styles.scss */
+.product-view .product-shop {
+  width: 60%;
+}
+
+/* line 479, ../scss/styles.scss */
+.block-shipping-estimate .block-title {
+  border: 0;
+  margin-bottom: 0px;
+  padding: 20px 0 0;
+}
+
+/* line 484, ../scss/styles.scss */
+#shipping-estimation-form .item {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 488, ../scss/styles.scss */
+#shipping-estimation-form .input-box {
+  display: inline-block;
+  float: left;
+  padding-top: 2px;
+  width: 60%;
+}
+
+/* line 494, ../scss/styles.scss */
+#shipping-estimation-form .input-box .input-text {
+  border: 0;
+  border-bottom: 1px dashed #000;
+  color: #000;
+  float: right;
+  font-family: "Advent Pro",sans-serif;
+  height: 1.2em;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 503, ../scss/styles.scss */
+.block-shipping-estimate .block-content {
+  position: relative;
+}
+
+/* line 504, ../scss/styles.scss */
+.block-shipping-estimate .actions {
+  margin: 0;
+}
+
+/* line 505, ../scss/styles.scss */
+.block-shipping-estimate .actions button {
+  background: none repeat scroll 0 0 transparent;
+  border: 1px dashed #000;
+  color: #000;
+  font-size: 0.8em;
+  height: 1.8em;
+  line-height: 1.2em;
+  padding: 3px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 518, ../scss/styles.scss */
+.product-view .product-shop .extra-info {
+  display: block;
+  opacity: 0.6;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  width: auto;
+}
+
+/* line 527, ../scss/styles.scss */
+.block-shipping-estimate .block-content li label {
+  color: #000;
+  font-family: "Advent Pro",sans-serif;
+  font-weight: normal;
+}
+
+/* line 533, ../scss/styles.scss */
+#last_most_view_box.product-view.product-mostview {
+  float: right;
+  padding-left: 20px;
+  width: 70%;
+}
+
+/* line 539, ../scss/styles.scss */
+.chamada-promocoes {
+  background: url("../images/labels_sprite.png") no-repeat scroll 0 0 #ed1a3a;
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 600;
+  line-height: 1em;
+  margin: 30px 0;
+  padding: 25px 0 25px 150px;
+  text-align: left;
+}
+
+/* line 550, ../scss/styles.scss */
+.chamada-promocoes a {
+  color: #fbd34c;
+}
+
+/* line 551, ../scss/styles.scss */
+.chamada-promocoes a:hover {
+  text-decoration: none;
+}
+
+/* line 553, ../scss/styles.scss */
 img {
   max-width: 100%;
 }
 
 @media only screen and (max-width: 771px) {
-  /* line 378, ../scss/styles.scss */
+  /* line 556, ../scss/styles.scss */
   .skip-link.skip-social {
     display: none;
   }
 
-  /* line 382, ../scss/styles.scss */
+  /* line 560, ../scss/styles.scss */
   .skip-link.skip-chat {
     display: none;
   }
 
-  /* line 386, ../scss/styles.scss */
+  /* line 564, ../scss/styles.scss */
   .skip-link.skip-wishlist {
     display: none;
   }
 }
 @media only screen and (min-width: 771px) {
-  /* line 392, ../scss/styles.scss */
+  /* line 570, ../scss/styles.scss */
   .page-header {
-    margin: 10px auto 15px;
+    margin: 10px auto 25px;
   }
 
-  /* line 396, ../scss/styles.scss */
+  /* line 574, ../scss/styles.scss */
   .account-cart-wrapper {
     right: 10px;
     top: 10px;
     line-height: 42px;
   }
 
-  /* line 402, ../scss/styles.scss */
+  /* line 580, ../scss/styles.scss */
   .account-cart-wrapper > * {
     float: left;
     padding-left: 3px;
   }
 
-  /* line 404, ../scss/styles.scss */
+  /* line 582, ../scss/styles.scss */
   #header-search {
     display: inline-block;
     height: 50px;
@@ -13208,42 +13461,42 @@ img {
     top: 0;
   }
 
-  /* line 413, ../scss/styles.scss */
+  /* line 591, ../scss/styles.scss */
   #header-nav {
     border-bottom: medium none;
     display: inline-block;
     width: 74%;
   }
 
-  /* line 419, ../scss/styles.scss */
+  /* line 597, ../scss/styles.scss */
   #header-menu {
     margin-left: auto;
     position: relative;
     width: 75%;
   }
 
-  /* line 425, ../scss/styles.scss */
+  /* line 603, ../scss/styles.scss */
   .nav-primary {
     text-align: right;
   }
 
-  /* line 429, ../scss/styles.scss */
+  /* line 607, ../scss/styles.scss */
   .nav-primary a.level0 {
     padding: 0 10px;
   }
 
-  /* line 433, ../scss/styles.scss */
+  /* line 611, ../scss/styles.scss */
   .nav-primary li.level0:after {
     content: " | ";
     color: #006784;
   }
 
-  /* line 438, ../scss/styles.scss */
+  /* line 616, ../scss/styles.scss */
   .nav-primary li.level0.last:after {
     content: "";
   }
 
-  /* line 442, ../scss/styles.scss */
+  /* line 620, ../scss/styles.scss */
   #search {
     background: none repeat scroll 0 0 #edf1f4;
     border: medium none;
@@ -13257,14 +13510,14 @@ img {
     width: 100%;
   }
 
-  /* line 455, ../scss/styles.scss */
+  /* line 633, ../scss/styles.scss */
   #search_mini_form .search-button {
     height: 22px;
     width: 30px;
     padding: 0;
   }
 
-  /* line 461, ../scss/styles.scss */
+  /* line 639, ../scss/styles.scss */
   #search_mini_form .search-button:before {
     background-position: 7px -145px;
     content: "";
@@ -13278,17 +13531,17 @@ img {
     width: 24px;
   }
 
-  /* line 474, ../scss/styles.scss */
+  /* line 652, ../scss/styles.scss */
   #header-search {
     height: 25px;
   }
 
-  /* line 476, ../scss/styles.scss */
+  /* line 654, ../scss/styles.scss */
   .main-container {
     padding: 0 30px;
   }
 
-  /* line 477, ../scss/styles.scss */
+  /* line 655, ../scss/styles.scss */
   .footer-container {
     padding: 0;
   }

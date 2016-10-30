@@ -1191,7 +1191,9 @@ var ProductMediaManager = {
             }
         }
 
-        image.elevateZoom();
+        if ($j('.review-product-list').length == 0) {
+            image.elevateZoom();
+        }
     },
 
     swapImage: function(targetImage) {
