@@ -57,5 +57,9 @@ if(count($_productCollection)){ ?>
         
     </div>
 </div>
-<?php } ?>
+<?php } else {
+
+echo $this->getBlockHtml('catalog.product.related');
+
+  }?>
 

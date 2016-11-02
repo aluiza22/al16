@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /~ambientelab/wp/
+RewriteBase /revista
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /~ambientelab/wp/index.php [L]
+RewriteRule . /revista/index.php [L]
 </IfModule>
 
 # END WordPress

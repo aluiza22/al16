@@ -685,6 +685,14 @@ img {max-width: 100%;}
     right: 0;
 }
 .products-grid .price-box .special-price .price {color: #af402b;}
+
+.slideshow-prev, .slideshow-next {opacity: 0.1;}
+.slideshow-next:hover:before {
+    border-color: transparent transparent transparent #e6b120;
+}
+.slideshow-prev:hover:before {
+    border-color: transparent transparent transparent #e6b120;
+}
 @media only screen and (max-width: 771px) {
 	.skip-link.skip-social {
 		display: none;
