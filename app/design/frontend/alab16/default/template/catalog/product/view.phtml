@@ -65,9 +65,11 @@
                     <?php if (!$this->hasOptions()):?>
                         <div class="add-to-box">
                             <?php echo $this->getChildHtml('addto') ?>
-                            <?php if($_product->isSaleable()): ?>                                
+                            <?php if($_product->isSaleable()) { ?>                                
                                 <?php echo $this->getChildHtml('addtocart') ?>
-                            <?php endif; ?>                            
+                            <?php } else { ?>
+                                <p class="outofstock">Produto insdiponível</p>
+                            <?php } ?>                            
                         </div>
                         <?php echo $this->getChildHtml('extra_buttons') ?>
                     <?php elseif (!$_product->isSaleable()): ?>

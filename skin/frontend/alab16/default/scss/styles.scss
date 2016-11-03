@@ -223,7 +223,7 @@ body, button, input, select, table, textarea {color: #000;}
 .footer-inblock.footer-info .fpagamento span.boleto {background-position: 1px -900px;}
 
 .cms-index-index .fhead h2.subtitle, .cms-index-index .bshead h2.subtitle, .cms-index-index .nphead h2.subtitle, .row .fhead h2.subtitle {
-    background: none repeat scroll 0 0 #e6b120;
+    background:  url(../images/dots.png) repeat 5px -4px #e6b120;
     border: 0 none;
     color: #000;
     font-family: 'Advent Pro',sans-serif;
@@ -234,7 +234,7 @@ body, button, input, select, table, textarea {color: #000;}
 }
 
 .cms-index-index .nphead h2.subtitle {
-	background: #0fa8b8;
+	background-color: #0fa8b8;
 	color: #fff;
 }
 
@@ -334,7 +334,7 @@ body, button, input, select, table, textarea {color: #000;}
 	background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.53);
     font-size: 2em;
     font-weight: 600;
     height: 100%;
@@ -354,6 +354,7 @@ body, button, input, select, table, textarea {color: #000;}
 
 .revista .block-content li.item a:hover, .layrev .block-content .item a:hover  {
 	text-decoration: none;
+    color: rgba(255, 255, 255, 0.80);
 	background: -moz-linear-gradient(left, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(left, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -583,7 +584,7 @@ body, button, input, select, table, textarea {color: #000;}
     padding-bottom: 9px;
 }
 .chamada-promocoes {
-    background: url("../images/labels_sprite.png") no-repeat scroll 0 0 #ed1a3a;
+    background: url(../images/dots.png) repeat 4px -2px #ed1a3a;
     color: #fff;
     font-size: 1.8em;
     font-weight: 600;
@@ -591,10 +592,22 @@ body, button, input, select, table, textarea {color: #000;}
     margin: 30px 0;
     padding: 25px 0 25px 150px;
     text-align: left;
+    position: relative;
 }
 
 .chamada-promocoes a {color: #fbd34c;}
 .chamada-promocoes a:hover {text-decoration: none;}
+
+.chamada-promocoes a:before {
+    background: url("../images/label_sprite.png") no-repeat scroll -1px -1px rgba(0, 0, 0, 0);
+    content: "";
+    display: block;
+    height: 100px;
+    left: 5%;
+    position: absolute;
+    top: -9px;
+    width: 99px;
+}
 
 h2.product-name a, h3.product-name a, h4.product-name a, h5.product-name a, p.product-name a {
     color: #000;
@@ -693,6 +706,9 @@ img {max-width: 100%;}
 .slideshow-prev:hover:before {
     border-color: transparent transparent transparent #e6b120;
 }
+
+.outofstock {color: #B61A1A;}
+
 @media only screen and (max-width: 771px) {
 	.skip-link.skip-social {
 		display: none;
@@ -738,7 +754,7 @@ img {max-width: 100%;}
 	#header-menu {
 	    margin-left: auto;
 	    position: relative;
-	    width: 75%;
+	    width: 90%;
 	}
 
 	.nav-primary {

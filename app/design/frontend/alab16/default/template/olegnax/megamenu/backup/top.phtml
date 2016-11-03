@@ -1,0 +1,38 @@
+<?php
+/**
+ * Top menu for store
+ *
+ * @see Olegnax_Megamenu_Block_Megamenu
+ */
+
+$menuHelper = $this->helper('olegnaxmegamenu');
+if ( $menuHelper->getCfg('general/status') ) :
+
+	$_menu = $this->getHtml('level-top', 'megamenu-dropdown');
+	?>
+	<?php if ($_menu): ?>
+	<div class="nav-container olegnaxmegamenu icons-<?php echo Mage::helper('athlete')->getAppearanceCfg('navigation/sub_nav_icons'); ?>">
+		<div class="nav-top-title"><div class="icon"><span></span><span></span><span></span></div><a href="#"><?php echo $this->__('Navigation'); ?></a></div>
+		
+		<ul id="nav">
+			<?php if ($menuHelper->getCfg('additional/home')) : ?>
+				<li class="level0 level-top home-block">
+					<a href="<?php echo $this->getBaseUrl(); ?>"><span><?php echo $this->__('Home'); ?></span></a>
+				</li>
+			<?php endif; ?>
+			
+			<li  class="level0 nav-1 first  level-top default">
+			<a href="http://173.193.212.234/~ambientelab/index.php/quem-somos.html" onmouseover='this.style.color="black"' onmouseout='this.style.color="black"' >QUEM SOMOS</a></li>
+			<li  class="level0 nav-1 first  level-top default"><a href="http://173.193.212.234/~ambientelab/index.php/o-que-fazemos.html" onmouseover='this.style.color="black"' onmouseout='this.style.color="black"' >CAMPANHAS</a></li>			
+			<li  class="level0 nav-2  level-top default"><a href="http://173.193.212.234/~ambientelab/wp"  onmouseover='this.style.color="black"' onmouseout='this.style.color="black"' >BLOG</a></li>
+			<li  class="level0 nav-2  level-top default parent"><a href="#"  onmouseover='this.style.color="black"' onmouseout='this.style.color="black"' >PRODUTOS</a>
+			<div class="megamenu-dropdown"><ul class="level0"><li  class="level1 nav-2-1 first"><a href="http://173.193.212.234/~ambientelab/index.php/produtos/bares.html" ><span>Bares e Restaurantes</span></a></li>
+			<li  class="level1 nav-2-2"><a href="http://173.193.212.234/~ambientelab/index.php/produtos/restaurantes.html" ><span>Lojas</span></a></li>			
+			<li  class="level1 nav-2-2"><a href="http://173.193.212.234/~ambientelab/index.php/produtos/escritorios.html" ><span>Escrit¨®rios e Consult¨®rios</span></a></li>
+			</ul><div class="clear"></div></div>
+			</li>
+			<li  class="level0 nav-7 last  level-top default"><a href="http://173.193.212.234/~ambientelab/index.php/contacts"  onmouseover='this.style.color="black"' onmouseout='this.style.color="black"' >CONTATO</a></li>
+		</ul>
+	</div>
+<?php endif ?>
+<?php endif; //if ( $menuHelper->getCfg('general/status') ) : ?>

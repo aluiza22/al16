@@ -23,7 +23,7 @@ $newproducts = $this->getNewProducts($limit);
             <h2 class="subtitle"><?php echo $this->__($title); ?></h2>
         </div>
         <?php if ($newproducts->count()>0): ?>
-            <div id="owl-newproducts" class="owl-carousel">
+            <div id="owl-newproducts" class="owl-carousel product-grid">
                     <?php foreach ($newproducts as $_product) : ?>
                             <div class="item">
                                 <a href="<?php echo $this->getUrl($_product->getUrlPath()) ?>" >

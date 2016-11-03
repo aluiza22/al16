@@ -50,22 +50,17 @@ $slide_navigation = $_item['horizontal_carousels_setting_slide_navigation'];
 									echo Mage::helper('core')->currency($_product->getFinalPrice(),true,false);
 								?>
 								</span>
-                                <!--<span class="fadd">
-                                    <p>
-                                        <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation(' <?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
-                                    </p>
-                                </span>-->
                             </div>
                     <?php endif; ?>
                     <?php $count++ ?>
                 <?php endforeach; ?>
+            </div>    
+        <?php else: ?>
+            <div class="show-msg">
+                <?php echo $this->__("Não há produtos em destaque."); ?> 
             </div>
+        <?php endif; ?>
     </div>
-    <?php else: ?>
-        <div class="show-msg">
-            <?php echo $this->__("There are no feature products."); ?> 
-        </div>
-    <?php endif; ?>
 <?php endif; ?>
 <script type="text/javascript">
 	var $fp = jQuery.noConflict();

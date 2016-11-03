@@ -6,16 +6,7 @@
  * @author      Ben Tideswell <help@fishpig.co.uk>
  */
 ?>
-<?php $posts = $this->getPosts();
-
-$url = Mage::getBaseUrl();
-
-if(has_post_thumbnail()){
-	$image = the_post_thumbnail();
-} else {
-	$image = 'plaholder-revista.jpg';
-}
- ?>
+<?php $posts = $this->getPosts() ?>
 <?php if (count($posts) > 0): ?>
 	<div class="block block-blog block-related-posts">
 		<?php if ($title = $this->getTitle()): ?>
@@ -26,7 +17,7 @@ if(has_post_thumbnail()){
 		<div class="block-content">
 			<ul id="<?php echo $this->getListId() ?>">
 			<?php foreach($posts as $post): ?>
-				<li class="item" style="background-image: url(<?php echo $url."skin/frontend/alab16/default/images/".$image; ?>)">
+				<li class="item">
 					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->htmlEscape($post->getPostTitle()) ?>"><?php echo $this->htmlEscape($post->getPostTitle()) ?></a>
 				</li>
 			<?php endforeach; ?>

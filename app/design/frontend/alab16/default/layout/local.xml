@@ -1,18 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <layout>
+
+	<reference name="head">
+		<action method="removeItem">
+			<type>js</type>
+			<name>varien/menu.js</name>
+			<params />
+		</action>
+		<action method="addCss"><stylesheet>css/local.css</stylesheet></action>
+		<action method="addCss"><stylesheet>owl-carousel/owl.carousel.css</stylesheet></action>
+		<action method="addCss"><stylesheet>owl-carousel/owl.theme.css</stylesheet></action>
+		<action method="addCss"><stylesheet>owl-carousel/owl.transitions.css</stylesheet></action>
+		<action method="addCss"><stylesheet>css/custom.css</stylesheet></action>
+		<action method="addCss"><stylesheet>css/animation.css</stylesheet></action>
+		<action ifconfig="athlete/layout/responsive" method="addCss"><stylesheet>css/grid.css</stylesheet></action>
+		<action method="addCss"><stylesheet>css/retina.css</stylesheet></action>
+		<action method="addCss"><stylesheet>font-awesome/css/font-awesome.css</stylesheet></action>
+		<action method="addItem"><type>skin_css</type><name>css/ie.css</name><params/><if>lt IE 9</if></action>
+		<action method="addCss"><stylesheet helper="athlete/data/getThemeCss" /></action>
+		<action ifconfig="athlete_appearance/custom/override_css" method="addItem"><type>skin_css</type><name>css/override.css</name></action>
+		<action method="addItem"><type>js</type><name>olegnax/html5shiv.js</name><params/><if>lt IE 9</if></action>
+		<action method="addJs"><script>olegnax/jquery-1.11.0.min.js</script></action>
+		<action method="addJs"><script>olegnax/jquery-migrate-1.2.1.min.js</script></action>
+		<action method="addJs"><script>olegnax/jquery.noconflict.js</script></action>
+		<action method="addJs"><script>olegnax/jquery.easing.js</script></action>
+		<action method="addItem"><type>skin_js</type><script>owl-carousel/owl.carousel.min.js</script></action>
+		<action method="addJs"><script>olegnax/jquery.swipe.js</script></action>
+		<action method="addJs"><script>olegnax/jquery.jcarousel.min.js</script></action>
+		<action method="addJs"><script>olegnax/jquery.anystretch.1.2.min.js</script></action>
+		<action method="addItem"><type>skin_js</type><script>js/script.js</script></action>
+	</reference>
+	<reference name="footer">		
+        <action method="addJs"><script>scriptaculous/slider.js</script></action>
+	</reference>
+
+	<default>
+		<reference name="footer.before">
+            <block type="newsletter/subscribe" name="footer.newsletter" as="newsletter" before="footer_store_language" template="newsletter/subscribe.phtml"/>
+        </reference>
+    </default>
+
 	<catalog_product_view>
 	    <reference name="head" after="-" >
 	        <action method="addItem"><type>skin_js</type><script>js/lib/elevatezoom/jquery.elevateZoom-3.0.8.min.js</script></action>
 	        <action method="addItem"><type>skin_js</type><script>js/mynoconflict.js</script></action>
 	    </reference>
-	    <reference name="product.info.additional">
-			<action method="unsetChild" ><name>product_tag_list</name></action>
-		</reference>
+
 		<reference name="content">
 	        <block type="catalog/product_view_additional" name="product.info.additional" as="product_additional_data" />
     	</reference>
+
+		<reference name="product.info.additional">
+			<remove name="product_tag_list" />
+		</reference>
 	</catalog_product_view>
+
 	<catalog_category_layered>
 		<reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>
@@ -52,60 +95,9 @@
 	    </reference>
 	</catalogsearch_result_index>
 
-	<wordpress_homepage>
+	<wordpress_default>
 		<reference name="root">
-			<action method="setTemplate">
-				<template>page/1column.phtml</template>
-			</action>
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
 		</reference>
-		<reference name="wordpress_post_list">
-			<action method="setTemplate">
-				<template>wordpress/post/list.phtml</template>
-			</action>
-			<action method="setPostRendererTemplate">
-				<template>wordpress/post/list/renderer/wrapper.phtml</template>
-			</action>
-		</reference>
-	</wordpress_homepage>
-
-	<wordpress_post_list>
-		<reference name="root">
-			<action method="setTemplate">
-				<template>page/1column.phtml</template>
-			</action>
-		</reference>
-		<reference name="wordpress_post_list">
-			<action method="setTemplate">
-				<template>wordpress/post/list.phtml</template>
-			</action>
-			<action method="setPostRendererTemplate">
-				<template>wordpress/post/list/renderer/wrapper.phtml</template>
-			</action>
-		</reference>
-	</wordpress_post_list>
-	<wordpress_post_view>
-		<reference name="root">
-			<action method="setTemplate">
-				<template>page/1column.phtml</template>
-			</action>
-		</reference>
-		<reference name="wp.post.view">
-			<action method="setTemplate">
-				<template>wordpress/post/view.phtml</template>
-			</action>
-		</reference>
-	</wordpress_post_view>
-	<wordpress_post_view_4>
-		<reference name="root">
-			<action method="setTemplate">
-				<template>page/1column.phtml</template>
-			</action>
-		</reference>
-		<reference name="wp.post.view">
-			<action method="setTemplate">
-				<template>wordpress/post/view.phtml</template>
-			</action>
-		</reference>
-	</wordpress_post_view_4>
-
+	</wordpress_default>
 </layout>
