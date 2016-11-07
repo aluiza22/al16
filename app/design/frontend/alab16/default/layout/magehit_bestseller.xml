@@ -28,8 +28,8 @@
             </action>
         </reference>
         
-        <reference name="right">
-            <block type="bestseller/bestseller" name="right.bestseller" as="right_bestseller" before="++" template="magehit/bestseller/vertical_bestsellerblock.phtml" />
+        <!--<reference name="right">
+            <block type="bestseller/bestseller" name="right.bestseller" as="right_bestseller" before="++" template="magehit/bestseller/vertical_bestsellerblock.phtml" />-->
         </reference>
     </default>
     

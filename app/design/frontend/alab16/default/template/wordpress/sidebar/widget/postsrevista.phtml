@@ -1,0 +1,36 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php $posts = $this->getPosts();
+$url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);
+?>
+
+<?php if (count($posts) > 0): ?>
+	<div class="block block-blog block-recent-posts">
+		<?php if ($title = $this->getTitle()): ?>
+			<div class="block-title">
+				<strong><span><?php echo $this->__($title) ?></span></strong>
+			</div>
+		<?php endif; ?>
+		<div class="block-content">
+			<ul id="<?php echo $this->getListId() ?>">
+			<?php foreach($posts as $post): 
+					if($featuredImage = $post->getFeaturedImage()){
+						$image = $featuredImage->getFullSizeImage();
+					} else {
+						$image = $url.'images/placeholder-revista.jpg';
+					}?>
+				<li class="item" style="background-image: url(<?php echo $image; ?>)">
+					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->htmlEscape($post->getPostTitle()) ?>"><?php echo $this->htmlEscape($post->getPostTitle()) ?></a>
+				</li>
+			<?php endforeach; ?>
+			</ul>
+			<script type="text/javascript">decorateList('<?php echo $this->getListId() ?>')</script>
+		</div>
+	</div>
+<?php endif; ?>

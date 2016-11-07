@@ -13,9 +13,9 @@ $_helper = $this->helper('catalog/output');
     <h2 class="subtitle">Campanhas</h2>
 </div>
 <div class="ccarousel">
-  <div id="owl-ccarousel" class="owl-carousel">
+  <div id="owl-ccarouselcamp" class="owl-carousel">
     <?php foreach ($categories as $category) : ?>
-       <div>
+       <div class="col100 col">
             <div class="col30 col image">
                <?php if ($category->getImageUrl()) :?>
                    <img src="<?php echo $category->getImageUrl()?>" alt="<?php echo $this->escapeHtml($category->getName())?>" />
@@ -77,8 +77,8 @@ $_helper = $this->helper('catalog/output');
 <script type="text/javascript">
   var $fp = jQuery.noConflict();
     $fp(document).ready(function() {
-      $fp("#owl-ccarousel").owlCarousel({
-        items : 1,
+      $fp("#owl-ccarouselcamp").owlCarousel({
+        items : 4,
         lazyLoad : true,
     autoPlay : false,
         navigation : true,
@@ -87,3 +87,5 @@ $_helper = $this->helper('catalog/output');
      
     });
 </script>
+
+

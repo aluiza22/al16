@@ -97,7 +97,15 @@
 
 	<wordpress_default>
 		<reference name="root">
-			<action method="setTemplate"><template>page/1column.phtml</template></action>
+			<action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+			<remove name="breadcrumbs" />
+		</reference>
+		<reference name="right">
+			<block type="wordpress/sidebar" name="wordpress.custom" as="wp.sidebar.custom">
+				<action method="setWidgetArea"><area>sidebar-1</area></action>
+			</block>
+            <block type="isfeatured/isfeatured" name="right.isfeatured" as="right_isfeatured" template="isfeatured/vertical_featureblock.phtml" />
+
 		</reference>
 	</wordpress_default>
 </layout>

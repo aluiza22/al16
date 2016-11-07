@@ -534,3 +534,18 @@ function twentytwelve_customize_preview_js() {
 	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20141120', true );
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
+
+
+//Register tag cloud filter callback
+add_filter('widget_tag_cloud_args', 'tag_widget_limit');
+ 
+//Limit number of tags inside widget
+function tag_widget_limit($args){
+ 
+	//Check if taxonomy option inside widget is set to tags
+	if(isset($args['taxonomy']) && $args['taxonomy'] == 'post_tag'){
+		$args['number'] = 10; //Limit number of tags
+	}
+	 
+	return $args;
+}

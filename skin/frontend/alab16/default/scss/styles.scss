@@ -222,7 +222,7 @@ body, button, input, select, table, textarea {color: #000;}
 .footer-inblock.footer-info .fpagamento span.paypal {background-position: 1px -875px;}
 .footer-inblock.footer-info .fpagamento span.boleto {background-position: 1px -900px;}
 
-.cms-index-index .fhead h2.subtitle, .cms-index-index .bshead h2.subtitle, .cms-index-index .nphead h2.subtitle, .row .fhead h2.subtitle {
+.cms-index-index .fhead h2.subtitle, .fhead-block h1, .fhead-block h2, .cms-index-index .bshead h2.subtitle, .cms-index-index .nphead h2.subtitle, .row .fhead h2.subtitle {
     background:  url(../images/dots.png) repeat 5px -4px #e6b120;
     border: 0 none;
     color: #000;
@@ -679,7 +679,8 @@ img {max-width: 100%;}
 
 .products-grid .product-info {padding-bottom: 0;}
 
-.page-title.category-title h1 {
+.post-list-item h2 {font-size: 1em;}
+.page-title.category-title h1, .post-list-item h2 a, .post-view-page .post-title h1 {
     color: #e6b120;
     font-family: "Advent Pro",sans-serif;
     font-size: 3.5em;
@@ -688,7 +689,14 @@ img {max-width: 100%;}
     text-transform: none;
     line-height: 1em;
     position: relative;
+    border: 0;
 }
+
+.page-title.category-title h1, .post-list-item h2 a:hover {
+    text-decoration: none;
+    opacity: .7;
+}
+
 .subcategory-page-top .page-title.category-title h1 {margin-top: 30px;}
 .page-title.category-title h1 span {
     color: #cecece;
@@ -709,6 +717,54 @@ img {max-width: 100%;}
 
 .outofstock {color: #B61A1A;}
 
+.wp-sidebar .block-blog li, .tags-list > li {margin: 0;display: block; float: none;}
+.wp-sidebar .block-blog li a:before {
+    background: url("../images/arrow-list.png") center center no-repeat;
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 2px;
+}
+.wp-sidebar .block-blog li a {color: #000; text-decoration: none; }
+
+.wp-sidebar .block-blog .block-title {border-top: 0;}
+
+.featured.sidebar {margin-top: 20px;}
+.featured.sidebar .fhead h2 {
+    border-bottom: 3px dotted #666;
+    color: #666;
+    font-family: "Advent Pro",sans-serif;
+    font-weight: normal;
+    padding: 10px 0;
+}
+
+#vertical-featuredproducts .item {
+    font-size: 0.9em;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+#vertical-featuredproducts .item h3.product-name {font-size: 12px;}
+
+.post-image {
+    margin-bottom: 20px;
+}
+
+.post-meta.details, .post-date {font-style: normal; margin-bottom: 10px;}
+
+
+#post-list .post-entry {border-bottom: 1px solid #e6b120;}
+.post-entry .wp-caption, .post-entry .wp-caption img {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    font-size: .8em;
+}
+.post-entry .wp-caption {margin-bottom: 20px;}
+.post-entry img[class*="align"], .post-entry img[class*="wp-image-"], .post-entry .gallery .gallery-icon img {border: 0; padding: 0; margin: 20px 0;}
+.post-entry .wp-caption img {margin: 20px 0 0;}
 @media only screen and (max-width: 771px) {
 	.skip-link.skip-social {
 		display: none;
