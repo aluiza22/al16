@@ -124,7 +124,7 @@
 
             
 
-            <?php echo $this->getChildHtml('related_products') ?>
+          
 
             <div class="clearer"></div>
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
@@ -185,8 +185,8 @@
     </div>
 
     
-
-    <?php echo $this->getChildHtml('upsell_products') ?>
+    <?php //echo $this->getChildHtml('related_products') ?>
+    <?php //echo $this->getChildHtml('upsell_products') ?>
     <div class="row">
         <?php echo $this->getChildHtml('product_additional_data') ?>
     </div>
@@ -209,7 +209,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col30 revista col pl pr">
+            <div class="col40 revista col pl pr">
                 <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista2-home')->toHtml() ?>
             </div>
             <div class="layrev servico col30 col ">               

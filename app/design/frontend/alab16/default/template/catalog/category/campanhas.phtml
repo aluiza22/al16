@@ -1,0 +1,75 @@
+<?php
+$rootId = 366;
+$categories = Mage::getModel('catalog/category')->getCollection()
+    ->addAttributeToSelect('*')
+    ->addAttributeToFilter('parent_id', $rootId)
+    ->setOrder('position')
+    ->addAttributeToFilter('is_active', 1);
+
+$_helper = $this->helper('catalog/output'); 
+?>
+<?php if ($categories->count() > 0) : ?>
+<div class="campanhas-list">
+    <?php foreach ($categories as $category) : ?>
+       <div class="col100 col">
+            <div class="col30 col image">
+               <?php if ($category->getImageUrl()) :?>
+                   <img src="<?php echo $category->getImageUrl()?>" alt="<?php echo $this->escapeHtml($category->getName())?>" />
+               <?php endif;?>
+           </div>
+           <div class="col70 col pl">
+             <div class="name">
+                <h2><a href="<?php echo $category->getUrl()?>" title="<?php echo $this->escapeHtml($category->getName())?>">
+                  <?php echo $category->getName()?>                    
+                </a></h2>
+             </div>           
+             <div class="description">
+                 <?php echo $_helper->categoryAttribute($category, $category->getDescription(), 'description') ?>
+             </div>
+             <ul class="ccarousel-products products-grid products-grid--max-6-col" id="products-list">
+               <?php 
+                $id = $category->getID();
+                $cproducts = Mage::getModel('catalog/category')->load($id)
+                 ->getProductCollection()
+                 ->addAttributeToSelect('*') 
+                 ->addAttributeToFilter('status', 1)
+                 ->addAttributeToFilter('visibility', 4); 
+                 $count = 1;
+                 $limit = 5;
+                 foreach ($cproducts as $cproduct) { 
+                    if ($count <= $limit) {
+                      $pname = $cproduct->getName();
+                  ?>
+                      <li class="item <?php if ($count == 5) { echo 'last'; } ?>">
+                         <a href="<?php echo $cproduct->getUrlPath(); ?>" >
+                            <span>
+                                <img class="lazyOwl" src="<?php echo $this->helper('catalog/image')->init($cproduct, 'small_image')->resize(260) ?>" alt="<?php echo $cproduct->getName() ?>" title="<?php echo $cproduct->getName() ?>" />
+                            </span>
+                        </a>
+                        <h3 class="product-name">
+                            <a href="<?php echo $cproduct->getUrlPath(); ?>" >
+                            <?php if (strlen($pname) > 38) {
+                                  echo substr($pname,0,35)."..."; 
+                                } else {
+                                  echo $pname;} 
+                            ?>
+                            </a>                   
+                        </h3>
+                        <span class="price-con">
+                          <?php echo Mage::helper('core')->currency($cproduct->getFinalPrice(),true,false); ?>
+                        </span> 
+                      </li>
+                 <?php } 
+                    $count++;
+                  }
+                 ?>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+       </div>
+    <?php endforeach;?>
+</div>
+<?php endif;?>
+
+
+

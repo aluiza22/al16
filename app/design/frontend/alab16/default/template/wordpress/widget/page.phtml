@@ -1,0 +1,30 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php 
+
+$postID = $this->getData('post');
+//$post = Mage::getModel('wordpress/page')->setPostType('page')->load($postID);
+$post = Mage::getModel('wordpress/post')->load($postID);
+
+if ($post): ?>
+	<div class="post-view">		
+		<div class="post-entry entry std">
+			<?php if ($post->isViewableForVisitor()): ?>
+				<?php if ($featuredImage = $post->getFeaturedImage()): ?>
+					<div class="featured-image left">
+						<img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+					</div>
+				<?php endif; ?>
+				<?php echo $post->getPostContent() ?>
+			<?php else: ?>
+				<?php echo $this->getPasswordProtectHtml() ?>
+			<?php endif; ?>
+		</div>
+	</div>
+<?php endif; ?>

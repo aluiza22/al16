@@ -16,10 +16,11 @@ $_helper = $this->helper('catalog/output');
   <div id="owl-ccarouselcamp" class="owl-carousel">
     <?php foreach ($categories as $category) : ?>
        <div class="col100 col">
-            <div class="col30 col image">
+            <div class="col30 col image labelS-parent">
                <?php if ($category->getImageUrl()) :?>
-                   <img src="<?php echo $category->getImageUrl()?>" alt="<?php echo $this->escapeHtml($category->getName())?>" />
+                   <div class="encapImg" style="background-image: url(<?php echo $category->getImageUrl()?>)"></div>
                <?php endif;?>
+               <span class="labelS monteoseu"></span>
            </div>
            <div class="col70 col pl">
              <div class="name">
@@ -30,7 +31,7 @@ $_helper = $this->helper('catalog/output');
              <div class="description">
                  <?php echo $_helper->categoryAttribute($category, $category->getDescription(), 'description') ?>
              </div>
-             <ul class="ccarousel-products products-grid products-grid--max-6-col" id="products-list">
+             <ul class="ccarousel-products products-grid products-grid--max-4-col" id="products-list">
                <?php 
                 $id = $category->getID();
                 $cproducts = Mage::getModel('catalog/category')->load($id)
@@ -60,7 +61,31 @@ $_helper = $this->helper('catalog/output');
                             </a>                   
                         </h3>
                         <span class="price-con">
-                          <?php echo Mage::helper('core')->currency($cproduct->getFinalPrice(),true,false); ?>
+                          <?php 
+                            $finalprice = Mage::helper('core')->currency($cproduct->getFinalPrice(),true,false);
+                            $price = Mage::helper('core')->currency($cproduct->getPrice(),true,false);
+                            if ($finalprice != $price){
+                                ?>
+                                <div class="price-box">                     
+                                    <p class="old-price">
+                                        <span class="price" id="old-price-1401">
+                                            <?php echo $price; ?>                
+                                        </span>
+                                    </p>
+
+                                    <span class="labelS ofertaprod"></span>
+                                    <p class="special-price">
+                                        <span class="price-label">Special Price</span>
+                                        <span class="price" id="product-price-1401">
+                                            <?php echo $finalprice; ?>                 
+                                        </span>
+                                    </p>
+                                </div>
+                                <?php
+                            } else {
+                                echo $finalprice;
+                            }  
+                          ?>
                         </span> 
                       </li>
                  <?php } 
@@ -78,7 +103,8 @@ $_helper = $this->helper('catalog/output');
   var $fp = jQuery.noConflict();
     $fp(document).ready(function() {
       $fp("#owl-ccarouselcamp").owlCarousel({
-        items : 4,
+        items : 1,
+        singleItem:true,
         lazyLoad : true,
     autoPlay : false,
         navigation : true,

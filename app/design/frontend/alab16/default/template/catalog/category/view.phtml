@@ -35,8 +35,7 @@ $_helper    = $this->helper('catalog/output');
 $_category  = $this->getCurrentCategory();
 $_imgHtml   = '';
 if ($_imgUrl = $_category->getImageUrl()) {
-    $_imgHtml = '<img src="'.$_imgUrl.'" alt="'.$this->escapeHtml($_category->getName()).'" title="'.$this->escapeHtml($_category->getName()).'" />';
-    $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
+    $_imgHtml = '<div class="encapImg" style="background-image:url('.$_imgUrl.');"></div>';
 }            
 
 $level = $this->getCurrentCategory()->getParentCategory()->getLevel();
@@ -55,12 +54,13 @@ if($level > 2){   ?>
     </div>
 <?php } else { ?>
 <div class="row">
-    <div class="col col55">        
-        <?php if($_imgUrl): ?>
+    <?php if($_imgUrl) { ?>
+    <div class="col col65">        
+        
             <?php echo $_imgHtml ?>
-        <?php endif; ?>
+        
     </div>
-    <div class="col col45 pl">
+    <div class="col col35 pl">
         <div class="page-title category-title">
             <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
                 <a href="<?php echo $this->getRssLink() ?>" class="link-rss"><?php echo $this->__('Subscribe to RSS Feed') ?></a>
@@ -81,6 +81,29 @@ if($level > 2){   ?>
         <?php endif; ?>
     </div>
     <div class="clearfix"></div>
+    <?php } else {?>
+    <div class="col col100">
+        <div class="page-title category-title">
+            <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
+                <a href="<?php echo $this->getRssLink() ?>" class="link-rss"><?php echo $this->__('Subscribe to RSS Feed') ?></a>
+            <?php endif; ?>
+            <h1>
+                <?php 
+                echo $_helper->categoryAttribute($_category, $_category->getName(), 'name'); ?>
+                
+            </h1>
+        </div>
+
+        <?php echo $this->getMessagesBlock()->toHtml() ?>
+
+        <?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
+            <div class="category-description std">
+                <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
+            </div>
+        <?php endif; ?>
+    </div>
+    <div class="clearfix"></div>
+    <?php } ?>
 </div>
 <?php } ?>
 <?php if($this->isContentMode()): ?>
@@ -94,12 +117,19 @@ if($level > 2){   ?>
     <?php echo $this->getProductListHtml() ?>
 <?php endif; ?>
 
-<div class="row">
-        <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('chamada-promocoes')->toHtml() ?>
-    </div>
-
     <div id="page-view-bottom">
-        <div class="row1 home row">
+
+        <div class="row1 row">
+            <div class="col30 col revista tall">
+                <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista2-home')->toHtml() ?>
+            </div>
+            <div class="col70 col pl">
+                <?php echo $this->getLayout()->createBlock('bestseller/bestseller')->setTemplate('magehit/bestseller/bestsellerblock2.phtml')->toHtml(); ?>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="row2 row">
             <div class="layrev servico col30 col ">               
                 <div class="block block-blog">
                     <div class="block-title">
@@ -112,8 +142,8 @@ if($level > 2){   ?>
                     </div>
                 </div>
             </div>
-            <div class="col30 revista col pl pr">
-                <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista2-home')->toHtml() ?>
+            <div class="col40 revista col pl pr">
+                <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista1-home')->toHtml() ?>
             </div>
             <div class="layrev servico col30 col ">               
                 <div class="block block-blog">
@@ -128,6 +158,10 @@ if($level > 2){   ?>
                 </div>
             </div>
             <div class="clearfix"></div>
+        </div>
+
+        <div class="row3">
+            <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('chamada-promocoes')->toHtml() ?>
         </div>
         
     </div>

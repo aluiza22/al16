@@ -1,0 +1,53 @@
+<?php
+$_item = $this->getStoreconfig();
+$enable = $_item['enabled'];
+$title = $_item['horizontal_carousels_setting_title'];
+$limit = 6;
+$slide_itemsonpage = $_item['horizontal_carousels_setting_slide_itemsonpage'];
+$slide_auto = $_item['horizontal_carousels_setting_slide_auto'];
+	if($slide_auto == 1) $slide_auto = 'true'; else $slide_auto = 'false';
+$slide_navigation = $_item['horizontal_carousels_setting_slide_navigation'];
+	if($slide_navigation == 1) $slide_navigation = 'true'; else $slide_navigation = 'false';
+
+?>
+<?php if ($enable): ?>
+    <?php $_productCollection=$this->getBestsellerproduct($limit) ?>
+    <div class="bestseller">
+        <div class="bshead">
+            <h2 class="subtitle"><?php echo $this->__($title); ?></h2>
+        </div>
+        <?php if ($_productCollection->count()): ?>
+            <ul class="products-grid products-grid--max-<?php echo $_columnCount; ?>-col">
+                <?php foreach ($_productCollection as $_product): 
+
+                ?>
+                    <li class="item<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?>">
+                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
+                            <?php $_imgSize = 210; ?>
+                            <img id="product-collection-image-<?php echo $_product->getId(); ?>"
+                                 src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($_imgSize); ?>"
+                                 alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                        </a>
+                        <h3 class="product-name">
+                            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>">
+                                <?php echo $_product->getName(); ?>
+                            </a>
+                        </h3>
+                        <span class="price-con">
+                            <?php echo $this->getPriceHtml($_product, true) ?>
+                        </span>
+                    </li>
+                <?php endforeach ?>
+            </ul> 
+            <?php else: ?>
+                <div class="show-msg">
+                    <?php echo $this->__("Não há produtos aplicáveis."); ?> 
+                </div>
+            <?php endif; ?>
+    </div>
+    
+<?php endif; ?>
+
+
+
+

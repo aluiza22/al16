@@ -46,9 +46,32 @@ $slide_navigation = $_item['horizontal_carousels_setting_slide_navigation'];
                                     </a>                   
                                 </h3>
                                 <span class="price-con">
-								<?php									
-									echo Mage::helper('core')->currency($_product->getFinalPrice(),true,false);
-								?>
+								<?php   
+                                    $finalprice = Mage::helper('core')->currency($_product->getFinalPrice(),true,false);
+                                    $price = Mage::helper('core')->currency($_product->getPrice(),true,false);
+                                    if ($finalprice != $price){
+                                        ?>
+                                        <div class="price-box">                     
+                                            <p class="old-price">
+                                                <span class="price" id="old-price-1401">
+                                                    <?php echo $price; ?>                
+                                                </span>
+                                            </p>
+
+                                            <span class="labelS ofertaprod"></span>
+                                            <p class="special-price">
+                                                <span class="price-label">Special Price</span>
+                                                <span class="price" id="product-price-1401">
+                                                    <?php echo $finalprice; ?>                 
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <?php
+                                    } else {
+                                        echo $finalprice;
+                                    }                   
+                                    
+                                ?>
 								</span>
                             </div>
                     <?php endif; ?>

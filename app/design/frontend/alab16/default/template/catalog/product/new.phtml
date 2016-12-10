@@ -36,7 +36,7 @@
                 <h3 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_product->getName()) ?>"><?php echo $this->escapeHtml($_product->getName()) ?></a></h3>
                 <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
                 <?php echo $this->getPriceHtml($_product, true, '-new') ?>
-                <div class="actions">
+                <!--<div class="actions">
                     <?php if($_product->isSaleable()): ?>
                         <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
                     <?php else: ?>
@@ -50,7 +50,7 @@
                             <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
                         <?php endif; ?>
                     </ul>
-                </div>
+                </div>-->
             </li>
         <?php if ($i%$_columnCount==0 || $i==count($_products)): ?>
         </ul>
