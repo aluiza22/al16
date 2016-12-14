@@ -335,12 +335,13 @@ ul, li {list-style: none;}
     margin: 0;
     overflow: hidden;
     padding: 0;
+    
 }
 
-#page-view-bottom .revista .block-content li.item, #page-view-bottom .layrev .block-content .item {height: 312px;}
+#page-view-bottom .revista .block-content li.item, #page-view-bottom .layrev .block-content .item {/*height: 312px;*/ padding-bottom: 100%;}
 
 .revista.tall .block-content li.item, #page-view-bottom .revista.tall .block-content li.item {height: 619px;}
-.layrev.servico .block-content .item {background-image: url(../images/media/servico.jpg); height: 312px;}
+.layrev.servico .block-content .item {background-image: url(../images/media/servico.jpg); /*height: 312px;*/}
 
 .revista .block-content li.item a, .layrev .block-content .item a {
 	background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
@@ -787,7 +788,9 @@ img {max-width: 100%;}
 
 .campanhas-list > div {border-bottom: 2px dotted #000; margin-bottom: 20px; padding-bottom: 20px;}
 
-.item-forn {margin-bottom: 20px; padding-bottom: 20px; border-bottom: 2px dotted #636363;}
+.item-forn {margin-bottom: 20px; padding-bottom: 20px; border-bottom: 2px dotted #636363; text-align: justify;}
+.item-forn .col50.pl {padding-left: 30px;}
+.item-forn .col50.pr.fdot {padding-right: 30px;}
 
 .std .item-forn > div > h2 {
     color: #000;
@@ -860,6 +863,8 @@ height: 30px;
 right: -1%; 
 width: 33px;
 }
+
+.fdot {border-right: 2px dotted #636363;}
 
 @media only screen and (max-width: 771px) {
 	.skip-link.skip-social {

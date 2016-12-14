@@ -238,6 +238,9 @@
 				<action method="setTitle" translate="title" module="wordpress"><title><![CDATA[Related Products]]></title></action>
 			</block>
 		</reference>
+		<reference name="footer.before">
+			<block type="core/template" name="postbottom" brefore="-" template="wordpress/post/view/bottom.phtml" />
+        </reference>
 	</wordpress_post_view>
 	<!--
 	/**
@@ -283,8 +286,8 @@
 	 */
 	 -->
 	<wordpress_post_view>
-		<reference name="post.content.after">
-			<block type="wp_addon_yarpp/sidebar_widget" name="wp.post.related" as="related_posts" before="wp.post.view.meta" template="wordpress-addons/yarpp/related.phtml" />
+		<reference name="footer.before">
+			<block type="wp_addon_yarpp/sidebar_widget" name="wp.post.related" as="related_posts" before="postbottom" template="wordpress-addons/yarpp/related.phtml" />
 		</reference>
 	</wordpress_post_view>
 </layout>
