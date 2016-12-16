@@ -36,7 +36,7 @@ $mq-fixed-value: false;
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro:400+600');
 
 * {font-family: 'Advent Pro', sans-serif; outline: none;}
-a {outline: none;}
+a, a:hover, a:active, a:focus {outline: none; text-decoration: none;}
 body, button, input, select, table, textarea {color: #000;}
 ul, li {list-style: none;}
 
@@ -194,6 +194,16 @@ ul, li {list-style: none;}
 .block-subscribe input[type="email"]#newsletter {font-family: 'Advent Pro',sans-serif; font-size: .8em; height: 24px; border: 1px solid #000; border-width: 0px 0px 1px; width: 25%}
 .block-subscribe button {background: #000; font-weight:600; line-height: 10px; font-size: .8em; color: #fff; padding: 8px; text-transform: lowercase;}
 
+#popup-subscribe {
+    position: fixed;
+    top: 50%;
+    z-index: 9999999999999999999;
+    background: url(../images/dots.png) repeat 5px -4px rgba(6, 82, 90, 0.77);
+    width: 25%;
+    color: #fff;
+    padding: 10px;
+}
+
 .footer-inblock .links.social-media {
     margin: 10px 0;
     width: 100%;
@@ -239,6 +249,18 @@ ul, li {list-style: none;}
     font-weight: normal;
     padding: 5px;
     text-align: left;
+    position: relative;
+}
+
+.yarpp-related h2.subtitle:after {
+content: "Ver todos";
+font-size: .6em;
+line-height: 3em;
+display: inline-block;
+position: absolute;
+right: 5px;
+top: 0;
+color: deeppink;
 }
 
 .cms-index-index .nphead h2.subtitle {
@@ -279,7 +301,7 @@ ul, li {list-style: none;}
 
 .row {display: block; width: 100%; float: none; clear: both;}
 .row.in {margin-top: 20px;}
-.col {display: block; float: left; position: relative;}
+.col {display: block; float: left; position: relative; overflow: hidden;}
 .col:after {clear: both;float: none;}
 .col10 {width: 10%;}
 .col15 {width: 15%;}
@@ -326,7 +348,7 @@ ul, li {list-style: none;}
     position: relative;
 }
 
-.revista .block-content li.item, .layrev .block-content .item {
+.revista .block-content li.item, .layrev .block-content .item, .posts-grid .item {
     background-blend-mode: darken;
     background-repeat: no-repeat;
     background-size: cover;
@@ -334,16 +356,20 @@ ul, li {list-style: none;}
     height: 380px;
     margin: 0;
     overflow: hidden;
-    padding: 0;
-    
+    padding: 0;    
 }
-
+#post-list.posts-grid li.item {margin: 0;}
+.posts-grid .item {height: 0; padding-bottom: 100%;}
+.yarpp-thumbnails-horizontal .col:nth-child(2) {margin: 0 5%}
+#post-list.posts-grid .col:nth-child(even) {padding-left: 2%;}
+#post-list.posts-grid .col:nth-child(odd) {padding-right: 2%;}
+#post-list.posts-grid .col {margin-bottom: 20px;}
 #page-view-bottom .revista .block-content li.item, #page-view-bottom .layrev .block-content .item {/*height: 312px;*/ padding-bottom: 100%;}
 
 .revista.tall .block-content li.item, #page-view-bottom .revista.tall .block-content li.item {height: 619px;}
 .layrev.servico .block-content .item {background-image: url(../images/media/servico.jpg); /*height: 312px;*/}
 
-.revista .block-content li.item a, .layrev .block-content .item a {
+.revista .block-content li.item a, .layrev .block-content .item a, , .posts-grid .item a {
 	background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -366,7 +392,7 @@ ul, li {list-style: none;}
     margin-top: 6px;
 }
 
-.revista .block-content li.item a:hover, .layrev .block-content .item a:hover  {
+.revista .block-content li.item a:hover, .layrev .block-content .item a:hover, .posts-grid .item a:hover  {
 	text-decoration: none;
     color: rgba(255, 255, 255, 0.80);
 	background: -moz-linear-gradient(left, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
@@ -375,7 +401,7 @@ ul, li {list-style: none;}
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 }
 
-.revista .block-content li.item > a:after, .layrev .block-content .item > a:after {
+.revista .block-content li.item > a:after, .layrev .block-content .item > a:after, , .posts-grid .item a:after {
     border: 1px solid rgba(255, 255, 255, 0.78);
     bottom: 0;
     color: rgba(255, 255, 255, 0.78);

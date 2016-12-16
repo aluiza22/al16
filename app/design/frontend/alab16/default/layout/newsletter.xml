@@ -64,4 +64,10 @@ Customer account pages, rendered for all tabs in dashboard
         </reference>
     </newsletter_manage_index>
 
+    <cms_index_index>
+        <reference name="content">
+            <block type="newsletter/subscribe" name="popup.newsletter" as="newsletter" template="newsletter/subscribe-popup.phtml"/>
+        </reference>
+    </cms_index_index>
+
 </layout>

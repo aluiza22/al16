@@ -8,18 +8,30 @@
 ?>
 <?php $posts = $this->getPosts() ?>
 <?php if ($posts && count($posts) > 0): ?>
-	<div class="yarpp-related">
+	<div class="yarpp-related row">
 		<?php if ($this->isThumbnailView()): ?>
-			<h2><?php echo $this->__($this->getThumbnailsHeading()) ?></h2>
-			<div class="yarpp-thumbnails-horizontal">
-				<?php foreach($posts as $post): ?>
-					<!--<a class="yarpp-thumbnail" href="<?php // echo $post->getPermalink() ?>" title="<?php // echo $this->escapeHtml($post->getPostTitle()) ?>">
-						<span class="yarpp-thumbnail-default"><img class="yarpp-thumbnail-default-wide" src="<?php // echo $this->getThumbnailImage($post) ?>" alt="<?php // echo $this->escapeHtml($post->getPostTitle()) ?>" /></span><span class="yarpp-thumbnail-title"><?php // echo $this->escapeHtml($post->getPostTitle()) ?></span>
-					</a>-->
-					<li class="item" style="background-image: url(<?php echo $this->getThumbnailImage($post) ?>)">
-						<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><?php echo $this->escapeHtml($post->getPostTitle()) ?></a>
-					</li>
+			<div class="fhead">
+			    <a href="/revista"><h2 class="subtitle"><?php echo $this->__($this->getThumbnailsHeading()) ?></h2></a>
+			</div>
+			<div class="yarpp-thumbnails-horizontal posts-grid">
+				<?php foreach($posts as $post): 
+
+					//$url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);
+					
+					if($featuredImage = $this->getThumbnailImage($post)){
+						$image = $this->getThumbnailImage($post);
+					} else {
+						//$image = $url.'images/placeholder-revista.jpg';
+						$image = $this->getSkinUrl('images/placeholder-revista.jpg');
+					}?>
+
+					<div class="col30 col">
+						<li class="item" style="background-image: url(<?php echo $image; ?>)">
+							<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><?php echo $this->escapeHtml($post->getPostTitle()) ?></a>
+						</li>
+					</div>
 				<?php endforeach; ?>
+				<div class="clearfix"></div>
 			</div>
 		<?php else: ?>
 			<?php echo $this->getBeforeBlockHtml() ?>
