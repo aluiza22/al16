@@ -39,7 +39,7 @@ $mq-fixed-value: false;
 a, a:hover, a:active, a:focus {outline: none; text-decoration: none;}
 body, button, input, select, table, textarea {color: #000;}
 ul, li {list-style: none;}
-
+.col-main {position: relative;}
 .wrapper > .page {
     margin: auto;
     max-width: 990px;
@@ -163,7 +163,7 @@ ul, li {list-style: none;}
 
 
 
-.footer {background: #4e4e4e; padding: 25px 25px 0 25px;}
+.footer {background: #4e4e4e; padding: 25px 25px 0 25px; font-size: 1.15em;}
 .footer .block-title {border-top: none;}
 .footer .block-title strong, .footer .links a {color: #fff;}
 .footer address {
@@ -196,12 +196,69 @@ ul, li {list-style: none;}
 
 #popup-subscribe {
     position: fixed;
-    top: 50%;
-    z-index: 9999999999999999999;
-    background: url(../images/dots.png) repeat 5px -4px rgba(6, 82, 90, 0.77);
-    width: 25%;
-    color: #fff;
-    padding: 10px;
+top: 50%;
+z-index: 9999999999999999999;
+background: url(../images/dots.png) repeat 5px -4px #06525a;
+width: 24%;
+color: #fff;
+padding: 15px;
+opacity: .8;
+margin-left: -20px;
+border-left: 10px solid rgba(2, 48, 53, 0.59);
+}
+
+#popup-subscribe h3 {
+    color: #e6b120;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+#popup-subscribe label {
+    text-align: center;
+font-family: Advent Pro, sans-serif;
+font-size: 0.8em;
+margin-bottom: 10px;
+}
+
+#popup-subscribe input {
+    width: 75%;
+background: transparent;
+border: 0;
+border-bottom: 1px solid white;
+color: white !important;
+height: 1.4em;
+font-size: .9em;
+}
+
+#popup-subscribe button.button {
+    width: 16%;
+    padding: 0;
+    float: right;
+    height: 1.8em;
+    background: white;
+    color: #297aa3;
+    text-transform: lowercase;
+    font-weight: 600;
+    font-size: .8em;
+}
+
+button.closePS {
+    background: #ca1313;
+    border-radius: 10px;
+    width: 13px;
+    height: 13px;
+    line-height: 11px;
+    color: white;
+    border: white 1px solid;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    font-size: .7em;
+    text-align: center;
+    font-weight: bold;
+    font-family: Advent Pro, sans-serif;
 }
 
 .footer-inblock .links.social-media {
@@ -227,7 +284,7 @@ ul, li {list-style: none;}
 .footer-inblock .links.social-media li em.instagram:hover {background-position: -23px -96px; height: 25px; width: 25px;}
 .footer-inblock .links.social-media li em.pinterest:hover {background-position: -17px -121px; height: 25px; width: 25px;}
 
-.footer-inblock.footer-info .fendereco {}
+.footer-inblock.footer-info .fendereco {font-size: 1.20em;}
 .footer-inblock.footer-info .fpagamento {margin: 15px 0;}
 .footer-inblock.footer-info .fpagamento span {
     background: url("../images/icon_sprite.png") no-repeat scroll 0 -800px rgba(0, 0, 0, 0);
@@ -833,6 +890,7 @@ img {max-width: 100%;}
 .labelS {
     display: block;
     position: absolute;
+    overflow: initial;
     z-index: 99999999;
     background: url(../images/label_sprite.png) no-repeat 0 0;
 }

@@ -24,25 +24,26 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div id="popup-subscribe">
-    <span class="closePS">X</span>
-    <form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
-        <div class="block-content">
-                <label for="newsletter">ASSINE A NOSSA NEWSLETTER E RECEBA NOTÍCIAS PERIÓDICAS SOBRE DECORAÇÃO E CENOGRAFIA!</label>
-               <input type="email" autocapitalize="off" autocorrect="off" spellcheck="false" name="email" id="newsletter" title="email" placeholder="email" class="input-text required-entry validate-email" />
-                <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Subscribe')) ?>" class="button"><span><span>Enviar</span></span></button>
-        </div>
-    </form>
-    <script type="text/javascript">
-    //<![CDATA[
-        var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
-    //]]>
-    </script>
-</div>
-<script type="text/javascript">
-document.ready(function() {
-    $('#closePS').click(function() {
-        $(this).parents('div').fadeOut();
-    });
-});    
-</script>
+    
+    <div id="popup-subscribe">
+        <button class="closePS" onclick="closePS();">X</button>
+        <form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
+            <div class="block-content">
+                    <h3>NÃO QUER SE CADASTRAR?</h3>
+                    <label for="newsletter">ASSINE A NOSSA NEWSLETTER E RECEBA NOTÍCIAS 
+PERIÓDICAS SOBRE DECORAÇÃO E CENOGRAFIA!</label>
+                   <input type="email" autocapitalize="off" autocorrect="off" spellcheck="false" name="email" id="newsletter" title="email" placeholder="email" class="input-text required-entry validate-email" />
+                    <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Subscribe')) ?>" class="button"><span><span>Enviar</span></span></button>
+            </div>
+        </form>
+        <script type="text/javascript">
+        //<![CDATA[
+            var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+
+            function closePS() {
+                var modal = document.getElementById('popup-subscribe');
+                modal.style.display = "none";
+            }
+        //]]>
+        </script>
+    </div>
