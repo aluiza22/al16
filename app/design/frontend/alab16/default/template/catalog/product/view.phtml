@@ -108,6 +108,10 @@
                     <?php echo $this->getChildHtml('additional') ?>
 
                     <?php echo $this->getLayout()->getBlock('shipping.estimate.form')->toHtml()?>
+                   
+                    <?php if ($_product->getAttributeText('free_shipping') == "Sim") { ?>
+                        <span class="labelS frete"></span>
+                    <?php } ?>
 
                 </div>
 

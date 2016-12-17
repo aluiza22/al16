@@ -680,8 +680,9 @@ color: deeppink;
     margin-bottom: 20px;
     padding-bottom: 9px;
 }
-.chamada-promocoes {
-    background: url(../images/dots.png) repeat 4px -2px #ed1a3a;
+
+.chamadaS {
+    background: url(../images/dots.png) repeat 4px -2px #0fa8b8;
     color: #fff;
     font-size: 1.8em;
     font-weight: 600;
@@ -692,11 +693,16 @@ color: deeppink;
     position: relative;
 }
 
+.chamada-promocoes {
+    background: url(../images/dots.png) repeat 4px -2px #ed1a3a;
+    
+}
+.chamada-novidades a {color: #ffffff;}
 .chamada-promocoes a {color: #fbd34c;}
-.chamada-promocoes a:hover {text-decoration: none;}
+.chamadaS a:hover {text-decoration: none;}
 
-.chamada-promocoes a:before {
-    background: url("../images/label_sprite.png") no-repeat scroll -1px -1px rgba(0, 0, 0, 0);
+.chamadaS a:before {
+    background: url("../images/label_sprite.png") no-repeat scroll -224px -1px rgba(0, 0, 0, 0);
     content: "";
     display: block;
     height: 100px;
@@ -704,6 +710,9 @@ color: deeppink;
     position: absolute;
     top: -9px;
     width: 99px;
+}
+.chamada-promocoes a:before {
+    background: url("../images/label_sprite.png") no-repeat scroll -1px -1px rgba(0, 0, 0, 0);
 }
 
 h2.product-name a, h3.product-name a, h4.product-name a, h5.product-name a, p.product-name a {
@@ -931,11 +940,11 @@ img {max-width: 100%;}
     width: 55px;
 }
 .labelS.frete {
-    background-position: -224px -133px;
-    bottom: 20%;
+    background-position: -224px -133px;    
     height: 86px;
-    right: -25%;
     width: 105px;
+    position: relative;
+    display: block;
 }
 
 .product-view .labelS.ofertaprod {display: none;}

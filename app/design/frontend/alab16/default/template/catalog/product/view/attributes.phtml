@@ -42,7 +42,8 @@
         <tbody>
         <?php foreach ($_additional as $_data): ?>
             <?php $_attribute = $_product->getResource()->getAttribute($_data['code']);
-            if (!is_null($_product->getData($_attribute->getAttributeCode())) && ((string)$_attribute->getFrontend()->getValue($_product) != '')) { ?>
+            if (!is_null($_product->getData($_attribute->getAttributeCode())) && ((string)$_attribute->getFrontend()->getValue($_product) != '') && ($_attribute['attribute_code'] != 'free_shipping')) {?>
+
             <tr>
                 <th class="label"><?php echo $this->htmlEscape($this->__($_data['label'])) ?></th>
                 <td class="data"><?php echo $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?></td>
