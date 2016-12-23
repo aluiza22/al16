@@ -21,10 +21,10 @@ if($slide_type=='1'){ ?>
 <?php  $cssurl =  str_replace('index.php/','',$this->getUrl());?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/css/generic-nav.css'; ?>" media="all">
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/css/grid12.css'; ?>" media="all">
-<script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery-1.js'; ?>"></script>
-<script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery-noconflict.js'; ?>"></script>
-<script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery_004.js'; ?>"></script>
-<script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery_003.js'; ?>"></script> 
+<!--<script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery-1.js'; ?>"></script>-->
+<!--<script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery-noconflict.js'; ?>"></script>-->
+<!--<script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery_004.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery_003.js'; ?>"></script> -->
 
 <!-- BEGIN GOOGLE ANALYTICS CODEs -->
  
@@ -71,17 +71,20 @@ $url = $row1["url"];
 //jQuery(function($) {
 responsivemks = jQuery.noConflict(); 
 responsivemks(window).load(function(){
-responsivemks('.the-slideshow').flexslider({
-namespace:"",
-animation:'fade',
-easing:'easeInOutCirc',
-useCSS:	false,
-animationLoop:<?php echo $slide_BannerLoop; ?>,
-smoothHeight: true,
-slideshowSpeed:<?php echo $slide_speed; ?>,
-animationSpeed:	600,
-pauseOnHover:<?php echo $slide_PauseOnhover; ?>
-});
+	responsivemks('.the-slideshow').flexslider({
+		namespace:"",
+		animation:'fade',
+		easing:'easeInOutCirc',
+		useCSS:	false,
+		animationLoop:<?php echo $slide_BannerLoop; ?>,
+		smoothHeight: true,
+		slideshowSpeed:<?php echo $slide_speed; ?>,
+		animationSpeed:	800,
+		pauseOnHover:<?php echo $slide_PauseOnhover; ?>,
+		controlNav: false,
+		controlsContainer:false,
+		customDirectionNav: false
+	});
 });
 //]]>
 </script>    
@@ -102,7 +105,7 @@ if($slide_type=='2'){ ?>
 <?php $cssurl =  str_replace('index.php/','',$this->getUrl());?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/css/generic-nav.css'; ?>" media="all">
 <link rel="stylesheet" type="text/css" href="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/css/grid12.css'; ?>" media="all">
-<script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery-1.7.2.min.js'; ?>"></script>
+<!--<script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery-1.7.2.min.js'; ?>"></script> -->
 <script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery.easing.min.js'; ?>"></script>
 <script type="text/javascript" src="<?php echo $cssurl.'skin/frontend/base/default/responsiveslider/js/jquery.flexslider.min.js'; ?>"></script>
 
@@ -151,17 +154,20 @@ $url = $row1["url"];
 //jQuery(function($) {
 responsivemks = jQuery.noConflict(); 
 responsivemks(window).load(function(){
-responsivemks('.the-slideshow').flexslider({
-namespace:"",
-animation:'slide',
-easing:'easeInOutCirc',
-useCSS:	false,
-animationLoop:<?php echo $slide_BannerLoop; ?>,
-smoothHeight: true,
-slideshowSpeed:<?php echo $slide_speed; ?>,
-animationSpeed:	600,
-pauseOnHover:<?php echo $slide_PauseOnhover; ?>
-});
+	responsivemks('.the-slideshow').flexslider({
+		namespace:"",
+		animation:'slide',
+		easing:'easeInOutCirc',
+		useCSS:	false,
+		animationLoop:<?php echo $slide_BannerLoop; ?>,
+		smoothHeight: true,
+		slideshowSpeed:<?php echo $slide_speed; ?>,
+		animationSpeed:	800,
+		pauseOnHover:<?php echo $slide_PauseOnhover; ?>,
+		controlNav: false,
+		controlsContainer:false,
+		customDirectionNav: false
+	});
 });
 //]]>
 </script>  
