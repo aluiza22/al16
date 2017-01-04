@@ -4,7 +4,7 @@
 .form-list li.wide .input-box{width:100%;}
 .form-list li.wide input.input-text,.form-list li.wide select{width:95%;}
 .form-list .customer-dob .dob-day, .form-list .customer-dob .dob-month, .form-list .customer-dob .dob-year{padding-right: 0px;}
-.form-list .field{width: 49%;}
+.form-list .field{width: 50%;}
 .form-list .field .input-box{width:100%;}
 .form-list .customer-dob .dob-year select { width:134px; }
 .form-list .customer-dob .dob-day select,
@@ -36,7 +36,7 @@
 .onestepcheckout-timer-actions-left a{margin-right: 15px;}
 .onestepcheckout-timer-actions-right a{margin-left: 15px;}
 .onestepcheckout-add-loader-into-this-block,#onestepcheckout-order-review-cart-wrapper,#onestepcheckout-order-review-coupon-wrapper{position: relative;}
-.osc-title{/* background: none repeat scroll 0 0 #F9F3E3; *//* border-top: 1px solid #BBAFA0; *//* border-bottom: 1px solid #BBAFA0; */color: #b9442e;cursor: default;padding-bottom: 5px;margin: 14px -8px !important;line-height: 26px;padding: 0 14px;font-weight: bold;}
+.osc-title{background: none repeat scroll 0 0 #F9F3E3;border-top: 1px solid #BBAFA0;border-bottom: 1px solid #BBAFA0;color: #F18200;cursor: default;padding-bottom: 5px;margin: 14px -8px !important;line-height: 26px;padding: 0 14px;font-weight: bold;}
 #onestepcheckout-title{}
 #onestepcheckout-title-description{font-size: 18px;}
 #onestepcheckout-authentification-button{border-top: 1px solid #D8D2C7;}

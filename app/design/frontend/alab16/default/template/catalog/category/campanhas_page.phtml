@@ -1,0 +1,230 @@
+<?php
+$rootId = 366;
+
+
+$categories = Mage::getModel('catalog/category')->getCollection()
+    ->addAttributeToSelect('*')
+    ->addAttributeToFilter('parent_id', $rootId)
+    ->setOrder('position', 'DESC')
+    ->addAttributeToFilter('is_active', 1);
+$_helper = $this->helper('catalog/output'); 
+
+$firstCategory = $categories->getFirstItem(); 
+?>
+<?php if ($categories->count() > 0) : ?>
+<div class="row row1">
+  <div class="ccarousel camapanhas-page-carousel">
+       <div class="col100 col">
+            <div class="col55 col image labelS-parent">
+               <?php if ($firstCategory->getImageUrl()) :?>
+                   <div class="encapImg" style="background-image: url(<?php echo $firstCategory->getImageUrl()?>)"></div>
+               <?php endif;?>
+           </div>
+           <div class="col45 col pl">
+             <div class="name">
+                <h2><a href="<?php echo $firstCategory->getUrl()?>" title="<?php echo $this->escapeHtml($firstCategory->getName())?>">
+                  <?php echo $firstCategory->getName()?>                    
+                </a></h2>
+             </div>           
+             <div class="description">
+                 <?php echo $_helper->categoryAttribute($firstCategory, $firstCategory->getDescription(), 'description') ?>
+             </div>
+            </div>
+       </div>
+       <div class="col100 col cpc-prod">        
+        <span class="labelS monteoseu"></span>
+         <ul class="ccarousel-products products-grid products-grid--max-4-col" id="products-list">
+               <?php 
+                $id = $firstCategory->getID();
+                $cproducts = Mage::getModel('catalog/category')->load($id)
+                 ->getProductCollection()
+                 ->addAttributeToSelect('*') 
+                 ->addAttributeToFilter('status', 1)
+                 ->addAttributeToFilter('visibility', 4); 
+                 $count = 1;
+                 $limit = 8;
+                 foreach ($cproducts as $cproduct) { 
+                    if ($count <= $limit) {
+                      $pname = $cproduct->getName();
+                  ?>
+                      <li class="item <?php if ($count == 5) { echo 'last'; } ?>">
+                         <a href="<?php echo $cproduct->getUrlPath(); ?>" >
+                            <span>
+                                <img class="lazyOwl" src="<?php echo $this->helper('catalog/image')->init($cproduct, 'small_image')->resize(260) ?>" alt="<?php echo $cproduct->getName() ?>" title="<?php echo $cproduct->getName() ?>" />
+                            </span>
+                        </a>
+                        <h3 class="product-name">
+                            <a href="<?php echo $cproduct->getUrlPath(); ?>" >
+                            <?php if (strlen($pname) > 38) {
+                                  echo substr($pname,0,35)."..."; 
+                                } else {
+                                  echo $pname;} 
+                            ?>
+                            </a>                   
+                        </h3>
+                        <span class="price-con">
+                          <?php 
+                            $finalprice = Mage::helper('core')->currency($cproduct->getFinalPrice(),true,false);
+                            $price = Mage::helper('core')->currency($cproduct->getPrice(),true,false);
+                            if ($finalprice != $price){
+                                ?>
+                                <div class="price-box">                     
+                                    <p class="old-price">
+                                        <span class="price" id="old-price-1401">
+                                            <?php echo $price; ?>                
+                                        </span>
+                                    </p>
+
+                                    <span class="labelS ofertaprod"></span>
+                                    <p class="special-price">
+                                        <span class="price-label">Special Price</span>
+                                        <span class="price" id="product-price-1401">
+                                            <?php echo $finalprice; ?>                 
+                                        </span>
+                                    </p>
+                                </div>
+                                <?php
+                            } else {
+                                echo $finalprice;
+                            }  
+                          ?>
+                        </span> 
+                      </li>
+                 <?php } 
+                    $count++;
+                  }
+                 ?>
+              </ul>
+       </div>
+  </div>
+</div>
+
+<div class="row">
+<div class="fhead">
+    <h2 class="subtitle">Campanhas</h2>
+</div>
+<div class="campanhas-page-list">
+    <?php foreach ($categories as $category) : ?>
+       <div class="col100 col item">
+            <div class="col30 col image labelS-parent">
+               <?php if ($category->getImageUrl()) :?>
+                   <div class="encapImg" style="background-image: url(<?php echo $category->getImageUrl()?>)"></div>
+               <?php endif;?>
+               <span class="labelS monteoseu"></span>
+           </div>
+           <div class="col70 col pl">
+             <div class="name">
+                <h2><a href="<?php echo $category->getUrl()?>" title="<?php echo $this->escapeHtml($category->getName())?>">
+                  <?php echo $category->getName()?>                    
+                </a></h2>
+             </div>           
+             <div class="description">
+                 <?php echo $_helper->categoryAttribute($category, $category->getDescription(), 'description') ?>
+             </div>
+             <ul class="ccarousel-products products-grid products-grid--max-4-col" id="products-list">
+               <?php 
+                $id = $category->getID();
+                $cproducts = Mage::getModel('catalog/category')->load($id)
+                 ->getProductCollection()
+                 ->addAttributeToSelect('*') 
+                 ->addAttributeToFilter('status', 1)
+                 ->addAttributeToFilter('visibility', 4); 
+                 $count = 1;
+                 $limit = 4;
+                 foreach ($cproducts as $cproduct) { 
+                    if ($count <= $limit) {
+                      $pname = $cproduct->getName();
+                  ?>
+                      <li class="item <?php if ($count == 5) { echo 'last'; } ?>">
+                         <a href="<?php echo $cproduct->getUrlPath(); ?>" >
+                            <span>
+                                <img class="lazyOwl" src="<?php echo $this->helper('catalog/image')->init($cproduct, 'small_image')->resize(260) ?>" alt="<?php echo $cproduct->getName() ?>" title="<?php echo $cproduct->getName() ?>" />
+                            </span>
+                        </a>
+                        <h3 class="product-name">
+                            <a href="<?php echo $cproduct->getUrlPath(); ?>" >
+                            <?php if (strlen($pname) > 38) {
+                                  echo substr($pname,0,35)."..."; 
+                                } else {
+                                  echo $pname;} 
+                            ?>
+                            </a>                   
+                        </h3>
+                        <span class="price-con">
+                          <?php 
+                            $finalprice = Mage::helper('core')->currency($cproduct->getFinalPrice(),true,false);
+                            $price = Mage::helper('core')->currency($cproduct->getPrice(),true,false);
+                            if ($finalprice != $price){
+                                ?>
+                                <div class="price-box">                     
+                                    <p class="old-price">
+                                        <span class="price" id="old-price-1401">
+                                            <?php echo $price; ?>                
+                                        </span>
+                                    </p>
+
+                                    <span class="labelS ofertaprod"></span>
+                                    <p class="special-price">
+                                        <span class="price-label">Special Price</span>
+                                        <span class="price" id="product-price-1401">
+                                            <?php echo $finalprice; ?>                 
+                                        </span>
+                                    </p>
+                                </div>
+                                <?php
+                            } else {
+                                echo $finalprice;
+                            }  
+                          ?>
+                        </span> 
+                      </li>
+                 <?php } 
+                    $count++;
+                  }
+                 ?>
+              </ul>
+            </div>
+       </div>
+    <?php endforeach;?>
+</div>
+</div>
+<?php endif;?>
+
+<div class="row1 home row">
+
+            <div class="col30 col ">
+                <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('anuncio-home')->toHtml() ?>
+            </div>
+            <div class="layrev fornecedores col40 col pl pr">               
+                <div class="block block-blog">
+                    <div class="block-title">
+                        <strong><span>Nossos maravilhosos<br/> fornecedores</span></strong>
+                    </div>
+                    <div class="block-content">
+                        <div class="item">
+                            <a href="<?php echo Mage::getBaseUrl(); ?>fornecedores">Todo cuidado é pouco</a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="layrev servico col30 col ">               
+                <div class="block block-blog">
+                    <div class="block-title">
+                        <strong><span>Serviços</span></strong>
+                    </div>
+                    <div class="block-content">
+                        <div class="item">
+                            <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('servicos-home')->toHtml() ?>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+    </div>
+
+<div class="row">
+        <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('chamada-promocoes')->toHtml() ?>
+    </div>
+

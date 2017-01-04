@@ -38,19 +38,20 @@ $mq-fixed-value: false;
 * {font-family: 'Advent Pro', sans-serif; outline: none;}
 a, a:hover, a:active, a:focus {outline: none; text-decoration: none;}
 body, button, input, select, table, textarea {color: #000;}
+body {background:url(../images/skyline_ok.gif) repeat 0 0; background-size:contain;}
+.wrapper {background: none;}
 ul, li {list-style: none;}
 .col-main {position: relative;}
 .wrapper > .page {
     margin: auto;
     max-width: 990px;
+    background-color: #fff;
 }
 
 .name a {
     color: #000;
     text-align: left;
 }
-
-
 
 .block-title h2, .block-title h3, .block-title strong {
     color: #000;
@@ -415,6 +416,7 @@ color: deeppink;
     overflow: hidden;
     padding: 0;    
 }
+.row22.home .revista .block-content li.item {height: 252px;}
 #post-list.posts-grid li.item {margin: 0;}
 .posts-grid .item {height: 0; padding-bottom: 100%;}
 .yarpp-thumbnails-horizontal .col:nth-child(2) {margin: 0 5%}
@@ -423,7 +425,7 @@ color: deeppink;
 #post-list.posts-grid .col {margin-bottom: 20px;}
 #page-view-bottom .revista .block-content li.item, #page-view-bottom .layrev .block-content .item {/*height: 312px;*/ padding-bottom: 100%;}
 
-.revista.tall .block-content li.item, #page-view-bottom .revista.tall .block-content li.item {height: 619px;}
+.revista.tall .block-content li.item, #page-view-bottom .revista.tall .block-content li.item {height: 541px;}
 .layrev.servico .block-content .item {background-image: url(../images/media/servico.jpg); /*height: 312px;*/}
 
 .revista .block-content li.item a, .layrev .block-content .item a, , .posts-grid .item a {
@@ -973,8 +975,8 @@ width: 33px;
     font-size: 2em;
     line-height: 18px;
     top: 60px;
-    position: absolute;
-
+    position: absolute;    
+    height: 50%;
 }
 
 .caption h2 {
@@ -982,8 +984,66 @@ width: 33px;
     font-size: 1.5em;
     font-family: Advent Pro, sans-serif;
     font-weight: bold;
-
 }
+
+.caption.dark3 h2:after {
+    border: 1px solid #e6b120;
+    bottom: 0; 
+    color: #e6b120;
+    content: "Ver mais";
+    display: inline-block;
+    font-size: 0.4em;
+    font-weight: 600;
+    left: 15px;
+    margin: 15px 6%;
+    padding: 4px 15px;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.category-campanhas .page-title.category-title {display: none;}
+.campanhas-page-list >  .item {border-bottom: 2px dotted #636363; padding-bottom: 15px; margin-bottom: 25px;}
+.campanhas-page-list >  .item h2 {font-weight: 600;}
+.camapanhas-page-carousel .name h2 a {color: #e6b120; font-size: 2.5em; font-weight: 600; text-transform: none; } 
+.camapanhas-page-carousel .ccarousel-products {
+    
+}
+.camapanhas-page-carousel .col.cpc-prod {
+    overflow: visible; 
+    padding-left: 10%;
+    border-top:2px dotted #636363;
+    padding-top: 10px;
+    margin-top: 30px; 
+    position: relative;
+    margin-bottom: 30px; 
+}
+.camapanhas-page-carousel .col.cpc-prod .labelS.monteoseu {
+    top: -50px;
+    left: 0;
+    z-index: 999999999999999999;
+}
+.camapanhas-page-carousel.ccarousel:after {border:none; margin:0; padding:0;}
+
+.category-quem-somos .page-title.category-title {display: none;}
+.sobre-nos-texto h3.widget-title {
+    font-family: 'Advent Pro', sans-serif; color: #e6b120; font-size: 2.5em; font-weight: 600; text-transform: none; }
+.servicos-boxes .panel-grid-cell .so-panel.widget_sow-editor li {list-style: disc;}
+.servicos-boxes .panel-grid-cell .so-panel.widget_sow-editor h3 {
+    background: url(../images/dots.png) repeat 5px -4px #e6b120;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px;
+    font-weight: 600;
+    color: #000;
+    font-family: 'Advent Pro', sans-serif;
+}
+.servicos-boxes .panel-grid-cell .so-panel.widget_sow-editor .textwidget {
+    background-color: #ffcb05;
+    font-size: .9em;
+    padding: 10px;
+}
+    
 
 @media only screen and (max-width: 771px) {
 	.skip-link.skip-social {
@@ -1001,7 +1061,8 @@ width: 33px;
 @media only screen and (min-width: 771px) {
 
 	.page-header {
-        margin: 10px auto 25px;
+        margin: 0px auto 25px;
+        padding-top: 10px;
     }
 
 	.account-cart-wrapper {

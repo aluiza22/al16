@@ -1,8 +1,18 @@
 <?php // echo $this->getLayout()->createBlock('cms/block')->setBlockId('your_static_block_id')->toHtml() ?>
 <div class="row1 home row">
-	<div class="col25 col revista">
-		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista1-home')->toHtml() ?>
+	<div class="layrev servico col25 col">				
+		<div class="block block-blog">
+			<div class="block-title">
+				<strong><span>Serviços</span></strong>
+			</div>
+			<div class="block-content">
+				<div class="item">
+					<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('servicos-home')->toHtml() ?>
+				</div>	
+			</div>
+		</div>
 	</div>
+	
 	<div class="col75 col pl">
 		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('slider-home')->toHtml() ?>
 	</div>
@@ -15,20 +25,11 @@
 	<div class="col70 col pl">
 		<?php echo $this->getLayout()->createBlock('newproducts/newproducts')->setTemplate('magehit/newproducts/newproductsblock.phtml')->toHtml(); ?>
 		<div class="row22 home row in">
-			<div class="layrev servico col50 col pl">				
-				<div class="block block-blog">
-					<div class="block-title">
-						<strong><span>Serviços</span></strong>
-					</div>
-					<div class="block-content">
-						<div class="item">
-							<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('servicos-home')->toHtml() ?>
-						</div>	
-					</div>
-				</div>
+			<div class="col50 col revista pr">
+				<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista1-home')->toHtml() ?>
 			</div>
-			<div class="col50 col pr">
-				
+			<div class="col50 col pl">
+				<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('anuncio-home')->toHtml() ?>
 			</div>
 		</div>
 	</div>
