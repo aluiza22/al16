@@ -1,7 +1,6 @@
 <?php
 $rootId = 366;
 
-
 $categories = Mage::getModel('catalog/category')->getCollection()
     ->addAttributeToSelect('*')
     ->addAttributeToFilter('parent_id', $rootId)
@@ -110,7 +109,6 @@ $firstCategory = $categories->getFirstItem();
                <?php if ($category->getImageUrl()) :?>
                    <div class="encapImg" style="background-image: url(<?php echo $category->getImageUrl()?>)"></div>
                <?php endif;?>
-               <span class="labelS monteoseu"></span>
            </div>
            <div class="col70 col pl">
              <div class="name">

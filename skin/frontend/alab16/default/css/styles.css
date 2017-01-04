@@ -12605,17 +12605,20 @@ ul, li {
 
 /* line 90, ../scss/styles.scss */
 .social-media li em.facebook:hover {
-  background-position: -20px 6px;
+  opacity: .8;
+  background-position: 5px 6px;
 }
 
 /* line 91, ../scss/styles.scss */
 .social-media li em.instagram:hover {
-  background-position: -20px -18px;
+  opacity: .8;
+  background-position: 5px -18px;
 }
 
 /* line 92, ../scss/styles.scss */
 .social-media li em.pinterest:hover {
-  background-position: -20px -43px;
+  opacity: .8;
+  background-position: 5px -43px;
 }
 
 /* line 95, ../scss/styles.scss */
@@ -12937,23 +12940,17 @@ button.closePS {
 
 /* line 284, ../scss/styles.scss */
 .footer-inblock .links.social-media li em.facebook:hover {
-  background-position: -23px -71px;
-  height: 25px;
-  width: 25px;
+  opacity: .8;
 }
 
 /* line 285, ../scss/styles.scss */
 .footer-inblock .links.social-media li em.instagram:hover {
-  background-position: -23px -96px;
-  height: 25px;
-  width: 25px;
+  opacity: .8;
 }
 
 /* line 286, ../scss/styles.scss */
 .footer-inblock .links.social-media li em.pinterest:hover {
-  background-position: -17px -121px;
-  height: 25px;
-  width: 25px;
+  opacity: .8;
 }
 
 /* line 288, ../scss/styles.scss */
@@ -14067,6 +14064,7 @@ img {
 /* line 900, ../scss/styles.scss */
 .labelS-parent {
   position: relative;
+  overflow: visible;
 }
 
 /* line 901, ../scss/styles.scss */
@@ -14534,6 +14532,14 @@ img {
   }
 
   /* line 1231, ../scss/styles.scss */
+  .footer-before-container {
+    max-width: 1260px;
+    background-color: #fff;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /* line 1232, ../scss/styles.scss */
   .footer-container {
     padding: 0;
   }

@@ -87,9 +87,9 @@ ul, li {list-style: none;}
 .social-media li em.instagram {background-position: 5px -18px;}
 .social-media li em.pinterest {background-position: 5px -43px;}
 
-.social-media li em.facebook:hover {background-position: -20px 6px;}
-.social-media li em.instagram:hover {background-position: -20px -18px;}
-.social-media li em.pinterest:hover {background-position: -20px -43px;}
+.social-media li em.facebook:hover {opacity: .8;background-position: 5px 6px;}
+.social-media li em.instagram:hover {opacity: .8;background-position: 5px -18px;}
+.social-media li em.pinterest:hover {opacity: .8;background-position: 5px -43px;}
 
 
 .product-view .sharing-links li a.facebook {background-position: -4px 6px;}
@@ -281,9 +281,9 @@ button.closePS {
 .footer-inblock .links.social-media li em.instagram {background-position: 2px -96px; height: 25px; width: 25px;}
 .footer-inblock .links.social-media li em.pinterest {background-position: 8px -121px; height: 25px; width: 25px;}
 
-.footer-inblock .links.social-media li em.facebook:hover {background-position: -23px -71px; height: 25px; width: 25px;}
-.footer-inblock .links.social-media li em.instagram:hover {background-position: -23px -96px; height: 25px; width: 25px;}
-.footer-inblock .links.social-media li em.pinterest:hover {background-position: -17px -121px; height: 25px; width: 25px;}
+.footer-inblock .links.social-media li em.facebook:hover {opacity: .8;}
+.footer-inblock .links.social-media li em.instagram:hover {opacity: .8;}
+.footer-inblock .links.social-media li em.pinterest:hover {opacity: .8;}
 
 .footer-inblock.footer-info .fendereco {font-size: 1.20em;}
 .footer-inblock.footer-info .fpagamento {margin: 15px 0;}
@@ -897,7 +897,7 @@ img {max-width: 100%;}
 .fendereco {font-size: 1.3em;}
 .encapImg {width: 100%; height: 0; padding-bottom: 100%; position: relative; background-repeat: no-repeat; background-size: cover; background-position:center;}
 
-.labelS-parent {position: relative;}
+.labelS-parent {position: relative; overflow: visible;}
 .labelS {
     display: block;
     position: absolute;
@@ -910,7 +910,7 @@ img {max-width: 100%;}
     bottom: 20%;
     height: 100px;
     right: -25%;
-    width: 100px;
+    width: 100px; 
 }
 
 .labelS.sohoje {
@@ -1228,5 +1228,6 @@ width: 33px;
 	#header-search {height: 25px;}
 
 	.main-container {padding: 0 30px;}
-	.footer-container {padding: 0;}
+	.footer-before-container {max-width: 1260px; background-color: #fff; position: relative; margin: 0 auto;}
+    .footer-container {padding: 0;}
 }

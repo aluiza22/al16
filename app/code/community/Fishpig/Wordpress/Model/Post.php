@@ -349,15 +349,20 @@ class Fishpig_Wordpress_Model_Post extends Fishpig_Wordpress_Model_Abstract
 	 * @return string
 	 */
 	public function getPostContent($context = 'full')
-	{
-		$key = rtrim('filtered_post_content_' . $context, '_');
-		
-		if (!$this->hasData($key)) {
-			$this->setData($key, Mage::helper('wordpress/filter')->applyFilters($this->_getData('post_content'), $this, $context));
-		}
-		
-		return $this->_getData($key);
-	}
+    {
+        $key = rtrim('filtered_post_content_' . $context, '_');
+
+        if (!$this->hasData($key)) {
+            $data = file_get_contents(Mage::helper('wordpress')->getBaseUrl() . '/wp-get-post.php?post_id=' . $this->getId());
+            if ($data && $data != "") {
+                $this->setData($key, Mage::helper('wordpress/filter')->applyFilters($data, $this, $context));
+            } else {
+                $this->setData($key, Mage::helper('wordpress/filter')->applyFilters($this->_getData('post_content'), $this, $context));
+            }
+        }
+
+        return $this->_getData($key);
+    }
 
 	/**
 	 * Returns a collection of comments for this post

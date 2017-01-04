@@ -116,7 +116,9 @@ if($level > 2){   ?>
 <?php else: ?>
     <?php echo $this->getProductListHtml() ?>
 <?php endif; ?>
-
+<?php 
+$idCatCamp = $_category->getID();
+if($idCatCamp != 366) {?>
     <div id="page-view-bottom">
 
         <div class="row1 row">
@@ -165,3 +167,4 @@ if($level > 2){   ?>
         </div>
         
     </div>
+<?php } ?>
