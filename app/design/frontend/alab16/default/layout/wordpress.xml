@@ -242,7 +242,20 @@
 			<block type="core/template" name="postbottom" brefore="-" template="wordpress/post/view/bottom.phtml" />
         </reference>
 	</wordpress_post_view>
-	<!--
+
+	<wordpress_page_view>
+	    <reference name="root">
+	        <action method="setTemplate">
+	            <template>page/1column.phtml</template>
+	        </action>
+	    </reference>
+	    <reference name="wp.post.view">
+	        <action method="setTemplate">
+	            <template>wordpress/post/page.phtml</template>
+	        </action>
+	    </reference>
+	</wordpress_page_view>
+	<!-- 
 	/**
 	 * Non-WordPress pages
 	 *

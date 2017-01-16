@@ -55,12 +55,12 @@ if($level > 2){   ?>
 <?php } else { ?>
 <div class="row">
     <?php if($_imgUrl) { ?>
-    <div class="col col65">        
+    <div class="col col45">        
         
             <?php echo $_imgHtml ?>
         
     </div>
-    <div class="col col35 pl">
+    <div class="col col45 pl">
         <div class="page-title category-title">
             <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
                 <a href="<?php echo $this->getRssLink() ?>" class="link-rss"><?php echo $this->__('Subscribe to RSS Feed') ?></a>

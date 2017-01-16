@@ -1,0 +1,58 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<div class="page-view-page">
+<?php $post = $this->getPost() ?>
+<?php if ($post): ?>
+	<?php $helper = $this->helper('wordpress') ?>
+
+	<div class="page-view">
+		<div class="page-entry entry std">
+			<?php if ($post->isViewableForVisitor()): ?>
+				<?php echo $post->getPostContent() ?>
+			<?php else: ?>
+				<?php echo $this->getPasswordProtectHtml() ?>
+			<?php endif; ?>
+		</div>
+	</div>
+<?php endif; ?>
+</div>
+
+<?php if ($post['ID'] === "1302") { ?>
+	<div id="page-view-bottom">
+        <div class="row2 row">
+        	<div class="col30 revista col">
+                <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('anuncio-home')->toHtml() ?>
+            </div>
+
+            <div class="layrev col35 squaredBlock col pl">               
+                <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista2-home')->toHtml() ?>
+            </div>
+            
+            <div class="layrev squaredBlock servico col35 col pl">               
+                <div class="block block-blog">
+					<div class="block-title">
+						<strong><span>Serviços</span></strong>
+					</div>
+					<div class="block-content">
+						<?php $postServ = Mage::getModel('wordpress/post')->load(1305); ?>
+						<div class="item" style="background-image: url(<?php echo $postServ->getFeaturedImage()->getFullSizeImage() ?>)">
+							<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('servicos-home')->toHtml() ?>
+						</div>	
+					</div>
+				</div>	
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="row3">
+            <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('chamada-novidades')->toHtml() ?>
+        </div>
+        
+    </div>
+<?php }?>

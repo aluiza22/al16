@@ -14,7 +14,7 @@ $firstCategory = $categories->getFirstItem();
 <div class="row row1">
   <div class="ccarousel camapanhas-page-carousel">
        <div class="col100 col">
-            <div class="col55 col image labelS-parent">
+            <div class="col45 col image labelS-parent">
                <?php if ($firstCategory->getImageUrl()) :?>
                    <div class="encapImg" style="background-image: url(<?php echo $firstCategory->getImageUrl()?>)"></div>
                <?php endif;?>
@@ -193,7 +193,7 @@ $firstCategory = $categories->getFirstItem();
             <div class="col30 col ">
                 <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('anuncio-home')->toHtml() ?>
             </div>
-            <div class="layrev fornecedores col40 col pl pr">               
+            <div class="layrev fornecedores col35 col pl squaredBlock">               
                 <div class="block block-blog">
                     <div class="block-title">
                         <strong><span>Nossos maravilhosos<br/> fornecedores</span></strong>
@@ -205,17 +205,18 @@ $firstCategory = $categories->getFirstItem();
                     </div>
                 </div>
             </div>
-            <div class="layrev servico col30 col ">               
+            <div class="layrev servico col35 col pl squaredBlock">               
                 <div class="block block-blog">
-                    <div class="block-title">
-                        <strong><span>Serviços</span></strong>
-                    </div>
-                    <div class="block-content">
-                        <div class="item">
-                            <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('servicos-home')->toHtml() ?>
-                        </div>  
-                    </div>
-                </div>
+                  <div class="block-title">
+                    <strong><span>Serviços</span></strong>
+                  </div>
+                  <div class="block-content">
+                    <?php $postServ = Mage::getModel('wordpress/post')->load(1305); ?>
+                    <div class="item" style="background-image: url(<?php echo $postServ->getFeaturedImage()->getFullSizeImage() ?>)">
+                      <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('servicos-home')->toHtml() ?>
+                    </div>  
+                  </div>
+                </div> 
             </div>
             <div class="clearfix"></div>
         </div>

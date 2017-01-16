@@ -12,12 +12,12 @@ $_helper = $this->helper('catalog/output');
 <div class="campanhas-list">
     <?php foreach ($categories as $category) : ?>
        <div class="col100 col">
-            <div class="col30 col image">
+            <div class="col45 col image">
                <?php if ($category->getImageUrl()) :?>
                    <img src="<?php echo $category->getImageUrl()?>" alt="<?php echo $this->escapeHtml($category->getName())?>" />
                <?php endif;?>
            </div>
-           <div class="col70 col pl">
+           <div class="col45 col pl">
              <div class="name">
                 <h2><a href="<?php echo $category->getUrl()?>" title="<?php echo $this->escapeHtml($category->getName())?>">
                   <?php echo $category->getName()?>                    

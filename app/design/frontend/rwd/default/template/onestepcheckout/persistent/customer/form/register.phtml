@@ -135,6 +135,9 @@
                         <input type="hidden" name="default_shipping" value="1" />
                     </div>
                 <?php endif; ?>
+                
+            </div>
+            <div class="col-2 registered-users">
                 <div class="fieldset">
                     <h2 class="legend"><?php echo $this->__('Login Information') ?></h2>
                     <ul class="form-list">
@@ -157,8 +160,6 @@
                     </ul>
                     <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
                 </div>
-            </div>
-            <div class="col-2 registered-users">
                 <div class="fieldset">
                     <ul class="form-list">
                         <h2 class="legend"><?php echo $this->__('Personal Information') ?></h2>

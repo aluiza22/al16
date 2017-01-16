@@ -6,7 +6,8 @@
 				<strong><span>Serviços</span></strong>
 			</div>
 			<div class="block-content">
-				<div class="item">
+				<?php $postServ = Mage::getModel('wordpress/post')->load(1305); ?>
+				<div class="item" style="background-image: url(<?php echo $postServ->getFeaturedImage()->getFullSizeImage() ?>)">
 					<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('servicos-home')->toHtml() ?>
 				</div>	
 			</div>
@@ -23,7 +24,8 @@
 		<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista2-home')->toHtml() ?>
 	</div>
 	<div class="col70 col pl">
-		<?php echo $this->getLayout()->createBlock('newproducts/newproducts')->setTemplate('magehit/newproducts/newproductsblock.phtml')->toHtml(); ?>
+		<?php echo $this->getLayout()->createBlock('bestseller/bestseller')->setTemplate('magehit/bestseller/bestsellerblock.phtml')->toHtml(); ?>
+		<?php // echo $this->getLayout()->createBlock('newproducts/newproducts')->setTemplate('magehit/newproducts/newproductsblock.phtml')->toHtml(); ?>
 		<div class="row22 home row in">
 			<div class="col50 col revista pr">
 				<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista1-home')->toHtml() ?>
@@ -36,12 +38,12 @@
 	<div class="clearfix"></div>
 </div>
 
-<div class="row3 home row">
+<!--<div class="row3 home row">
 	<div class="col100 col">
-		<?php echo $this->getLayout()->createBlock('bestseller/bestseller')->setTemplate('magehit/bestseller/bestsellerblock.phtml')->toHtml(); ?>
+		<?php // echo $this->getLayout()->createBlock('bestseller/bestseller')->setTemplate('magehit/bestseller/bestsellerblock.phtml')->toHtml(); ?>
 	</div>
 	<div class="clearfix"></div>
-</div>
+</div> -->
 
 <div class="row4 home row">
 	<div class="col100 col">
