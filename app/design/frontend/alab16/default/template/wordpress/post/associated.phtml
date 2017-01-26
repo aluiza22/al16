@@ -6,9 +6,9 @@
  * @author      Ben Tideswell <help@fishpig.co.uk>
  */
 ?>
-<div class="col30 col revista">
+<div class="col30 col tall revista">
 <?php if (($posts = $this->getPostCollection()) !== false): ?>
-<?php if (count($posts) > 0): ?>
+<?php if (count($posts) > 0) { ?>
 	<div class="block block-blog block-recent-posts">
 		<div class="block-title">
 			<strong><span>Revista</span></strong>
@@ -28,6 +28,8 @@
 			</ul>
 		</div>
 	</div>
-<?php endif; ?>
+<?php } else { ?>
+<?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista1-home')->toHtml() ?>
+<?php } ?>
 <?php endif; ?>
 </div>

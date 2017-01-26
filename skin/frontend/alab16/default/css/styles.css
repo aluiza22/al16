@@ -12632,7 +12632,7 @@ ul, li {
 /* line 87, ../scss/styles.scss */
 .wrapper > .page {
   margin: auto;
-  max-width: 990px;
+  max-width: 1174px;
   background-color: #fff;
 }
 
@@ -14609,6 +14609,22 @@ body.customer-account .my-account .page-title h1 {
 }
 
 /* line 1191, ../scss/styles.scss */
+#last_most_view_box h2 {
+  margin-bottom: 0;
+}
+
+/* line 1192, ../scss/styles.scss */
+.product-mostview .products-grid > li {
+  margin: 0 !important;
+  padding: 0 20px;
+}
+
+/* line 1193, ../scss/styles.scss */
+#last_most_view_title span {
+  line-height: 0;
+}
+
+/* line 1195, ../scss/styles.scss */
 .page-title h1, .sobre-nos-texto h3.widget-title, .camapanhas-page-carousel .name h2 a, .page-title.category-title h1, .post-list-item h2 a, .post-view-page .post-title h1, #onestepcheckout-title h1 {
   color: #e6b120;
   font-family: 'Advent Pro',sans-serif;
@@ -14618,49 +14634,71 @@ body.customer-account .my-account .page-title h1 {
   text-transform: none;
 }
 
+/* line 1204, ../scss/styles.scss */
+.chamada-promocoes.chamadaS {
+  height: 0;
+  padding: 0;
+  visibility: hidden;
+}
+
+/* line 1210, ../scss/styles.scss */
+#popup-subscribe {
+  width: 18%;
+}
+
+/* line 1212, ../scss/styles.scss */
+#product-attribute-specs-table.data-table tbody td {
+  white-space: pre-line;
+}
+
+/* line 1214, ../scss/styles.scss */
+.product-view .product-shop .price-info {
+  margin-top: 10px;
+}
+
 @media only screen and (max-width: 771px) {
-  /* line 1201, ../scss/styles.scss */
+  /* line 1217, ../scss/styles.scss */
   .skip-link.skip-social {
     display: none;
   }
 
-  /* line 1205, ../scss/styles.scss */
+  /* line 1221, ../scss/styles.scss */
   .skip-link.skip-chat {
     display: none;
   }
 
-  /* line 1209, ../scss/styles.scss */
+  /* line 1225, ../scss/styles.scss */
   .skip-link.skip-wishlist {
     display: none;
   }
 
-  /* line 1212, ../scss/styles.scss */
+  /* line 1228, ../scss/styles.scss */
   .col {
     width: 100% !important;
     margin-bottom: 10px;
   }
 }
 @media only screen and (min-width: 771px) {
-  /* line 1216, ../scss/styles.scss */
+  /* line 1232, ../scss/styles.scss */
   .page-header {
     margin: 0px auto 25px;
     padding-top: 10px;
   }
 
-  /* line 1221, ../scss/styles.scss */
+  /* line 1237, ../scss/styles.scss */
   .account-cart-wrapper {
     right: 10px;
     top: 10px;
     line-height: 42px;
   }
 
-  /* line 1227, ../scss/styles.scss */
+  /* line 1243, ../scss/styles.scss */
   .account-cart-wrapper > * {
     float: left;
     padding-left: 3px;
   }
 
-  /* line 1229, ../scss/styles.scss */
+  /* line 1245, ../scss/styles.scss */
   #header-search {
     display: inline-block;
     height: 50px;
@@ -14670,14 +14708,14 @@ body.customer-account .my-account .page-title h1 {
     top: 0;
   }
 
-  /* line 1238, ../scss/styles.scss */
+  /* line 1254, ../scss/styles.scss */
   #header-nav {
     border-bottom: medium none;
     display: inline-block;
     width: 74%;
   }
 
-  /* line 1244, ../scss/styles.scss */
+  /* line 1260, ../scss/styles.scss */
   #header-menu {
     margin-left: auto;
     width: 90%;
@@ -14685,7 +14723,7 @@ body.customer-account .my-account .page-title h1 {
     position: relative;
   }
 
-  /* line 1251, ../scss/styles.scss */
+  /* line 1267, ../scss/styles.scss */
   #header-nav #custommenu {
     line-height: 0;
     padding: 0;
@@ -14695,7 +14733,7 @@ body.customer-account .my-account .page-title h1 {
     position: initial;
   }
 
-  /* line 1260, ../scss/styles.scss */
+  /* line 1276, ../scss/styles.scss */
   #header-nav #custommenu .wp-custom-menu-popup {
     opacity: .95;
     z-index: 999999999999999999999999999;
@@ -14703,7 +14741,7 @@ body.customer-account .my-account .page-title h1 {
     box-shadow: 2px 2px 3px #d0d0d0;
   }
 
-  /* line 1263, ../scss/styles.scss */
+  /* line 1279, ../scss/styles.scss */
   #header-nav #custommenu > .menu {
     position: static;
     line-height: 0;
@@ -14713,18 +14751,18 @@ body.customer-account .my-account .page-title h1 {
     float: none;
   }
 
-  /* line 1272, ../scss/styles.scss */
+  /* line 1288, ../scss/styles.scss */
   #custommenu > .menu > .parentMenu {
     line-height: 0;
     padding: 0;
   }
 
-  /* line 1277, ../scss/styles.scss */
+  /* line 1293, ../scss/styles.scss */
   #menu-button:after, .parentMenu:after {
     content: "";
   }
 
-  /* line 1279, ../scss/styles.scss */
+  /* line 1295, ../scss/styles.scss */
   #custommenu > .menu > .parentMenu > a.level0 {
     color: #000;
     font-size: inherit;
@@ -14734,7 +14772,7 @@ body.customer-account .my-account .page-title h1 {
     padding: 0 10px;
   }
 
-  /* line 1288, ../scss/styles.scss */
+  /* line 1304, ../scss/styles.scss */
   #custommenu > .menu > .parentMenu > a.level0:after {
     color: #006784;
     content: " | ";
@@ -14744,19 +14782,19 @@ body.customer-account .my-account .page-title h1 {
     top: 0;
   }
 
-  /* line 1296, ../scss/styles.scss */
+  /* line 1312, ../scss/styles.scss */
   #custommenu > .menu:last-child > .parentMenu > a.level0:after, #custommenu > #menu456.menu > .parentMenu > a.level0:after {
     content: "";
   }
 
-  /* line 1300, ../scss/styles.scss */
+  /* line 1316, ../scss/styles.scss */
   #custommenu > .menu > .parentMenu > a.level0 span {
     line-height: auto;
     padding: 0;
     height: unset;
   }
 
-  /* line 1306, ../scss/styles.scss */
+  /* line 1322, ../scss/styles.scss */
   #custommenu .itemMenu.level1 > a {
     color: #000;
     font-weight: bold;
@@ -14764,44 +14802,44 @@ body.customer-account .my-account .page-title h1 {
     margin-top: 0;
   }
 
-  /* line 1313, ../scss/styles.scss */
+  /* line 1329, ../scss/styles.scss */
   #custommenu .itemMenu.level1 > a:after {
     color: #006784;
-    content: " | ";
+    content: "";
     display: inline-block;
     position: absolute;
     right: 0;
     top: 0;
   }
 
-  /* line 1322, ../scss/styles.scss */
+  /* line 1338, ../scss/styles.scss */
   #custommenu .menu a.act span, #custommenu .menu a:hover span {
     color: #006784 !important;
   }
 
-  /* line 1324, ../scss/styles.scss */
+  /* line 1340, ../scss/styles.scss */
   #custommenu .wp-custom-menu-popup {
     top: 1.5em !important;
   }
 
-  /* line 1325, ../scss/styles.scss */
+  /* line 1341, ../scss/styles.scss */
   #custommenu .wp-custom-menu-popup div.column {
     width: 33%;
   }
 
-  /* line 1326, ../scss/styles.scss */
+  /* line 1342, ../scss/styles.scss */
   .wp-custom-menu-popup .column {
     border-left: 1px solid #006784;
     padding: 0 15px;
     margin: 15px 0;
   }
 
-  /* line 1332, ../scss/styles.scss */
+  /* line 1348, ../scss/styles.scss */
   .wp-custom-menu-popup .column.first {
     border-left: none;
   }
 
-  /* line 1336, ../scss/styles.scss */
+  /* line 1352, ../scss/styles.scss */
   #custommenu .itemMenu.level1 > a, .itemMenu.level1 a.itemMenuName.level1 {
     color: #006784;
     text-transform: uppercase;
@@ -14810,12 +14848,12 @@ body.customer-account .my-account .page-title h1 {
     line-height: 1em;
   }
 
-  /* line 1344, ../scss/styles.scss */
+  /* line 1360, ../scss/styles.scss */
   #custommenu .itemSubMenu.level1 {
     margin-bottom: 5px;
   }
 
-  /* line 1346, ../scss/styles.scss */
+  /* line 1362, ../scss/styles.scss */
   .itemSubMenu.level1 .itemMenu.level2 a.itemMenuName.level2 {
     color: #000;
     padding-top: 4px;
@@ -14827,7 +14865,7 @@ body.customer-account .my-account .page-title h1 {
     padding-bottom: 2px;
   }
 
-  /* line 1357, ../scss/styles.scss */
+  /* line 1373, ../scss/styles.scss */
   .itemSubMenu.level2 .itemMenu.level3 a.itemMenuName.level3 {
     color: #000;
     padding-left: 5px;
@@ -14847,7 +14885,7 @@ body.customer-account .my-account .page-title h1 {
       margin-left: 0px;
       padding-left: 15px;
   }*/
-  /* line 1377, ../scss/styles.scss */
+  /* line 1393, ../scss/styles.scss */
   #search {
     background: none repeat scroll 0 0 #edf1f4;
     border: medium none;
@@ -14861,14 +14899,14 @@ body.customer-account .my-account .page-title h1 {
     width: 100%;
   }
 
-  /* line 1390, ../scss/styles.scss */
+  /* line 1406, ../scss/styles.scss */
   #search_mini_form .search-button {
     height: 22px;
     width: 30px;
     padding: 0;
   }
 
-  /* line 1396, ../scss/styles.scss */
+  /* line 1412, ../scss/styles.scss */
   #search_mini_form .search-button:before {
     background-position: 7px -145px;
     content: "";
@@ -14882,17 +14920,17 @@ body.customer-account .my-account .page-title h1 {
     width: 24px;
   }
 
-  /* line 1409, ../scss/styles.scss */
+  /* line 1425, ../scss/styles.scss */
   #header-search {
     height: 25px;
   }
 
-  /* line 1411, ../scss/styles.scss */
+  /* line 1427, ../scss/styles.scss */
   .main-container {
     padding: 0 30px;
   }
 
-  /* line 1412, ../scss/styles.scss */
+  /* line 1428, ../scss/styles.scss */
   .footer-before-container {
     max-width: 1260px;
     background-color: #fff;
@@ -14900,7 +14938,7 @@ body.customer-account .my-account .page-title h1 {
     margin: 15px auto 0;
   }
 
-  /* line 1413, ../scss/styles.scss */
+  /* line 1429, ../scss/styles.scss */
   .footer-container {
     padding: 0;
   }

@@ -86,7 +86,7 @@ ul, li {list-style: none;}
 .col-main {position: relative;}
 .wrapper > .page {
     margin: auto;
-    max-width: 990px;
+    max-width: 1174px;
     background-color: #fff;
 }
 
@@ -1188,6 +1188,10 @@ body.customer-account .my-account .page-title h1 {color: #e6b120;}
 
 .dashboard .box-head, form .legend {border-bottom: 2px dotted #c0c0c0;}
 
+#last_most_view_box h2 {margin-bottom: 0;}
+.product-mostview .products-grid > li {margin:0 !important; padding: 0 20px;}
+#last_most_view_title span {line-height: 0;}
+
 .page-title h1, .sobre-nos-texto h3.widget-title, .camapanhas-page-carousel .name h2 a, .page-title.category-title h1, .post-list-item h2 a, .post-view-page .post-title h1, #onestepcheckout-title h1 {
     color: #e6b120;
     font-family: 'Advent Pro',sans-serif;
@@ -1196,6 +1200,18 @@ body.customer-account .my-account .page-title h1 {color: #e6b120;}
     line-height: 1em;
     text-transform: none;
 }
+
+.chamada-promocoes.chamadaS {
+    height: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+#popup-subscribe {width: 18%;}
+
+#product-attribute-specs-table.data-table tbody td {white-space: pre-line;}
+
+.product-view .product-shop .price-info {margin-top: 10px;}
 
 @media only screen and (max-width: 771px) {
 	.skip-link.skip-social {
@@ -1312,7 +1328,7 @@ body.customer-account .my-account .page-title h1 {color: #e6b120;}
 
     #custommenu .itemMenu.level1 > a:after {
         color: #006784;
-        content: " | ";
+        content: "";
         display: inline-block;
         position: absolute;
         right: 0;

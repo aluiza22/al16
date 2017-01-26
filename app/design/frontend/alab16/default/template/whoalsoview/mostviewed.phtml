@@ -15,7 +15,7 @@ foreach($count_sku as $key =>$pro_value)
     array_push($_productCollection, $_product);
 }
 
-if(count($_productCollection)){ ?>
+ ?>
 
 <?php $display_length = $this->displayproductlength(); ?>
 <?php $showInStock = $this->showInStock(); ?>
@@ -30,26 +30,33 @@ if(count($_productCollection)){ ?>
             <!--div class="container"-->
              <!--div class="row"-->
               <!-- <div class="sliderbox"> -->
-                <ul class="products-grid products-grid--max-<?php echo $_columnCount; ?>-col">
+              <?php if(count($_productCollection) > 0){ ?>
+                  <ul class="products-grid products-grid--max-<?php echo $_columnCount; ?>-col">
 
-                <?php $i=0; foreach ($_productCollection as $key => $_product): ?>
-                 <?php if ($key < $display_length && ($showInStock == $_product->isAvailable() || 1 == $_product->isAvailable())): ?>
-                    <li class="item<?php if($key==0): ?> first<?php elseif($key==$_collectionSize): ?> last<?php endif; ?>">
-                        <a href="<?php echo $site_url.$_product->getUrlPath(); ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" class="product-image">
-                          <span>
-                          <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(260); ?>" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" /></span>
-                        </a>
-                        <h3 class="product-name">
-                          <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a>
-                        </h3>
-                        <span class="price-con">
-                          <?php echo $this->getPriceHtml($_product, true) ?>
-                        </span>
-                    </li>
-                  <?php endif ?>  
-                <?php endforeach ?>
-                </ul>    
-                <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+                  <?php $i=0; foreach ($_productCollection as $key => $_product): ?>
+                   <?php if ($key < $display_length && ($showInStock == $_product->isAvailable() || 1 == $_product->isAvailable())): ?>
+                      <li class="item<?php if($key==0): ?> first<?php elseif($key==$_collectionSize): ?> last<?php endif; ?>">
+                          <a href="<?php echo $site_url.$_product->getUrlPath(); ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" class="product-image">
+                            <span>
+                            <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(260); ?>" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" /></span>
+                          </a>
+                          <h3 class="product-name">
+                            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a>
+                          </h3>
+                          <span class="price-con">
+                            <?php echo $this->getPriceHtml($_product, true) ?>
+                          </span>
+                      </li>
+                    <?php endif ?>  
+                  <?php endforeach ?>
+                  </ul>    
+                  <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+                <?php } else {
+
+                  //echo $this->getBlockHtml('catalog.product.related');
+                  //echo $this->getChildHtml('related_products');
+                  echo "<p style='margin:20px;'>Não foram encontrados produtos relacionados.</p>";
+                  }?>
              <!-- </div> -->
             <!--/div-->
           <!--/div-->
@@ -58,9 +65,5 @@ if(count($_productCollection)){ ?>
         
     </div>
 </div>
-<?php } else {
 
-//echo $this->getBlockHtml('catalog.product.related');
-echo $this->getChildHtml('related_products');
-  }?>
 
