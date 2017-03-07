@@ -39,20 +39,7 @@ if ($_imgUrl = $_category->getImageUrl()) {
 }            
 
 $level = $this->getCurrentCategory()->getParentCategory()->getLevel();
-if($level > 2){   ?>
-    <div class="row subcategory-page-top">
-        <div class="col col100">
-            <div class="page-title category-title">
-                <h1>
-                    <?php  
-                    echo $_helper->categoryAttribute($_category, $_category->getName(), 'name');              
-                    echo "<span>".$this->getCurrentCategory()->getParentCategory()->getName()."</span>";?>                    
-                </h1>
-            </div>
-            <?php echo $this->getMessagesBlock()->toHtml() ?>
-        </div>
-    </div>
-<?php } else { ?>
+?>
 <div class="row">
     <?php if($_imgUrl) { ?>
     <div class="col col45">        
@@ -82,30 +69,21 @@ if($level > 2){   ?>
     </div>
     <div class="clearfix"></div>
     <?php } else {?>
-    <div class="col col100">
-        <div class="page-title category-title">
-            <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
-                <a href="<?php echo $this->getRssLink() ?>" class="link-rss"><?php echo $this->__('Subscribe to RSS Feed') ?></a>
-            <?php endif; ?>
-            <h1>
-                <?php 
-                echo $_helper->categoryAttribute($_category, $_category->getName(), 'name'); ?>
-                
-            </h1>
-        </div>
-
-        <?php echo $this->getMessagesBlock()->toHtml() ?>
-
-        <?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
-            <div class="category-description std">
-                <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
+    <div class="row subcategory-page-top">
+        <div class="col col100">
+            <div class="page-title category-title">
+                <h1>
+                    <?php  
+                    echo $_helper->categoryAttribute($_category, $_category->getName(), 'name');              
+                    echo "<span>".$this->getCurrentCategory()->getParentCategory()->getName()."</span>";?>                    
+                </h1>
             </div>
-        <?php endif; ?>
+            <?php echo $this->getMessagesBlock()->toHtml() ?>
+        </div>
     </div>
     <div class="clearfix"></div>
     <?php } ?>
 </div>
-<?php } ?>
 <?php if($this->isContentMode()): ?>
     <?php echo $this->getCmsBlockHtml() ?>
 
@@ -132,7 +110,7 @@ if($idCatCamp != 366) {?>
         </div>
 
         <div class="row2 row">
-            <div class="layrev servico col30 col ">               
+            <div class="layrev servico col33 col ">               
                 <div class="block block-blog">
                     <div class="block-title">
                         <strong><span>Nossos maravilhosos<br/> fornecedores</span></strong>
@@ -144,10 +122,10 @@ if($idCatCamp != 366) {?>
                     </div>
                 </div>
             </div>
-            <div class="col40 revista col pl pr">
+            <div class="col33 revista col middle">
                 <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('revista1-home')->toHtml() ?>
             </div>
-            <div class="layrev servico col30 col ">               
+            <div class="layrev servico col33 col ">               
                 <div class="block block-blog">
                     <div class="block-title">
                         <strong><span>Serviços</span></strong>

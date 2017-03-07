@@ -16,11 +16,11 @@ if ($post): ?>
 	<div class="post-view">		
 		<div class="post-entry entry std">
 			<?php if ($post->isViewableForVisitor()): ?>
-				<?php if ($featuredImage = $post->getFeaturedImage()): ?>
+				<?php /*if ($featuredImage = $post->getFeaturedImage()): ?>
 					<div class="featured-image left">
 						<img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
 					</div>
-				<?php endif; ?>
+				<?php endif; */?>
 				<?php echo $post->getPostContent() ?>
 			<?php else: ?>
 				<?php echo $this->getPasswordProtectHtml() ?>
